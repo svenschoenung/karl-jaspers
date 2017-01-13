@@ -3,7 +3,7 @@ class TableButton extends React.Component {
   render() {
     return (
       <div className="table-button">
-        <h2>{this.props.name}<h2>
+        {this.props.name}
         {this.props.desc}
       </div>
     )
