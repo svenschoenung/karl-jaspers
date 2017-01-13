@@ -1,0 +1,10 @@
+.table-buttons {
+  text-align:center;
+}
+
+.table-button {
+  display:inline-block;
+  width:200px;
+  height:200px;
+  margin:20px;
+}
