@@ -2,3 +2,18 @@ header {
   text-align:center;
   margin:50px 0px;
 }
+
+header.small img {
+  height:50px;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+
+
+}
+
+header img {
+  width:90%;
+  max-width:1000px;
+}

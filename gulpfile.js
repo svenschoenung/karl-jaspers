@@ -2,8 +2,7 @@ var gulp = require('gulp');
 var babel = require('gulp-babel'); var concat = require('gulp-concat');
 var browserSync = require('browser-sync');
 var _if = require('gulp-if');
-var plumber = require('gulp-plumber');
-var runSequence = require('run-sequence');
+var plumber = require('gulp-plumber'); var runSequence = require('run-sequence');
 
 var serve = false;
 
@@ -21,11 +20,11 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function(cb) {
-  return gulp.src(['src/js/header.js', 'src/js/app.js'])
+  return gulp.src(['src/js/app.js'])
     .pipe(_if(serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
     })))
-    .pipe(concat('main.js'))
+    .pipe(concat('app.js'))
     .pipe(babel({ presets: ['es2015', 'react'] }))
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(serve, browserSync.stream()));
@@ -45,7 +44,13 @@ gulp.task('serve', function(cb) {
   runSequence('build', function() {
     browserSync.init({
       server: {
-        baseDir: 'www/'
+        baseDir: 'www/',
+        middleware: function(req, res, next) {
+          if (!/\/(css|js|imgs)/.test(req.url)) {
+            req.url = '/';
+          }
+          next();
+        }
       }
     });
 
