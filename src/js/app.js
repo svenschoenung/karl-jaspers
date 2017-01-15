@@ -1,3 +1,28 @@
+
+function getYearForWork(work) {
+ var years = work.publishedIn
+   .map((edition) => edition.replace(/.*\//, ''))
+   .map((year) => parseInt(year));
+ return Math.min.apply(Math, years);
+}
+
+var worksByYear = Object.keys(data.works)
+ .map((id) => data.works[id])
+ .map((work) => { work.year = getYearForWork(work); return work })
+ .sort((work1, work2) => work1.year - work2.year);
+
+var editionsByYear = Object.keys(data.editions)
+ .map((id) => data.editions[id])
+ .sort((edition1, edition2) => edition1.year - edition2.year);
+ 
+function containsSearchTerm(object, term, keys) {
+  return Object.keys(object)
+   .filter((key) => keys.indexOf(key) >= 0)
+   .map((key) => object[key].toString().toLowerCase())
+   .filter((val) => val.indexOf(term) >= 0)
+   .length > 0;
+}
+
 class Header extends React.Component {
   render() {
     return (
@@ -66,15 +91,6 @@ class SmallHeaderComponent extends React.Component {
   }
 }
 
-function containsSearchTerm(object, term) {
-  for (var key in object) {
-    if (object[key].toString().toLowerCase().indexOf(term) >= 0) {
-      return true;
-    }
-  }
-  return false;
-}
-
 class Works extends SmallHeaderComponent {
   constructor(props) {
     super(props);
@@ -89,15 +105,15 @@ class Works extends SmallHeaderComponent {
         </div>
         <table>
         {
-          data.works.map((work) => {
-            if (containsSearchTerm(work, this.state.search)) {
-             return <tr> 
+          worksByYear
+            .filter((work) => containsSearchTerm(work, this.state.search, ['year', 'type', 'title']))
+            .map((work) => (
+              <tr> 
                <td>{work.year}</td>
                <td>{work.type}</td>
                <td>{work.title}</td>
              </tr>
-            }
-          })
+            ))
         }
         </table>
       </main>
@@ -119,15 +135,15 @@ class Editions extends SmallHeaderComponent {
         </div>
         <table>
         {
-          data.works.map((edition) => {
-            if (containsSearchTerm(edition, this.state.search)) {
-             return <tr> 
+          editionsByYear
+            .filter((edition) => containsSearchTerm(edition, this.state.search, ['year', 'type', 'title']))
+            .map((edition) => (
+              <tr> 
                <td>{edition.year}</td>
                <td>{edition.type}</td>
                <td>{edition.title}</td>
              </tr>
-            }
-          })
+            ))
         }
         </table>
       </main>
