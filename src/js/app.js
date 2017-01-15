@@ -1,7 +1,7 @@
 class Header extends React.Component {
   render() {
     return (
-      <header className={this.props.type}>
+      <header className={this.props.size}>
         <h1>
         <Link to="/">
         <img alt="Karl Jaspers" src="/imgs/karl-jaspers.svg"/>
@@ -26,9 +26,19 @@ class HomeButton extends React.Component {
 }
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: '' };
+    this.setHeaderSize = props.setHeaderSize;
+  }
+
+  componentDidMount() {
+    this.setHeaderSize('big');
+  }
+
   render() {
     return (
-        <main>
+        <main className="home">
           <div className="home-buttons">
           <HomeButton name="Werke" to="werke"/>
           <HomeButton name="Ausgaben" to="ausgaben"/>
@@ -38,33 +48,130 @@ class Home extends React.Component {
   }
 }
 
-class Works extends React.Component {
+
+class SmallHeaderComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: '' };
+    this.handleChange = this.handleChange.bind(this);
+    this.setHeaderSize = props.setHeaderSize;
+  }
+
+  componentDidMount() {
+    this.setHeaderSize('small');
+  }
+
+  handleChange(evt) {
+    this.setState({ search: evt.target.value });
+  }
+}
+
+function containsSearchTerm(object, term) {
+  for (var key in object) {
+    if (object[key].toString().toLowerCase().indexOf(term) >= 0) {
+      return true;
+    }
+  }
+  return false;
+}
+
+class Works extends SmallHeaderComponent {
+  constructor(props) {
+    super(props);
+  }
+ 
   render() {
     return (
-        <main>Werke</main>
+      <main className="works">
+        <div className="search">
+          <input type="text" placeholder="Werke durchsuchen"
+                 value={this.state.value} onChange={this.handleChange} />
+        </div>
+        <table>
+        {
+          data.works.map((work) => {
+            if (containsSearchTerm(work, this.state.search)) {
+             return <tr> 
+               <td>{work.year}</td>
+               <td>{work.type}</td>
+               <td>{work.title}</td>
+             </tr>
+            }
+          })
+        }
+        </table>
+      </main>
     );
   }
 }
 
-class Editions extends React.Component {
+class Editions extends SmallHeaderComponent {
+  constructor(props) {
+    super(props);
+  }
+ 
   render() {
     return (
-        <main>Ausgaben</main>
+      <main className="editions">
+        <div className="search">
+          <input type="text" placeholder="Ausgaben durchsuchen"
+                 value={this.state.value} onChange={this.handleChange} />
+        </div>
+        <table>
+        {
+          data.works.map((edition) => {
+            if (containsSearchTerm(edition, this.state.search)) {
+             return <tr> 
+               <td>{edition.year}</td>
+               <td>{edition.type}</td>
+               <td>{edition.title}</td>
+             </tr>
+            }
+          })
+        }
+        </table>
+      </main>
     );
   }
 }
+
+
 
 var {
   Router, Route, IndexRoute, IndexLink, Link,
   hashHistory, browserHistory
 } = ReactRouter;
 
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { headerSize: '' };
+    this.setHeaderSize = this.setHeaderSize.bind(this);
+  }
+
+  setHeaderSize(headerSize) {
+    this.setState({ headerSize: headerSize });
+  }
+ 
   render () {
     return (
       <div>
-        <Header/>
-        {this.props.children}
+        <Header size={this.state.headerSize}/>
+        <ReactCSSTransitionGroup
+          component="div"
+          className="page"
+          transitionName="page-transition"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}>
+        {
+          React.cloneElement(this.props.children, {
+            key: location.pathname,
+            setHeaderSize: this.setHeaderSize
+          })
+        }
+        </ReactCSSTransitionGroup>
       </div>
     );
   }

@@ -1,16 +1,25 @@
 header {
   text-align:center;
+}
+
+header.big {
   margin:50px 0px;
+  transition: all .5s ease-in-out;
+}
+
+header.small {
+  margin:20px 0px;
+  transition: all .5s ease-in-out;
+}
+
+header.big img {
+  max-height:200px;
+  transition: all .5s ease-in-out;
 }
 
 header.small img {
-  height:50px;
-	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	-o-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
-
-
+  max-height:50px;
+  transition: all .5s ease-in-out;
 }
 
 header img {

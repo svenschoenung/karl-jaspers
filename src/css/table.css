@@ -1,0 +1,31 @@
+.search {
+  text-align:center;
+  margin-bottom:20px;
+}
+.search input {
+  text-align:center;
+  font-size:140%;
+  border:none;
+  border-bottom:1px solid #ccc;
+  padding:10px;
+  width:60%;
+  font-family:sans-serif,Arial,Helvetica;
+}
+.search input:focus {
+  outline:none;
+}
+
+table {
+  margin:0 auto;
+  font-size:120%;
+  font-family:sans-serif,Arial,Helvetica;
+  border-collapse:collapse;
+}
+
+tr:nth-child(even) {
+  background:#eee;
+}
+
+td {
+   padding:10px 10px;
+}
