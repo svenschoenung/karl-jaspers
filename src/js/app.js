@@ -1,3 +1,4 @@
+var data = {/*DATA*/};
 
 function getYearForWork(work) {
  var years = work.publishedIn

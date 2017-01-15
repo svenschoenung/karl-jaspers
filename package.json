@@ -14,9 +14,7 @@
     "gulp-add-src": "^0.2.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
-    "gulp-footer": "^1.0.5",
-    "gulp-header": "^1.8.8",
-    "gulp-if": "^2.0.2",
+    "gulp-replace": "^0.5.4",
     "run-sequence": "^1.2.2"
   }
 }

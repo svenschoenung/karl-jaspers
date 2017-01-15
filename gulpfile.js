@@ -4,9 +4,9 @@ var browserSync = require('browser-sync');
 var _if = require('gulp-if');
 var plumber = require('gulp-plumber'); 
 var runSequence = require('run-sequence');
-var header = require('gulp-header');
-var footer = require('gulp-footer');
-var addSrc = require('gulp-add-src');
+var replace = require('gulp-replace');
+var fs = require('fs');
+
 
 var serve = false;
 
@@ -24,14 +24,12 @@ gulp.task('css', function() {
 });
 
 gulp.task('js', function(cb) {
-  return gulp.src('src/data.json')
+  return gulp.src('src/js/app.js')
     .pipe(_if(serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
     })))
-    .pipe(header('var data = '))
-    .pipe(footer(';'))
-    .pipe(addSrc.append('src/js/app.js'))
+    .pipe(replace('{/*DATA*/}', fs.readFileSync('src/data.json')))
     .pipe(concat('app.js'))
     .pipe(babel({ presets: ['es2015', 'react'] }))
     .pipe(gulp.dest('www/js/'))
