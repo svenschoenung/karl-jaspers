@@ -1,0 +1,11 @@
+main.work > div {
+  max-width:800px;
+  margin:0px auto;
+  padding:20px;
+}
+
+main.work h2 {
+  font-size:200%;
+  font-weight:normal;
+  margin:0px;
+}

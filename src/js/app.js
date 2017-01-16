@@ -8,12 +8,12 @@ function getYearForWork(work) {
 }
 
 var worksByYear = Object.keys(data.works)
- .map((id) => data.works[id])
- .map((work) => { work.year = getYearForWork(work); return work })
+ .map((id) => { data.works[id].id = id; return data.works[id]; })
+ .map((work) => { work.year = getYearForWork(work); return work; })
  .sort((work1, work2) => work1.year - work2.year);
 
 var editionsByYear = Object.keys(data.editions)
- .map((id) => data.editions[id])
+ .map((id) => { data.editions[id].id = id; return data.editions[id]; })
  .sort((edition1, edition2) => edition1.year - edition2.year);
  
 function containsSearchTerm(object, term, keys) {
@@ -112,12 +112,30 @@ class Works extends SmallHeaderComponent {
               <tr> 
                <td>{work.year}</td>
                <td>{work.type}</td>
-               <td>{work.title}</td>
+               <td><Link to={'/werke/' + work.id}>{work.title}</Link></td>
              </tr>
             ))
         }
         </table>
       </main>
+    );
+  }
+}
+
+class Work extends SmallHeaderComponent {
+  constructor(props) {
+    super(props);
+  }
+ 
+  render() {
+    var work = data.works[this.props.params.workId];
+    return (
+      <main className="work">
+        <div>
+        <h2>{work.title}</h2>
+        <div>Erstver&ouml;ffentlichung: {work.year}</div>
+        </div>
+      </main> 
     );
   }
 }
@@ -142,12 +160,33 @@ class Editions extends SmallHeaderComponent {
               <tr> 
                <td>{edition.year}</td>
                <td>{edition.type}</td>
-               <td>{edition.title}</td>
+               <td><Link to={'/ausgaben/' + edition.id}>{edition.title}</Link></td>
              </tr>
             ))
         }
         </table>
       </main>
+    );
+  }
+}
+
+class Edition extends SmallHeaderComponent {
+  constructor(props) {
+    super(props);
+  }
+ 
+  render() {
+    var editionName = this.props.params.editionName;
+    var editionYear = this.props.params.editionYear;
+    var editionId = editionName + '/' + editionYear;
+    var edition = data.editions[editionId];
+    return (
+      <main className="edition">
+        <div>
+        <h2>{edition.title}</h2>
+        <div>Jahr: {edition.year}</div>
+        </div>
+      </main> 
     );
   }
 }
@@ -201,7 +240,9 @@ class AppRoutes extends React.Component {
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
           <Route path="/werke" component={Works}/>
+          <Route path="/werke/:workId" component={Work}/>
           <Route path="/ausgaben" component={Editions}/>
+          <Route path="/ausgaben/:editionName/:editionYear" component={Edition}/>
         </Route>
       </Router>
     );
