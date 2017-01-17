@@ -17,10 +17,11 @@ var editionsByYear = Object.keys(data.editions)
  .sort((edition1, edition2) => edition1.year - edition2.year);
  
 function containsSearchTerm(object, term, keys) {
+  var lowerCaseTerm = term.toLowerCase();
   return Object.keys(object)
    .filter((key) => keys.indexOf(key) >= 0)
    .map((key) => object[key].toString().toLowerCase())
-   .filter((val) => val.indexOf(term) >= 0)
+   .filter((val) => val.indexOf(lowerCaseTerm) >= 0)
    .length > 0;
 }
 
