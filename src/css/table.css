@@ -9,7 +9,7 @@
   border-bottom:1px solid #ccc;
   padding:10px;
   width:60%;
-  font-family:sans-serif,Arial,Helvetica;
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
 }
 .search input:focus {
   outline:none;
@@ -18,7 +18,7 @@
 table {
   margin:0 auto;
   font-size:120%;
-  font-family:sans-serif,Arial,Helvetica;
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
   border-collapse:collapse;
 }
 
@@ -27,5 +27,11 @@ tr:nth-child(even) {
 }
 
 td {
-   padding:10px 10px;
+}
+
+td a {
+  display:block;
+  padding:10px 10px;
+  text-decoration:none;
+  color:black;
 }

@@ -132,10 +132,14 @@ class Work extends SmallHeaderComponent {
     var work = data.works[this.props.params.workId];
     return (
       <main className="work">
-        <div>
+        <article>
         <h2>{work.title}</h2>
-        <div>Erstver&ouml;ffentlichung: {work.year}</div>
-        </div>
+        <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
+        <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>Ver&ouml;ffentlicht in </h3>
+        </article>
       </main> 
     );
   }
@@ -183,10 +187,10 @@ class Edition extends SmallHeaderComponent {
     var edition = data.editions[editionId];
     return (
       <main className="edition">
-        <div>
+        <article>
         <h2>{edition.title}</h2>
-        <div>Jahr: {edition.year}</div>
-        </div>
+        <div className="meta">Jahr: {edition.year}</div>
+        </article>
       </main> 
     );
   }
