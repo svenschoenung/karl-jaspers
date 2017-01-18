@@ -1,3 +1,58 @@
 article div.meta, article p, article h3 {
   font-family:'Arsenal',sans-serif,Arial,Helvetica;
 }
+
+nav.breadcrumb {
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+}
+
+nav.breadcrumb a {
+  text-decoration:none;
+  color:black;
+}
+nav.breadcrumb a:hover {
+  background:#eee;
+}
+
+ul.publishedIn {
+  margin:0px;
+  padding:0px;
+}
+
+ul.publishedIn li {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+
+ul.publishedIn li a:hover {
+  background:#eee;
+}
+
+ul.publishedIn li a {
+  display:block;
+  text-decoration:none;
+  color:black;
+  padding:10px;
+} 
+
+ul.publishedIn li a img {
+  width:40px;
+  height:60px;
+  margin-right:10px;
+  vertical-align:top;
+  display:inline-block; 
+}
+
+ul.publishedIn li a > * {
+  display:inline-block; 
+}
+
+ul.publishedIn li .title {
+  font-family: 'Amiri', serif;
+  font-size:120%;
+}
+
+ul.publishedIn li {
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+}

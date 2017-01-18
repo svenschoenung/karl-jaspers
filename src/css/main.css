@@ -3,6 +3,10 @@ main > article, main > table {
   margin:0px auto;
   padding:20px;
 }
+main > nav  {
+  max-width:800px;
+  margin:0px auto;
+}
 
 main h2 {
   font-size:200%;

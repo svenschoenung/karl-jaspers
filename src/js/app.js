@@ -132,6 +132,7 @@ class Work extends SmallHeaderComponent {
     var work = data.works[this.props.params.workId];
     return (
       <main className="work">
+        <nav className="breadcrumb"><Link to="/werke">Werke</Link> &gt; {work.title}</nav>
         <article>
         <h2>{work.title}</h2>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
@@ -139,6 +140,17 @@ class Work extends SmallHeaderComponent {
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
         <h3>Ver&ouml;ffentlicht in </h3>
+        <ul className="publishedIn">
+        {
+          work.publishedIn.map((editionId) => data.editions[editionId])
+            .sort((edition1, edition2) => edition1.year - edition2.year)
+            .map((edition) => 
+              <li>
+<Link to={'ausgaben/' + edition.id}>
+<img alt="Cover" src={'bilder/werke/' + edition.id + '.png'}/><div><span className="title">{edition.title} ({edition.year})</span><br/>{edition.pages} Seiten, {edition.publisher}</div></Link></li>
+            )
+        }
+        </ul>
         </article>
       </main> 
     );
