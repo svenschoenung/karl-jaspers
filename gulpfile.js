@@ -6,12 +6,15 @@ var plumber = require('gulp-plumber');
 var runSequence = require('run-sequence');
 var replace = require('gulp-replace');
 var fs = require('fs');
-
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css')
+var minifyHtml = require('gulp-htmlmin')
 
 var serve = false;
 
 gulp.task('html', function() {
   return gulp.src('src/index.html')
+    .pipe(_if(!serve, minifyHtml({collapseWhitespace: true})))
     .pipe(gulp.dest('www/'))
     .pipe(_if(serve, browserSync.stream()));
 });
@@ -19,6 +22,7 @@ gulp.task('html', function() {
 gulp.task('css', function() {
   return gulp.src('src/css/**/*.css')
     .pipe(concat('style.css'))
+    .pipe(_if(!serve, minifyCss()))
     .pipe(gulp.dest('www/css'))
     .pipe(_if(serve, browserSync.stream()));
 });
@@ -32,6 +36,7 @@ gulp.task('js', function(cb) {
     .pipe(replace('{/*DATA*/}', fs.readFileSync('src/data.json')))
     .pipe(concat('app.js'))
     .pipe(babel({ presets: ['es2015', 'react'] }))
+    .pipe(_if(!serve, uglify()))
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(serve, browserSync.stream()));
 });
