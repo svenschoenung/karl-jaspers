@@ -89,8 +89,13 @@ gulp.task('data-editions', function() {
   return gulp.src('src/data/data.json')
     .pipe(jeditor(function(data) {
       var editionsByYear = Object.keys(data.editions)
-        .map((id) => { data.editions[id].id = id; return data.editions[id]; })
-        .sort((edition1, edition2) => edition1.year - edition2.year);
+        .map((id) => { 
+          var edition = data.editions[id]; 
+          edition.id = id;
+          edition.name = id.replace(/\/.*/, '');
+          return edition;
+        })
+        .sort((edition1, edition2) => edition1.year - edition2.year)
       return editionsByYear;
     }))
     .pipe(rename('ausgaben.json'))

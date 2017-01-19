@@ -198,6 +198,9 @@ class Edition extends SmallHeaderComponent {
     var edition = data.editions[editionId];
     return (
       <main className="edition">
+        <nav className="breadcrumb">
+          <Link to="/ausgaben">Ausgaben</Link> &gt; <Link to={'/ausgaben/' + edition.name}>{edition.title}</Link> &gt; {edition.year} 
+        </nav>
         <article>
         <h2>{edition.title}</h2>
         <div className="meta">Jahr: {edition.year}</div>
