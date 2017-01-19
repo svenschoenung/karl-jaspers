@@ -30,7 +30,7 @@ class Header extends React.Component {
     return (
       <header className={this.props.size}>
         <h1>
-        <Link to="/">
+        <Link to="/" aria-label="Zur Startseite">
         <img alt="Karl Jaspers" src="/imgs/karl-jaspers.svg"/>
         </Link>
         </h1>
@@ -42,9 +42,9 @@ class Header extends React.Component {
 class HomeButton extends React.Component {
   render() {
     return (
-      <Link to={this.props.to}>
-      <div className="home-button">
-        <img src={'/imgs/' + this.props.to + '.png'}/>
+      <Link to={this.props.to} aria-label={this.props.label}>
+      <div className="home-button" aria-hidden="true">
+        <img src={'/imgs/' + this.props.to + '.png'} role="button"/>
         <h2>{this.props.name}</h2>
       </div>
       </Link>
@@ -66,10 +66,10 @@ class Home extends React.Component {
   render() {
     return (
         <main className="home">
-          <div className="home-buttons">
-          <HomeButton name="Werke" to="werke"/>
-          <HomeButton name="Ausgaben" to="ausgaben"/>
-          </div>
+          <nav className="home-buttons">
+          <HomeButton name="Werke" to="werke" label="Zeige Liste mit Karl Jaspers Werken"/>
+          <HomeButton name="Ausgaben" to="ausgaben" label="Zeige Liste verschiedener Ausgaben von Karl Jaspers Werken"/>
+          </nav>
         </main>
     );
   }
@@ -105,19 +105,22 @@ class Works extends SmallHeaderComponent {
           <input type="text" placeholder="Werke durchsuchen"
                  value={this.state.value} onChange={this.handleChange} />
         </div>
-        <table>
+        <div className="list">
+        <ol>
         {
           worksByYear
             .filter((work) => containsSearchTerm(work, this.state.search, ['year', 'type', 'title']))
             .map((work) => (
-              <tr> 
-               <td>{work.year}</td>
-               <td>{work.type}</td>
-               <td><Link to={'/werke/' + work.id}>{work.title}</Link></td>
-             </tr>
+              <li> 
+<Link to={'/werke/' + work.id}>
+               <span className="year">{work.year}</span> 
+               <span className="title">{work.title}</span>
+</Link>
+             </li>
             ))
         }
-        </table>
+        </ol>
+        </div>
       </main>
     );
   }
@@ -127,7 +130,7 @@ class Work extends SmallHeaderComponent {
   constructor(props) {
     super(props);
   }
- 
+
   render() {
     var work = data.works[this.props.params.workId];
     return (
@@ -136,9 +139,7 @@ class Work extends SmallHeaderComponent {
         <article>
         <h2>{work.title}</h2>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
-        <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div dangerouslySetInnerHTML={{__html: this.state.content}} />
         <h3>Ver&ouml;ffentlicht in </h3>
         <ul className="publishedIn">
         {
@@ -164,24 +165,27 @@ class Editions extends SmallHeaderComponent {
  
   render() {
     return (
-      <main className="editions">
+      <main className="editions list">
         <div className="search">
           <input type="text" placeholder="Ausgaben durchsuchen"
                  value={this.state.value} onChange={this.handleChange} />
         </div>
-        <table>
+        <div className="list">
+        <ol>
         {
           editionsByYear
             .filter((edition) => containsSearchTerm(edition, this.state.search, ['year', 'type', 'title']))
             .map((edition) => (
-              <tr> 
-               <td>{edition.year}</td>
-               <td>{edition.type}</td>
-               <td><Link to={'/ausgaben/' + edition.id}>{edition.title}</Link></td>
-             </tr>
+              <li>
+              <Link to={'/ausgaben/' + edition.id}>
+               <span className="year">{edition.year}</span>
+               <span className="title">{edition.title}</span>
+              </Link>
+              </li>
             ))
         }
-        </table>
+        </ol>
+        </div>
       </main>
     );
   }
