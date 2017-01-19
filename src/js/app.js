@@ -1,28 +1,14 @@
 var data = {/*DATA*/};
 
-function getYearForWork(work) {
- var years = work.publishedIn
-   .map((edition) => edition.replace(/.*\//, ''))
-   .map((year) => parseInt(year));
- return Math.min.apply(Math, years);
-}
-
-var worksByYear = Object.keys(data.works)
- .map((id) => { data.works[id].id = id; return data.works[id]; })
- .map((work) => { work.year = getYearForWork(work); return work; })
- .sort((work1, work2) => work1.year - work2.year);
-
-var editionsByYear = Object.keys(data.editions)
- .map((id) => { data.editions[id].id = id; return data.editions[id]; })
- .sort((edition1, edition2) => edition1.year - edition2.year);
- 
-function containsSearchTerm(object, term, keys) {
+function isSearchMatch(term, props) {
   var lowerCaseTerm = term.toLowerCase();
-  return Object.keys(object)
-   .filter((key) => keys.indexOf(key) >= 0)
-   .map((key) => object[key].toString().toLowerCase())
-   .filter((val) => val.indexOf(lowerCaseTerm) >= 0)
-   .length > 0;
+  return (object) => {
+    return Object.keys(object)
+      .filter((prop) => props.indexOf(prop) >= 0)
+      .map((prop) => object[prop].toString().toLowerCase())
+      .filter((val) => val.indexOf(lowerCaseTerm) >= 0)
+      .length > 0;
+  }
 }
 
 class Header extends React.Component {
@@ -108,15 +94,16 @@ class Works extends SmallHeaderComponent {
         <div className="list">
         <ol>
         {
-          worksByYear
-            .filter((work) => containsSearchTerm(work, this.state.search, ['year', 'type', 'title']))
+          data.worksByYear
+            .map((workId) => data.works[workId])
+            .filter(isSearchMatch(this.state.search, ['year', 'title']))
             .map((work) => (
               <li> 
-<Link to={'/werke/' + work.id}>
-               <span className="year">{work.year}</span> 
-               <span className="title">{work.title}</span>
-</Link>
-             </li>
+              <Link to={'/werke/' + work.id}>
+              <span className="year">{work.year}</span> 
+              <span className="title">{work.title}</span>
+              </Link>
+              </li>
             ))
         }
         </ol>
@@ -129,6 +116,13 @@ class Works extends SmallHeaderComponent {
 class Work extends SmallHeaderComponent {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    super.componentDidMount();
+    fetch('/werke/' + this.props.params.workId + '.json')
+      .then((rsp) => rsp.json())
+      .then((json) => this.setState({content: json.content}));
   }
 
   render() {
@@ -173,13 +167,14 @@ class Editions extends SmallHeaderComponent {
         <div className="list">
         <ol>
         {
-          editionsByYear
-            .filter((edition) => containsSearchTerm(edition, this.state.search, ['year', 'type', 'title']))
+          data.editionsByYear
+            .map((editionId) => data.editions[editionId])
+            .filter(isSearchMatch(this.state.search, ['year', 'title']))
             .map((edition) => (
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-               <span className="year">{edition.year}</span>
-               <span className="title">{edition.title}</span>
+              <span className="year">{edition.year}</span>
+              <span className="title">{edition.title}</span>
               </Link>
               </li>
             ))
