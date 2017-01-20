@@ -204,6 +204,7 @@ class Edition extends SmallHeaderComponent {
         <article>
         <h2>{edition.title}</h2>
         <div className="meta">Jahr: {edition.year}</div>
+<Link to={edition.dnb}>{edition.dnb}</Link>
         </article>
       </main> 
     );
