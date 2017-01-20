@@ -12,6 +12,7 @@ var minifyHtml = require('gulp-htmlmin')
 var rename = require('gulp-rename');
 var markdown = require('gulp-markdown');
 var jeditor = require('gulp-json-editor');
+var imagemin = require('gulp-imagemin');
 
 var serve = false;
 
@@ -62,6 +63,7 @@ gulp.task('js', ['data'], function(cb) {
 
 gulp.task('imgs', function() {
   return gulp.src('src/imgs/**/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('www/imgs/'))
     .pipe(_if(serve, browserSync.stream()));
 });
