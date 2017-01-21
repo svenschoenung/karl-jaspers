@@ -153,7 +153,7 @@ class EditionList extends React.Component {
             .map((edition) => 
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-              <img alt="Cover" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.100px.jpg'}/>
+              <img alt="Cover" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.100px.png'}/>
               <div><span className="title">{edition.title} ({edition.year})</span><br/>{edition.pages} Seiten, {edition.publisher}</div>
               </Link>
               </li>
@@ -246,8 +246,8 @@ class Edition extends SmallHeaderComponent {
         </nav>
         <article>
         <h2>{edition.title}</h2>
-        <a href={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.jpg'}>
-        <img className="edition-preview" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.200px.jpg'}/>
+        <a href={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.png'}>
+        <img className="edition-preview" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.200px.png'}/>
         </a>
         <div className="info">
         {edition.year} <br/>
@@ -256,7 +256,7 @@ class Edition extends SmallHeaderComponent {
         </div>
         <h3>Enthaltene Werke</h3>
         <h3>Externe Links</h3>
-        <Link to={edition.dnb}>{edition.dnb}</Link>
+        <a href={edition.dnb}>{edition.dnb}</a>
         </article>
       </main> 
     );
