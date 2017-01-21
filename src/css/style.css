@@ -187,31 +187,38 @@ article h2 {
   line-height:1em;
 }
 
+article h3 {
+  clear:both;
+}
 
+article .info {
+  display:inline-block;
+  margin:10px;  
+}
 
-ul.publishedIn {
+ul.edition-list {
   margin:0px;
   padding:0px;
 }
 
-ul.publishedIn li {
+ul.edition-list li {
   list-style-type:none;
   margin:0px;
   padding:0px;
 }
 
-ul.publishedIn li a:hover {
+ul.edition-list li a:hover {
   background:#eee;
 }
 
-ul.publishedIn li a {
+ul.edition-list li a {
   display:block;
   text-decoration:none;
   color:black;
   padding:10px;
 } 
 
-ul.publishedIn li a img {
+ul.edition-list li a img {
   width:40px;
   height:60px;
   margin-right:10px;
@@ -219,15 +226,27 @@ ul.publishedIn li a img {
   display:inline-block; 
 }
 
-ul.publishedIn li a > * {
+ul.edition-list li a > * {
   display:inline-block; 
 }
 
-ul.publishedIn li .title {
+ul.edition-list li .title {
   font-family: 'Amiri',serif;
   font-size:120%;
 }
 
-ul.publishedIn li {
+ul.edition-list li {
   font-family:'Arsenal',sans-serif,Arial,Helvetica;
+}
+
+.edition-preview {
+  float:left;
+  padding:10px; 
+  max-width:200px;
+  max-height:200px;
+}
+
+.edition-preview:hover {
+  opacity:0.6;
+  background:#eee;
 }

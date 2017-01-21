@@ -135,19 +135,31 @@ class Work extends SmallHeaderComponent {
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.content}} />
         <h3>Ver&ouml;ffentlicht in </h3>
-        <ul className="publishedIn">
+        <EditionList editions={work.publishedIn}/>
+        </article>
+      </main> 
+    );
+  }
+}
+
+class EditionList extends React.Component {
+
+  render() {
+    return (
+      <ul className="edition-list">
         {
-          work.publishedIn.map((editionId) => data.editions[editionId])
+          this.props.editions.map((editionId) => data.editions[editionId])
             .sort((edition1, edition2) => edition1.year - edition2.year)
             .map((edition) => 
               <li>
-<Link to={'ausgaben/' + edition.id}>
-<img alt="Cover" src={'bilder/werke/' + edition.id + '.png'}/><div><span className="title">{edition.title} ({edition.year})</span><br/>{edition.pages} Seiten, {edition.publisher}</div></Link></li>
+              <Link to={'/ausgaben/' + edition.id}>
+              <img alt="Cover" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.100px.jpg'}/>
+              <div><span className="title">{edition.title} ({edition.year})</span><br/>{edition.pages} Seiten, {edition.publisher}</div>
+              </Link>
+              </li>
             )
         }
-        </ul>
-        </article>
-      </main> 
+      </ul>
     );
   }
 }
@@ -156,7 +168,7 @@ class Editions extends SmallHeaderComponent {
   constructor(props) {
     super(props);
   }
- 
+
   render() {
     return (
       <main className="editions list">
@@ -186,11 +198,42 @@ class Editions extends SmallHeaderComponent {
   }
 }
 
+class EditionVariants extends SmallHeaderComponent {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    var editionIds = data.editionsByName[this.props.params.editionName];
+    var editions = editionIds.map((editionId) => data.editions[editionId]);
+    return (
+     <main className="editions-variants">
+       <nav className="breadcrumb">
+         <Link to="/ausgaben">Ausgaben</Link> &gt; {editions[0].title} 
+       </nav>
+       <article>
+       <h3>Auflagen</h3>
+       <EditionList editions={editionIds}/>
+       </article>
+     </main>
+    );
+  }
+}
+
+
 class Edition extends SmallHeaderComponent {
   constructor(props) {
     super(props);
   }
- 
+
+  componentDidMount() {
+    super.componentDidMount();
+    fetch('/ausgaben/' + this.props.params.editionName + '/' +
+          this.props.params.editionYear + '.json')
+      .then((rsp) => rsp.json())
+      .then((json) => this.setState({content: json.content}));
+  }
+
   render() {
     var editionName = this.props.params.editionName;
     var editionYear = this.props.params.editionYear;
@@ -203,8 +246,17 @@ class Edition extends SmallHeaderComponent {
         </nav>
         <article>
         <h2>{edition.title}</h2>
-        <div className="meta">Jahr: {edition.year}</div>
-<Link to={edition.dnb}>{edition.dnb}</Link>
+        <a href={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.jpg'}>
+        <img className="edition-preview" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '.200px.jpg'}/>
+        </a>
+        <div className="info">
+        {edition.year} <br/>
+        {edition.publisher}
+        <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
+        </div>
+        <h3>Enthaltene Werke</h3>
+        <h3>Externe Links</h3>
+        <Link to={edition.dnb}>{edition.dnb}</Link>
         </article>
       </main> 
     );
@@ -262,6 +314,7 @@ class AppRoutes extends React.Component {
           <Route path="/werke" component={Works}/>
           <Route path="/werke/:workId" component={Work}/>
           <Route path="/ausgaben" component={Editions}/>
+          <Route path="/ausgaben/:editionName" component={EditionVariants}/>
           <Route path="/ausgaben/:editionName/:editionYear" component={Edition}/>
         </Route>
       </Router>

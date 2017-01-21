@@ -48,8 +48,8 @@ function jsData() {
   data = addYearAndIdToWorks(data);
   data = addIdAndNameToEditions(data);
 
-  var worksByYear = sortWorksByYear(data).map((work) => work.id);
-  var editionsByYear = sortEditionsByYear(data).map((edition) => edition.id);
+  var worksByYear = sortWorksByYear(data);
+  var editionsByYear = sortEditionsByYear(data);
 
   var editionsByName = editionsByYear.reduce((byName, edition) => {
     byName[edition.name] = byName[edition.name] || [];
@@ -60,8 +60,8 @@ function jsData() {
   return JSON.stringify({
     works: data.works,
     editions: data.editions,
-    worksByYear: worksByYear,
-    editionsByYear: editionsByYear,
+    worksByYear: worksByYear.map((work) => work.id),
+    editionsByYear: editionsByYear.map((edition) => edition.id),
     editionsByName: editionsByName
   });
 }
