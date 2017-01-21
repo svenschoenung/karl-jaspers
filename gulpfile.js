@@ -12,7 +12,9 @@ var rename = require('gulp-rename');
 var markdown = require('gulp-markdown');
 var jeditor = require('gulp-json-editor');
 var imagemin = require('gulp-imagemin');
+var resize = require('gulp-image-resize');
 
+var merge = require('merge-stream');
 var through = require('through2').obj;
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
@@ -79,7 +81,16 @@ gulp.task('js', function(cb) {
 });
 
 gulp.task('imgs', function() {
-  return gulp.src('src/imgs/**/*')
+  var imgs = gulp.src('src/imgs/*')
+  var imgsEditions = gulp.src('src/imgs/ausgaben/**/*', {base:'src/imgs/'});
+  var imgsEditions100 = gulp.src('src/imgs/ausgaben/**/*', {base:'src/imgs/'})
+    .pipe(resize({width:100, height:100, crop:false}))
+    .pipe(rename({suffix:'.100px'}))
+  var imgsEditions200 = gulp.src('src/imgs/ausgaben/**/*', {base:'src/imgs/'})
+    .pipe(resize({width:200, height:200, crop:false}))
+    .pipe(rename({suffix:'.200px'}))
+  
+  return merge(imgs, imgsEditions, imgsEditions100, imgsEditions200) 
     .pipe(imagemin())
     .pipe(gulp.dest('www/imgs/'))
     .pipe(_if(serve, browserSync.stream()));
