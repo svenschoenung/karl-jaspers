@@ -208,9 +208,8 @@ gulp.task('serve', function(cb) {
     gulp.watch('src/index.html', ['html']);
     gulp.watch('src/css/**/*.css', ['css']);
     gulp.watch('src/js/**/*.js', ['js']);
-    gulp.watch('src/data.json', ['js']);
     gulp.watch('src/imgs/**/*', ['imgs']);
-    gulp.watch('src/data/**/*', ['json']);
+    gulp.watch('src/data/**/*', ['json', 'js']);
 
     cb();
   });
