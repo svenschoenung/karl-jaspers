@@ -1,5 +1,36 @@
 {
   "works": { 
+    "allgemeine-psychopathologie": {
+      "title": "Allgemeine Psychopathologie",
+      "publishedIn": [
+        "allgemeine-psychopathologie/1913",
+        "allgemeine-psychopathologie/1920",
+        "allgemeine-psychopathologie/1923"
+      ]
+    },
+    "psychologie-der-weltanschauungen": {
+      "title": "Psychologie der Weltanschauungen",
+      "publishedIn": [
+        "psychologie-der-weltanschauungen/1919"
+      ]
+    },
+    "max-weber": {
+      "title": "Max Weber",
+      "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
+      "publishedIn": [
+        "max-weber/1921",
+        "mitverantwortlich/1982",
+        "mitverantwortlich/1968"
+      ]
+    },
+    "strindberg-und-van-gogh": {
+      "title": "Strindberg und van Gogh",
+      "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
+      "publishedIn": [
+        "strindberg-und-van-gogh/1922"
+      ]
+    },
+
     "rede-zur-verleihung-des-friedenspreises-des-deutschen-buchhandels-1958": {
       "title": "Rede zur Verleihung des Friedenspreises des Deutschen Buchhandels 1958",
       "publishedIn": [
@@ -24,13 +55,6 @@
     },
     "unsere-zukunft-und-goethe": {
       "title": "Unsere Zukunft und Goethe",
-      "publishedIn": [
-        "mitverantwortlich/1982",
-        "mitverantwortlich/1968"
-      ]
-    },
-    "max-weber": {
-      "title": "Max Weber",
       "publishedIn": [
         "mitverantwortlich/1982",
         "mitverantwortlich/1968"
@@ -192,6 +216,106 @@
     }
   },
   "editions": {
+    "allgemeine-psychopathologie/1913": {
+      "title": "Allgemeine Psychopathologie",
+      "subtitle": "Ein Leitfaden für Studierende, Ärzte und Psychologen",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 338,
+      "dnb": "http://d-nb.info/580991040",
+      "google": "https://books.google.de/books?id=8TwVAAAAMAAJ",
+      "year": 1913
+    },
+    "psychologie-der-weltanschauungen/1919": {
+      "title": "Psychologie der Weltanschauungen",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 428,
+      "dnb": "http://d-nb.info/580991024",
+      "openlib": "https://openlibrary.org/books/OL24528503M/",
+      "scribd": "https://www.scribd.com/doc/304777694/",
+      "links": [{
+        "url": "http://link.springer.com/book/10.1007/978-3-662-05505-2",
+        "desc": "Springer Link" 
+      }],
+      "year": 1919
+    },
+    "allgemeine-psychopathologie/1920": {
+      "title": "Allgemeine Psychopathologie",
+      "subtitle": "Für Studierende, Ärzte und Psychologen",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 2,
+      "edition_desc": "2. neubearbeitete Auflage",
+      "pages": 416,
+      "dnb": "http://d-nb.info/580991059",
+      "google": "https://books.google.de/books?id=RGCqBgAAQBAJ",
+      "scribd": "https://www.scribd.com/doc/316019211/",
+      "links": [{
+        "url": "http://link.springer.com/book/10.1007/978-3-662-26726-4",
+        "desc": "Springer Link" 
+      }],
+      "year": 1920
+    },
+    "max-weber/1921": {
+      "title": "Max Weber",
+      "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
+      "publisher": "J.C.B. Mohr",
+      "publisher_city": "Tübingen",
+      "edition": 1,
+      "pages": 30,
+      "dnb": "http://d-nb.info/574091734",
+      "google": "https://books.google.de/books?id=H38CAAAAMAAJ",
+      "year": 1921
+    },
+    "strindberg-und-van-gogh/1922": {
+      "title": "Strindberg und van Gogh",
+      "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
+      "publisher": "E. Bircher",
+      "publisher_city": "Leipzig",
+      "edition": 1,
+      "pages": 131,
+      "openlib": "https://openlibrary.org/books/OL6648014M/",
+      "dnb": "http://d-nb.info/580274470",
+      "year": 1922
+    },
+
+
+    "allgemeine-psychopathologie/1923": {
+      "title": "Allgemeine Psychopathologie",
+      "subtitle": "Für Studierende, Ärzte und Psychologen",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 3,
+      "edition_desc": "3. vermehrte und verbesserte Auflage",
+      "pages": 460,
+      "openlib": "https://openlibrary.org/books/OL15332085M/",
+      "links": [{
+        "url": "http://link.springer.com/book/10.1007/978-3-662-36704-9",
+        "desc": "Springer Link" 
+      }],
+      "year": 1923
+    },
+
+    "strindberg-und-van-gogh/1926": {
+      "title": "Strindberg und van Gogh",
+      "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
+      "publisher": "Julius Springer",
+      "publisher_city": "Berlin",
+      "edition": 2,
+      "edition_desc": "2. ergänzte Auflage",
+      "pages": 151,
+      "google": "https://books.google.de/books?id=5ezPBgAAQBAJ",
+      "openlib": "https://openlibrary.org/books/OL6756615M/",
+      "scribd": "https://www.scribd.com/document/323103048/",
+      "dnb": "http://d-nb.info/580274489",
+      "year": 1926
+    },
+
+
+
     "mitverantwortlich/1982": {
       "title": "Mitverantwortlich",
       "subtitle": "Ein philosophisch politisches Lesebuch",
