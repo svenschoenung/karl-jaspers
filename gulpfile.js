@@ -20,6 +20,8 @@ var through = require('through2').obj;
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var glob = require('glob');
+var touch = require('touch');
+var mkdirp = require('mkdirp');
 
 var fs = require('fs');
 var path = require('path');
@@ -39,6 +41,19 @@ gulp.task('css', function() {
     .pipe(_if(!serve, minifyCss()))
     .pipe(gulp.dest('www/css'))
     .pipe(_if(serve, browserSync.stream()));
+});
+
+gulp.task('md', function() {
+  var data = require('./src/data/data.json');
+  Object.keys(data.editions).forEach((edition) => {
+    mkdirp.sync(path.dirname('./src/data/ausgaben/' + edition));
+    touch.sync('./src/data/ausgaben/' + edition + '.md');
+  });
+  Object.keys(data.works).forEach((work) => {
+    mkdirp.sync('./src/data/werke/');
+    touch.sync('./src/data/werke/' + work + '.md');
+  });
+
 });
 
 function readData() {
