@@ -19,6 +19,7 @@ var merge = require('merge-stream');
 var through = require('through2').obj;
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
+var glob = require('glob');
 
 var fs = require('fs');
 var path = require('path');
@@ -140,6 +141,9 @@ function addIdAndNameToEditions(data) {
     var edition = data.editions[editionId]; 
     edition.id = editionId;
     edition.name = editionId.replace(/\/.*/, '');
+    edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
+      .map((f) => path.parse(f).name)
+      .sort((f) => ['umschlag', 'cover', 'einband', 'titelseite']);
   });
   return data;
 }

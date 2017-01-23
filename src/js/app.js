@@ -153,7 +153,7 @@ class EditionList extends React.Component {
             .map((edition) => 
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-              <img alt="Cover" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.100px.png'}/>
+              <img alt="Cover" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/' + edition.images[0] + '.100px.png'}/>
               <div><span className="title">{edition.title} ({edition.year})</span><br/>{edition.pages} Seiten, {edition.publisher}</div>
               </Link>
               </li>
@@ -239,6 +239,8 @@ class Edition extends SmallHeaderComponent {
     var editionYear = this.props.params.editionYear;
     var editionId = editionName + '/' + editionYear;
     var edition = data.editions[editionId];
+    var image = '/imgs/ausgaben/' + edition.name + '/' +
+                edition.year + '/' + edition.images[0]; 
     return (
       <main className="edition">
         <nav className="breadcrumb">
@@ -246,8 +248,8 @@ class Edition extends SmallHeaderComponent {
         </nav>
         <article>
         <h2>{edition.title}</h2>
-        <a href={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.png'}>
-        <img className="edition-preview" src={'/imgs/ausgaben/' + edition.name + '/' + edition.year + '/cover.200px.png'}/>
+        <a href={image + '.png'}>
+        <img className="edition-preview" src={image + '.200px.png'}/>
         </a>
         <div className="info">
         {edition.year} <br/>
