@@ -13,6 +13,7 @@ var markdown = require('gulp-markdown');
 var jeditor = require('gulp-json-editor');
 var imagemin = require('gulp-imagemin');
 var gm = require('gulp-gm');
+var changed = require('gulp-changed');
 
 var merge = require('merge-stream');
 var through = require('through2').obj;
@@ -83,18 +84,23 @@ gulp.task('js', function(cb) {
 gulp.task('imgs', function() {
   var base = {base:'src/imgs/'};
 
-  var imgs = gulp.src('src/imgs/*.{jpg,png,svg}');
+  var imgs = gulp.src('src/imgs/*.{jpg,png,svg}')
+    .pipe(changed('www/imgs/'));
 
   var imgsEditions = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
+    .pipe(rename({extname:'.png'}))
+    .pipe(changed('www/imgs/'))
     .pipe(gm((file) => file.setFormat('png')));
 
   var imgsEditions100 = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
+    .pipe(rename({suffix:'.100px', extname:'.png'}))
+    .pipe(changed('www/imgs/'))
     .pipe(gm((file) => file.resize(100, 100).setFormat('png')))
-    .pipe(rename({suffix:'.100px'}))
 
   var imgsEditions200 = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
+    .pipe(rename({suffix:'.200px', extname:'.png'}))
+    .pipe(changed('www/imgs/'))
     .pipe(gm((file) => file.resize(200, 200).setFormat('png')))
-    .pipe(rename({suffix:'.200px'}))
   
   return merge(imgs, imgsEditions, imgsEditions100, imgsEditions200) 
     .pipe(imagemin())
