@@ -11,7 +11,8 @@
     "psychologie-der-weltanschauungen": {
       "title": "Psychologie der Weltanschauungen",
       "publishedIn": [
-        "psychologie-der-weltanschauungen/1919"
+        "psychologie-der-weltanschauungen/1919",
+        "psychologie-der-weltanschauungen/1922"
       ]
     },
     "max-weber": {
@@ -30,6 +31,8 @@
         "strindberg-und-van-gogh/1922"
       ]
     },
+
+
 
     "rede-zur-verleihung-des-friedenspreises-des-deutschen-buchhandels-1958": {
       "title": "Rede zur Verleihung des Friedenspreises des Deutschen Buchhandels 1958",
@@ -229,13 +232,14 @@
     },
     "psychologie-der-weltanschauungen/1919": {
       "title": "Psychologie der Weltanschauungen",
-      "publisher": "Springer",
+      "publisher": "Julius Springer",
       "publisher_city": "Berlin",
       "edition": 1,
       "pages": 428,
       "dnb": "http://d-nb.info/580991024",
       "openlib": "https://openlibrary.org/books/OL24528503M/",
       "scribd": "https://www.scribd.com/doc/304777694/",
+      "google": "https://books.google.de/books?id=2IouAAAAYAAJ",
       "links": [{
         "url": "http://link.springer.com/book/10.1007/978-3-662-05505-2",
         "desc": "Springer Link" 
@@ -273,12 +277,27 @@
     "strindberg-und-van-gogh/1922": {
       "title": "Strindberg und van Gogh",
       "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
-      "publisher": "E. Bircher",
+      "publisher": "Ernst Bircher",
       "publisher_city": "Leipzig",
       "edition": 1,
       "pages": 131,
       "openlib": "https://openlibrary.org/books/OL6648014M/",
       "dnb": "http://d-nb.info/580274470",
+      "year": 1922
+    },
+    "psychologie-der-weltanschauungen/1922": {
+      "title": "Psychologie der Weltanschauungen",
+      "publisher": "Julius Springer",
+      "publisher_city": "Berlin",
+      "edition": 2,
+      "edition_desc": "2. durchgesehene Auflage",
+      "pages": 486,
+      "dnb": "http://d-nb.info/580991032",
+      "google": "https://books.google.de/books?id=KE0AAAAAMAAJa",
+      "links": [{
+        "url": "http://link.springer.com/book/10.1007/978-3-662-36361-4",
+        "desc": "Springer Link" 
+      }],
       "year": 1922
     },
 
