@@ -27,6 +27,12 @@
       "publishedIn": [
         "strindberg-und-van-gogh/1922"
       ]
+    },
+    "die-idee-der-universitaet": {
+      "title": "Die Idee der Universität",
+      "publishedIn": [
+        "die-idee-der-universitaet/1923"
+      ]
     }
   },
   "editions": {
@@ -110,6 +116,16 @@
         "desc": "Springer Link" 
       }],
       "year": 1922
+    },
+    "die-idee-der-universitaet/1923": {
+      "title": "Die Idee der Universität",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 81,
+      "dnb": "http://d-nb.info/574091645",
+      "google": "https://books.google.de/books?id=cb_3jgEACAAJ",
+      "year": 1923
     }
   }
 }
