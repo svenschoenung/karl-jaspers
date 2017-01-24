@@ -18,7 +18,8 @@
       "title": "Max Weber",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publishedIn": [
-        "max-weber/1921"
+        "max-weber/1921",
+        "max-weber/1926"
       ]
     },
     "strindberg-und-van-gogh": {
@@ -144,6 +145,17 @@
         "url": "http://link.springer.com/book/10.1007/978-3-642-99342-8",
         "desc": "Springer Link" 
       }],
+      "year": 1926
+    },
+    "max-weber/1926": {
+      "title": "Max Weber",
+      "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
+      "publisher": "J.C.B. Mohr",
+      "publisher_city": "Tübingen",
+      "edition": 2,
+      "pages": 27,
+      "dnb": "http://d-nb.info/574091742",
+      "google": "https://books.google.de/books?id=Vs5HAAAAYAAJ",
       "year": 1926
     }
   }
