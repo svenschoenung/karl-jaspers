@@ -35,6 +35,12 @@
       "publishedIn": [
         "die-idee-der-universitaet/1923"
       ]
+    },
+    "die-geistige-situation-der-zeit": {
+      "title": "Die geistige Situation der Zeit",
+      "publishedIn": [
+        "die-geistige-situation-der-zeit/1931"
+      ]
     }
   },
   "editions": {
@@ -156,6 +162,15 @@
       "pages": 27,
       "dnb": "http://d-nb.info/574091742",
       "google": "https://books.google.de/books?id=Vs5HAAAAYAAJ",
+      "year": 1926
+    },
+    "die-geistige-situation-der-zeit/1931": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berling, Leipzig",
+      "edition": 1,
+      "pages": 191,
+      "dnb": "http://d-nb.info/580274462",
       "year": 1926
     }
   }
