@@ -107,6 +107,7 @@
       "publisher_city": "Leipzig",
       "edition": 1,
       "pages": 131,
+      "series": "Arbeiten zur angewandten Psychiatrie, Band 5",
       "openlib": "https://openlibrary.org/books/OL6648014M/",
       "dnb": "http://d-nb.info/580274470",
       "year": 1922
@@ -144,6 +145,7 @@
       "edition": 2,
       "edition_desc": "2. ergänzte Auflage",
       "pages": 151,
+      "series": "Philosophische Forschungen, Band 3",
       "google": "https://books.google.de/books?id=5ezPBgAAQBAJ",
       "openlib": "https://openlibrary.org/books/OL6756615M/",
       "dnb": "http://d-nb.info/580274489",
@@ -171,6 +173,7 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 1,
       "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
       "dnb": "http://d-nb.info/580274462",
       "year": 1931
     },
@@ -180,6 +183,7 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 2,
       "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
       "dnb": "http://d-nb.info/580274462",
       "year": 1931
     }
