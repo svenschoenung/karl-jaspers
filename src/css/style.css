@@ -191,6 +191,10 @@ article h3 {
   clear:both;
 }
 
+article h4 {
+  margin-top:0px;
+}
+
 article .info {
   display:inline-block;
   margin:10px;  

@@ -132,6 +132,7 @@ class Work extends SmallHeaderComponent {
         <nav className="breadcrumb"><Link to="/werke">Werke</Link> &gt; {work.title}</nav>
         <article>
         <h2>{work.title}</h2>
+        {(work.subtitle) ? <h4>{work.subtitle}</h4> : null}
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.content}} />
         <h3>Ver&ouml;ffentlicht in </h3>
@@ -255,6 +256,7 @@ class Edition extends SmallHeaderComponent {
         </nav>
         <article>
         <h2>{edition.title}</h2>
+        {(edition.subtitle) ? <h4>{edition.subtitle}</h4> : null}
         <a href={image + '.png'}>
         <img className="edition-preview" src={image + '.200px.png'}/>
         </a>
