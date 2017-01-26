@@ -128,7 +128,7 @@ function addYearAndIdToWorks(data) {
   Object.keys(data.works).forEach((workId) => {
     var work = data.works[workId];
     var years = work.publishedIn
-      .map((edition) => edition.replace(/.*\//, ''))
+      .map((edition) => edition.replace(/.*\/(\d{4})\/?.*/, '$1'))
       .map((year) => parseInt(year));
     var year =  Math.min.apply(Math, years);
     work.year = year;
@@ -159,6 +159,7 @@ function addIdAndNameToEditions(data) {
     edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
       .map((f) => path.parse(f).name)
       .sort((f) => ['umschlag', 'cover', 'einband', 'titelseite']);
+console.log(edition)
   });
   return data;
 }

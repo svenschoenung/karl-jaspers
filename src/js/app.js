@@ -220,6 +220,14 @@ class EditionVariants extends SmallHeaderComponent {
   }
 }
 
+function editionPath(params) {
+  var path = params.editionName
+  path += '/' + params.editionYear;
+  if (params.editionNum) {
+    path += '/' + params.editionNum;
+  }
+  return path;
+}
 
 class Edition extends SmallHeaderComponent {
   constructor(props) {
@@ -228,8 +236,8 @@ class Edition extends SmallHeaderComponent {
 
   componentDidMount() {
     super.componentDidMount();
-    fetch('/ausgaben/' + this.props.params.editionName + '/' +
-          this.props.params.editionYear + '.json')
+
+    fetch('/ausgaben/' + editionPath(this.props.params) + '.json')
       .then((rsp) => rsp.json())
       .then((json) => this.setState({content: json.content}));
   }
@@ -237,10 +245,9 @@ class Edition extends SmallHeaderComponent {
   render() {
     var editionName = this.props.params.editionName;
     var editionYear = this.props.params.editionYear;
-    var editionId = editionName + '/' + editionYear;
+    var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
-    var image = '/imgs/ausgaben/' + edition.name + '/' +
-                edition.year + '/' + edition.images[0]; 
+    var image = '/imgs/ausgaben/' + editionId + '/' + edition.images[0]; 
     return (
       <main className="edition">
         <nav className="breadcrumb">
@@ -318,6 +325,7 @@ class AppRoutes extends React.Component {
           <Route path="/ausgaben" component={Editions}/>
           <Route path="/ausgaben/:editionName" component={EditionVariants}/>
           <Route path="/ausgaben/:editionName/:editionYear" component={Edition}/>
+          <Route path="/ausgaben/:editionName/:editionYear/:editionNum" component={Edition}/>
         </Route>
       </Router>
     );
