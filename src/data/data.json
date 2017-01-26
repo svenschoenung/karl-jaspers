@@ -39,7 +39,8 @@
     "die-geistige-situation-der-zeit": {
       "title": "Die geistige Situation der Zeit",
       "publishedIn": [
-        "die-geistige-situation-der-zeit/1931"
+        "die-geistige-situation-der-zeit/1931/1",
+        "die-geistige-situation-der-zeit/1931/2"
       ]
     }
   },
@@ -164,14 +165,23 @@
       "google": "https://books.google.de/books?id=Vs5HAAAAYAAJ",
       "year": 1926
     },
-    "die-geistige-situation-der-zeit/1931": {
+    "die-geistige-situation-der-zeit/1931/1": {
       "title": "Die geistige Situation der Zeit",
       "publisher": "De Gruyter",
-      "publisher_city": "Berling, Leipzig",
+      "publisher_city": "Berlin, Leipzig",
       "edition": 1,
       "pages": 191,
       "dnb": "http://d-nb.info/580274462",
-      "year": 1926
+      "year": 1931
+    },
+    "die-geistige-situation-der-zeit/1931/2": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 2,
+      "pages": 191,
+      "dnb": "http://d-nb.info/580274462",
+      "year": 1931
     }
   }
 }
