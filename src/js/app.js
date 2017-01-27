@@ -266,6 +266,19 @@ class Edition extends SmallHeaderComponent {
         <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
         </div>
         <h3>Enthaltene Werke</h3>
+        <div className="list">
+        <ol>
+        {
+          edition.contains.map((workId) => (
+	    <li> 
+            <Link to={'/werke/' + workId}>
+            <span className="title">{data.works[workId].title} ({data.works[workId].year})</span>
+            </Link>
+            </li>
+          ))
+        }
+        </ol>
+        </div>
         <h3>Externe Links</h3>
         <a href={edition.dnb}>{edition.dnb}</a>
         </article>

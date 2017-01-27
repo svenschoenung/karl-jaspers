@@ -159,6 +159,9 @@ function addIdAndNameToEditions(data) {
     edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
       .map((f) => path.parse(f).name)
       .sort((f) => ['umschlag', 'cover', 'einband', 'titelseite']);
+    edition.contains = Object.keys(data.works).filter((workId) =>
+      data.works[workId].publishedIn.indexOf(editionId) >= 0
+    );
   });
   return data;
 }

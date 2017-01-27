@@ -161,6 +161,14 @@ a .home-button {
   padding-right:10px;
 }
 
+main.edition .list ol, main.work .list ol {
+  font-size:100%;
+}
+main.edition .list li a, main.work .list li a {
+  padding:7px 7px;
+}
+
+
 nav.breadcrumb {
   font-family:'Arsenal',sans-serif,Arial,Helvetica;
   margin-bottom:10px;
@@ -248,6 +256,7 @@ ul.edition-list li {
   padding:10px; 
   max-width:200px;
   max-height:200px;
+  margin-bottom:20px;
 }
 
 .edition-preview:hover {
