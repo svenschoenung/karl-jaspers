@@ -14,12 +14,12 @@
         "psychologie-der-weltanschauungen/1922"
       ]
     },
-    "max-weber": {
+    "max-weber-trauerfeier": {
       "title": "Max Weber",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publishedIn": [
-        "max-weber/1921",
-        "max-weber/1926"
+        "max-weber-trauerfeier/1921",
+        "max-weber-trauerfeier/1926"
       ]
     },
     "strindberg-und-van-gogh": {
@@ -41,6 +41,12 @@
       "publishedIn": [
         "die-geistige-situation-der-zeit/1931/1",
         "die-geistige-situation-der-zeit/1931/2"
+      ]
+    },
+    "max-weber-wesen": {
+      "title": "Max Weber",
+      "publishedIn": [
+        "max-weber-wesen/1932"
       ]
     }
   },
@@ -89,7 +95,7 @@
       }],
       "year": 1920
     },
-    "max-weber/1921": {
+    "max-weber-trauerfeier/1921": {
       "title": "Max Weber",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publisher": "J.C.B. Mohr",
@@ -156,7 +162,7 @@
       }],
       "year": 1926
     },
-    "max-weber/1926": {
+    "max-weber-trauerfeier/1926": {
       "title": "Max Weber",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publisher": "J.C.B. Mohr",
@@ -186,6 +192,19 @@
       "series": "Sammlung Göschen, Band 1000",
       "dnb": "http://d-nb.info/580274462",
       "year": 1931
+    },
+    "max-weber-wesen/1932": {
+      "title": "Max Weber",
+      "subtitle": "Deutsches Wesen im politischen Denken, im Forschen und Philosophieren",
+      "publisher": "Gerhard Stalling",
+      "publisher_city": "Oldenburg",
+      "edition": 1,
+      "pages": 77,
+      "series": "Stalling-Bücherei, Schriften an die Nation, Nr. 4",
+      "dnb": "http://d-nb.info/366318519",
+      "openlib": "https://openlibrary.org/works/OL569924W/",
+      "google": "https://books.google.de/books/?id=yEIeAAAAIAAJ",
+      "year": 1932
     }
   }
 }
