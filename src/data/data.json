@@ -40,7 +40,9 @@
       "title": "Die geistige Situation der Zeit",
       "publishedIn": [
         "die-geistige-situation-der-zeit/1931/1",
-        "die-geistige-situation-der-zeit/1931/2"
+        "die-geistige-situation-der-zeit/1931/2",
+        "die-geistige-situation-der-zeit/1932/3",
+        "die-geistige-situation-der-zeit/1932/4"
       ]
     },
     "max-weber-wesen": {
@@ -204,6 +206,24 @@
       "dnb": "http://d-nb.info/366318519",
       "openlib": "https://openlibrary.org/works/OL569924W/",
       "google": "https://books.google.de/books/?id=yEIeAAAAIAAJ",
+      "year": 1932
+    },
+    "die-geistige-situation-der-zeit/1932/3": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 3,
+      "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
+      "year": 1932
+    },
+    "die-geistige-situation-der-zeit/1932/4": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 4,
+      "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
       "year": 1932
     }
   }
