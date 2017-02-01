@@ -57,6 +57,12 @@
       "publishedIn": [
         "vernunft-und-existenz/1935"
       ]
+    },
+    "nietzsche": {
+      "title": "Nietzsche",
+      "publishedIn": [
+        "nietzsche/1936"
+      ]
     }
   },
   "editions": {
@@ -255,6 +261,17 @@
       "dnb": "http://d-nb.info/580274497",
       "openlib": "https://openlibrary.org/books/OL15332601M",
       "year": 1935
+    },
+    "nietzsche/1936": {
+      "title": "Nietzsche",
+      "subtitle": "Einführung in das Verständnis seines Philosophierens",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 1,
+      "pages": 437,
+      "dnb": "http://d-nb.info/574091661",
+      "openlib": "https://openlibrary.org/works/OL570034W",
+      "year": 1936
     }
   }
 }
