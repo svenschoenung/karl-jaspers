@@ -42,7 +42,8 @@
         "die-geistige-situation-der-zeit/1931/1",
         "die-geistige-situation-der-zeit/1931/2",
         "die-geistige-situation-der-zeit/1932/3",
-        "die-geistige-situation-der-zeit/1932/4"
+        "die-geistige-situation-der-zeit/1932/4",
+        "die-geistige-situation-der-zeit/1933"
       ]
     },
     "max-weber-wesen": {
@@ -225,6 +226,16 @@
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
       "year": 1932
+    },
+    "die-geistige-situation-der-zeit/1933": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 5,
+      "edition_desc": "5. zum Teil neu bearbeitete Auflage",
+      "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
+      "year": 1933
     }
   }
 }
