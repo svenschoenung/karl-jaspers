@@ -51,6 +51,12 @@
       "publishedIn": [
         "max-weber-wesen/1932"
       ]
+    },
+    "vernunft-und-existenz": {
+      "title": "Vernunft und Existenz",
+      "publishedIn": [
+        "vernunft-und-existenz/1935"
+      ]
     }
   },
   "editions": {
@@ -233,9 +239,22 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 5,
       "edition_desc": "5. zum Teil neu bearbeitete Auflage",
+      "dnb": "",
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
       "year": 1933
+    },
+    "vernunft-und-existenz/1935": {
+      "title": "Vernunft und Existenz",
+      "subtitle": "5 Vorlesungen, gehalten vom 25.-29. März 1935",
+      "publisher": "Wolters",
+      "publisher_city": "Groningen",
+      "edition": 1,
+      "pages": 115,
+      "series": "Aula-voordrachten der Rijksuniversiteit te Groningen 1",
+      "dnb": "http://d-nb.info/580274497",
+      "openlib": "https://openlibrary.org/books/OL15332601M",
+      "year": 1935
     }
   }
 }
