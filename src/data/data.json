@@ -63,6 +63,18 @@
       "publishedIn": [
         "nietzsche/1936"
       ]
+    },
+    "descartes-und-die-philosophie": {
+      "title": "Descartes und die Philosophie",
+      "publishedIn": [
+        "descartes-und-die-philosophie/1937"
+      ]
+    },
+    "existenzphilosophie": {
+      "title": "Existenzphilosophie",
+      "publishedIn": [
+        "existenzphilosophie/1938"
+      ]
     }
   },
   "editions": {
@@ -73,9 +85,10 @@
       "publisher_city": "Berlin",
       "edition": 1,
       "pages": 338,
-      "dnb": "http://d-nb.info/580991040",
-      "google": "https://books.google.de/books?id=8TwVAAAAMAAJ",
-      "year": 1913
+      "links": {
+        "dnb": ["http://d-nb.info/580991040"],
+        "google": ["https://books.google.de/books?id=8TwVAAAAMAAJ"]
+      }
     },
     "psychologie-der-weltanschauungen/1919": {
       "title": "Psychologie der Weltanschauungen",
@@ -83,15 +96,16 @@
       "publisher_city": "Berlin",
       "edition": 1,
       "pages": 428,
-      "dnb": "http://d-nb.info/580991024",
-      "openlib": "https://openlibrary.org/books/OL24528503M/",
-      "scribd": "https://www.scribd.com/doc/304777694/",
-      "google": "https://books.google.de/books?id=2IouAAAAYAAJ",
-      "links": [{
-        "url": "http://link.springer.com/book/10.1007/978-3-662-05505-2",
-        "desc": "Springer Link" 
-      }],
-      "year": 1919
+      "links": {
+        "dnb": ["http://d-nb.info/580991024"],
+        "openlib": ["https://openlibrary.org/books/OL24528503M/"],
+        "scribd": ["https://www.scribd.com/doc/304777694/"],
+        "google": ["https://books.google.de/books?id=2IouAAAAYAAJ"],
+        "other": [{
+          "url": "http://link.springer.com/book/10.1007/978-3-662-05505-2",
+          "desc": "Springer Link" 
+        }]
+      }
     },
     "allgemeine-psychopathologie/1920": {
       "title": "Allgemeine Psychopathologie",
@@ -101,14 +115,18 @@
       "edition": 2,
       "edition_desc": "2. neubearbeitete Auflage",
       "pages": 416,
-      "dnb": "http://d-nb.info/580991059",
-      "google": "https://books.google.de/books?id=RGCqBgAAQBAJ",
-      "scribd": "https://www.scribd.com/doc/316019211/",
-      "links": [{
-        "url": "http://link.springer.com/book/10.1007/978-3-662-26726-4",
-        "desc": "Springer Link" 
-      }],
-      "year": 1920
+      "links": {
+        "dnb": [
+          "http://d-nb.info/580991059",
+          "http://d-nb.info/105483945X"
+        ],
+        "google": ["https://books.google.de/books?id=RGCqBgAAQBAJ"],
+        "scribd": ["https://www.scribd.com/doc/316019211/"],
+        "other": [{
+          "url": "http://link.springer.com/book/10.1007/978-3-662-26726-4",
+          "desc": "Springer Link" 
+        }]
+      }
     },
     "max-weber-trauerfeier/1921": {
       "title": "Max Weber",
@@ -117,9 +135,10 @@
       "publisher_city": "Tübingen",
       "edition": 1,
       "pages": 30,
-      "dnb": "http://d-nb.info/574091734",
-      "google": "https://books.google.de/books?id=H38CAAAAMAAJ",
-      "year": 1921
+      "links": {
+        "dnb": ["http://d-nb.info/574091734"],
+        "google": ["https://books.google.de/books?id=H38CAAAAMAAJ"]
+      }
     },
     "strindberg-und-van-gogh/1922": {
       "title": "Strindberg und van Gogh",
@@ -129,9 +148,10 @@
       "edition": 1,
       "pages": 131,
       "series": "Arbeiten zur angewandten Psychiatrie, Band 5",
-      "openlib": "https://openlibrary.org/books/OL6648014M/",
-      "dnb": "http://d-nb.info/580274470",
-      "year": 1922
+      "links": {
+        "openlib": ["https://openlibrary.org/books/OL6648014M/"],
+        "dnb": ["http://d-nb.info/580274470"]
+      }
     },
     "psychologie-der-weltanschauungen/1922": {
       "title": "Psychologie der Weltanschauungen",
@@ -140,13 +160,14 @@
       "edition": 2,
       "edition_desc": "2. durchgesehene Auflage",
       "pages": 486,
-      "dnb": "http://d-nb.info/580991032",
-      "google": "https://books.google.de/books?id=KE0AAAAAMAAJa",
-      "links": [{
-        "url": "http://link.springer.com/book/10.1007/978-3-662-36361-4",
-        "desc": "Springer Link" 
-      }],
-      "year": 1922
+      "links": {
+        "dnb": ["http://d-nb.info/580991032"],
+        "google": ["https://books.google.de/books?id=KE0AAAAAMAAJa"],
+        "other": [{
+          "url": "http://link.springer.com/book/10.1007/978-3-662-36361-4",
+          "desc": "Springer Link" 
+        }]
+      }
     },
     "die-idee-der-universitaet/1923": {
       "title": "Die Idee der Universität",
@@ -154,9 +175,10 @@
       "publisher_city": "Berlin",
       "edition": 1,
       "pages": 81,
-      "dnb": "http://d-nb.info/574091645",
-      "google": "https://books.google.de/books?id=cb_3jgEACAAJ",
-      "year": 1923
+      "links": {
+        "dnb": ["http://d-nb.info/574091645"],
+        "google": ["https://books.google.de/books?id=cb_3jgEACAAJ"]
+      }
     },
     "strindberg-und-van-gogh/1926": {
       "title": "Strindberg und van Gogh",
@@ -169,13 +191,14 @@
       "series": "Philosophische Forschungen, Band 3",
       "google": "https://books.google.de/books?id=5ezPBgAAQBAJ",
       "openlib": "https://openlibrary.org/books/OL6756615M/",
-      "dnb": "http://d-nb.info/580274489",
-      "scribd": "https://www.scribd.com/document/323103048/",
-      "links": [{
-        "url": "http://link.springer.com/book/10.1007/978-3-642-99342-8",
-        "desc": "Springer Link" 
-      }],
-      "year": 1926
+      "links": {
+        "dnb": ["http://d-nb.info/580274489"],
+        "scribd": ["https://www.scribd.com/document/323103048/"],
+        "other": [{
+          "url": "http://link.springer.com/book/10.1007/978-3-642-99342-8",
+          "desc": "Springer Link" 
+        }]
+      }
     },
     "max-weber-trauerfeier/1926": {
       "title": "Max Weber",
@@ -184,9 +207,10 @@
       "publisher_city": "Tübingen",
       "edition": 2,
       "pages": 27,
-      "dnb": "http://d-nb.info/574091742",
-      "google": "https://books.google.de/books?id=Vs5HAAAAYAAJ",
-      "year": 1926
+      "links": {
+        "dnb": ["http://d-nb.info/574091742"],
+        "google": ["https://books.google.de/books?id=Vs5HAAAAYAAJ"]
+      }
     },
     "die-geistige-situation-der-zeit/1931/1": {
       "title": "Die geistige Situation der Zeit",
@@ -195,8 +219,9 @@
       "edition": 1,
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
-      "dnb": "http://d-nb.info/580274462",
-      "year": 1931
+      "links": {
+        "dnb": ["http://d-nb.info/580274462"]
+      } 
     },
     "die-geistige-situation-der-zeit/1931/2": {
       "title": "Die geistige Situation der Zeit",
@@ -205,8 +230,9 @@
       "edition": 2,
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
-      "dnb": "http://d-nb.info/580274462",
-      "year": 1931
+      "links": {
+        "dnb": ["http://d-nb.info/580274462"]
+      }
     },
     "max-weber-wesen/1932": {
       "title": "Max Weber",
@@ -216,10 +242,11 @@
       "edition": 1,
       "pages": 77,
       "series": "Stalling-Bücherei, Schriften an die Nation, Nr. 4",
-      "dnb": "http://d-nb.info/366318519",
-      "openlib": "https://openlibrary.org/works/OL569924W/",
-      "google": "https://books.google.de/books/?id=yEIeAAAAIAAJ",
-      "year": 1932
+      "links": {
+        "dnb": ["http://d-nb.info/366318519"],
+        "openlib": ["https://openlibrary.org/works/OL569924W/"],
+        "google": ["https://books.google.de/books/?id=yEIeAAAAIAAJ"]
+      }
     },
     "die-geistige-situation-der-zeit/1932/3": {
       "title": "Die geistige Situation der Zeit",
@@ -227,8 +254,7 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 3,
       "pages": 191,
-      "series": "Sammlung Göschen, Band 1000",
-      "year": 1932
+      "series": "Sammlung Göschen, Band 1000"
     },
     "die-geistige-situation-der-zeit/1932/4": {
       "title": "Die geistige Situation der Zeit",
@@ -236,8 +262,7 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 4,
       "pages": 191,
-      "series": "Sammlung Göschen, Band 1000",
-      "year": 1932
+      "series": "Sammlung Göschen, Band 1000"
     },
     "die-geistige-situation-der-zeit/1933": {
       "title": "Die geistige Situation der Zeit",
@@ -245,10 +270,11 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 5,
       "edition_desc": "5. zum Teil neu bearbeitete Auflage",
-      "dnb": "http://d-nb.info/580274454",
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
-      "year": 1933
+      "links": {
+        "dnb": ["http://d-nb.info/580274454"]
+      }
     },
     "vernunft-und-existenz/1935": {
       "title": "Vernunft und Existenz",
@@ -258,9 +284,10 @@
       "edition": 1,
       "pages": 115,
       "series": "Aula-voordrachten der Rijksuniversiteit te Groningen 1",
-      "dnb": "http://d-nb.info/580274497",
-      "openlib": "https://openlibrary.org/books/OL15332601M",
-      "year": 1935
+      "links": {
+        "dnb": ["http://d-nb.info/580274497"],
+        "openlib": ["https://openlibrary.org/books/OL15332601M"]
+      }
     },
     "nietzsche/1936": {
       "title": "Nietzsche",
@@ -269,9 +296,33 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 1,
       "pages": 437,
-      "dnb": "http://d-nb.info/574091661",
-      "openlib": "https://openlibrary.org/works/OL570034W",
-      "year": 1936
+      "links": {
+        "dnb": ["http://d-nb.info/574091661"],
+        "openlib": ["https://openlibrary.org/works/OL570034W"]
+      }
+    },
+    "descartes-und-die-philosophie/1937": {
+      "title": "Descartes und die Philosophie",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 1,
+      "pages": 104,
+      "links": {
+        "dnb": ["http://d-nb.info/574091599"],
+        "openlib": ["https://openlibrary.org/works/OL570012W"]
+      }
+    },
+    "existenzphilosophie/1938": {
+      "title": "Existenzphilosophie",
+      "subtitle": "3 Vorlesungen, gehalten am Freien Deutschen Hochstift in Frankfurt am Main, Sept. 1937",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin, Leipzig",
+      "edition": 1,
+      "pages": 86,
+      "links": {
+        "dnb": ["http://d-nb.info/574091610"],
+        "openlib": ["https://openlibrary.org/books/OL19402744M"]
+      }
     }
   }
 }

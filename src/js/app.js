@@ -230,6 +230,10 @@ function editionPath(params) {
   return path;
 }
 
+function link(edition, key, desc) {
+  return { url: edition.links[key], desc: desc };
+}
+
 class Edition extends SmallHeaderComponent {
   constructor(props) {
     super(props);
@@ -249,6 +253,16 @@ class Edition extends SmallHeaderComponent {
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
     var image = '/imgs/ausgaben/' + editionId + '/' + edition.images[0]; 
+    var links = Object.keys(edition.links)
+      .map(key => (
+        (key == 'dnb') ? link(edition, key, 'Deutsche Nationalbibliothek') :
+        (key == 'google') ? link(edition, key, 'Google Books') :
+        (key == 'scribd') ? link(edition, key, 'Scribd') :
+        (key == 'openlib') ? link(edition, key, 'Open Library') :
+        edition.links[key]
+      ))
+      .sort((a,b) => a.desc.localeCompare(b.desc));
+
     return (
       <main className="edition">
         <nav className="breadcrumb">
@@ -280,7 +294,19 @@ class Edition extends SmallHeaderComponent {
         </ol>
         </div>
         <h3>Externe Links</h3>
-        <a href={edition.dnb}>{edition.dnb}</a>
+        <div className="list">
+        <ol>
+        {
+          links.map((link) => (
+	    <li> 
+            <a href={link.url}>
+            <span className="title">{link.desc}</span>
+            </a>
+            </li>
+          ))
+        }
+        </ol>
+        </div>
         </article>
       </main> 
     );

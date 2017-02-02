@@ -124,11 +124,15 @@ gulp.task('imgs', function() {
     .pipe(_if(serve, browserSync.stream()));
 });
 
+function getYearFromEdition(edition) {
+  return edition.replace(/.*\/(\d{4})\/?.*/, '$1');
+}
+
 function addYearAndIdToWorks(data) {
   Object.keys(data.works).forEach((workId) => {
     var work = data.works[workId];
     var years = work.publishedIn
-      .map((edition) => edition.replace(/.*\/(\d{4})\/?.*/, '$1'))
+      .map((edition) => getYearFromEdition(edition))
       .map((year) => parseInt(year));
     var year =  Math.min.apply(Math, years);
     work.year = year;
@@ -162,6 +166,7 @@ function addIdAndNameToEditions(data) {
     edition.contains = Object.keys(data.works).filter((workId) =>
       data.works[workId].publishedIn.indexOf(editionId) >= 0
     );
+    edition.year = getYearFromEdition(editionId);
   });
   return data;
 }
