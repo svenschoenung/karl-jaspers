@@ -258,9 +258,10 @@ class Edition extends SmallHeaderComponent {
         (key == 'dnb') ? link(edition, key, 'Deutsche Nationalbibliothek') :
         (key == 'google') ? link(edition, key, 'Google Books') :
         (key == 'scribd') ? link(edition, key, 'Scribd') :
-        (key == 'openlib') ? link(edition, key, 'Open Library') :
-        edition.links[key]
+        (key == 'openlib') ? link(edition, key, 'Open Library') : null
       ))
+      .filter(key => key != null)
+      .concat(edition.links.other || [])
       .sort((a,b) => a.desc.localeCompare(b.desc));
 
     return (
