@@ -286,6 +286,7 @@ class Edition extends SmallHeaderComponent {
           edition.contains.map((workId) => (
 	    <li> 
             <Link to={'/werke/' + workId}>
+            <span className="letter">{data.works[workId].title.charAt(0)}</span>
             <span className="title">{data.works[workId].title} ({data.works[workId].year})</span>
             </Link>
             </li>

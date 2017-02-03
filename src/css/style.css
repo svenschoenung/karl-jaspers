@@ -160,12 +160,19 @@ a .home-button {
   padding-right:10px;
 }
 
-.list li span.icon {
+.list li span.icon, .list li span.letter {
   margin-right:10px;
   width:60px;
+  height:32px;
   text-align:center;
   border:1px solid #eeeeee;
   background:white;
+}
+.list li span.letter {
+  font-size:32px;
+  line-height:36px;
+  vertical-align:middle;
+  font-family:'Amiri',serif;
 }
 
 .list li span.icon img {
