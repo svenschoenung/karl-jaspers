@@ -164,9 +164,6 @@ function addIdAndNameToEditions(data) {
     edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
       .map((f) => path.parse(f).name)
       .sort((f1, f2) => images.indexOf(f1) - images.indexOf(f2));
-console.log(editionId);
-console.log(edition.images);
-
     edition.contains = Object.keys(data.works).filter((workId) =>
       data.works[workId].publishedIn.indexOf(editionId) >= 0
     );
