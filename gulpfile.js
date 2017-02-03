@@ -156,13 +156,17 @@ gulp.task('json-works', function() {
 });
 
 function addIdAndNameToEditions(data) {
+  var images = ['umschlag', 'cover', 'einband', 'titelseite'];
   Object.keys(data.editions).forEach((editionId) => {
     var edition = data.editions[editionId]; 
     edition.id = editionId;
     edition.name = editionId.replace(/\/.*/, '');
     edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
       .map((f) => path.parse(f).name)
-      .sort((f) => ['umschlag', 'cover', 'einband', 'titelseite']);
+      .sort((f1, f2) => images.indexOf(f1) - images.indexOf(f2));
+console.log(editionId);
+console.log(edition.images);
+
     edition.contains = Object.keys(data.works).filter((workId) =>
       data.works[workId].publishedIn.indexOf(editionId) >= 0
     );
