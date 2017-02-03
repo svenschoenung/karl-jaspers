@@ -237,7 +237,9 @@
       "edition": 1,
       "pages": 340,
       "links": {
-        "dnb": ["http://d-nb.info/366261207"]
+        "dnb": ["http://d-nb.info/366261207"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99341-1"],
+        "google": ["https://books.google.de/books?id=nXk6vgAACAAJ"]
       }
     },
     "philosophie-2/1932": {
@@ -247,7 +249,8 @@
       "edition": 1,
       "pages": 441,
       "links": {
-        "dnb": ["http://d-nb.info/366261215"]
+        "dnb": ["http://d-nb.info/366261215"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99339-8"]
       }
     },
     "philosophie-3/1932": {
@@ -257,7 +260,9 @@
       "edition": 1,
       "pages": 237,
       "links": {
-        "dnb": ["http://d-nb.info/366261223"]
+        "dnb": ["http://d-nb.info/366261223"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99340-4"],
+        "google": ["https://books.google.de/books?id=RZ8hAQAAIAAJ"]
       }
     },
     "max-weber-wesen/1932": {
