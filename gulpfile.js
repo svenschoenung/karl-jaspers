@@ -100,7 +100,7 @@ gulp.task('js', function(cb) {
 gulp.task('imgs', function() {
   var base = {base:'src/imgs/'};
 
-  var imgs = gulp.src('src/imgs/*.{jpg,png,svg}')
+  var imgs = gulp.src('src/imgs/{links/,}*.{jpg,png,svg}')
     .pipe(changed('www/imgs/'));
 
   var imgsEditions = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)

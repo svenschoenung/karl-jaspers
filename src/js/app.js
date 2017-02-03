@@ -230,10 +230,6 @@ function editionPath(params) {
   return path;
 }
 
-function link(edition, key, desc) {
-  return { url: edition.links[key], desc: desc };
-}
-
 class Edition extends SmallHeaderComponent {
   constructor(props) {
     super(props);
@@ -248,6 +244,9 @@ class Edition extends SmallHeaderComponent {
   }
 
   render() {
+    var l = (edition, key, desc) =>
+      edition.links[key].map(url => ({ url: url, desc: desc, type: key }));
+
     var editionName = this.props.params.editionName;
     var editionYear = this.props.params.editionYear;
     var editionId = editionPath(this.props.params);
@@ -255,13 +254,13 @@ class Edition extends SmallHeaderComponent {
     var image = '/imgs/ausgaben/' + editionId + '/' + edition.images[0]; 
     var links = Object.keys(edition.links)
       .map(key => (
-        (key == 'dnb') ? link(edition, key, 'Deutsche Nationalbibliothek') :
-        (key == 'google') ? link(edition, key, 'Google Books') :
-        (key == 'scribd') ? link(edition, key, 'Scribd') :
-        (key == 'openlib') ? link(edition, key, 'Open Library') : null
-      ))
-      .filter(key => key != null)
-      .concat(edition.links.other || [])
+        (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :
+        (key == 'google') ? l(edition, key, 'Google Books') :
+        (key == 'scribd') ? l(edition, key, 'Scribd') :
+        (key == 'openlib') ? l(edition, key, 'Open Library') : 
+        (key == 'springer') ? l(edition, key, 'Springer Link') : []
+      ));
+    links = [].concat.apply([], links)
       .sort((a,b) => a.desc.localeCompare(b.desc));
 
     return (
@@ -301,6 +300,7 @@ class Edition extends SmallHeaderComponent {
           links.map((link) => (
 	    <li> 
             <a href={link.url}>
+            <span className="icon"><img src={'/imgs/links/' + link.type + '.png'}/></span>
             <span className="title">{link.desc}</span>
             </a>
             </li>

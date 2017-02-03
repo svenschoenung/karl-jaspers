@@ -101,10 +101,7 @@
         "openlib": ["https://openlibrary.org/books/OL24528503M/"],
         "scribd": ["https://www.scribd.com/doc/304777694/"],
         "google": ["https://books.google.de/books?id=2IouAAAAYAAJ"],
-        "other": [{
-          "url": "http://link.springer.com/book/10.1007/978-3-662-05505-2",
-          "desc": "Springer Link" 
-        }]
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-05505-2"]
       }
     },
     "allgemeine-psychopathologie/1920": {
@@ -122,10 +119,7 @@
         ],
         "google": ["https://books.google.de/books?id=RGCqBgAAQBAJ"],
         "scribd": ["https://www.scribd.com/doc/316019211/"],
-        "other": [{
-          "url": "http://link.springer.com/book/10.1007/978-3-662-26726-4",
-          "desc": "Springer Link" 
-        }]
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-26726-4"]
       }
     },
     "max-weber-trauerfeier/1921": {
@@ -163,10 +157,7 @@
       "links": {
         "dnb": ["http://d-nb.info/580991032"],
         "google": ["https://books.google.de/books?id=KE0AAAAAMAAJa"],
-        "other": [{
-          "url": "http://link.springer.com/book/10.1007/978-3-662-36361-4",
-          "desc": "Springer Link" 
-        }]
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-36361-4"]
       }
     },
     "die-idee-der-universitaet/1923": {
@@ -194,10 +185,7 @@
       "links": {
         "dnb": ["http://d-nb.info/580274489"],
         "scribd": ["https://www.scribd.com/document/323103048/"],
-        "other": [{
-          "url": "http://link.springer.com/book/10.1007/978-3-642-99342-8",
-          "desc": "Springer Link" 
-        }]
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99342-8"]
       }
     },
     "max-weber-trauerfeier/1926": {

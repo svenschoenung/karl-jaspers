@@ -64,6 +64,7 @@ header img {
 main {
   position:absolute;
   width:100%;
+  padding-bottom:50px;
 }
 
 main > * {
@@ -151,14 +152,25 @@ a .home-button {
   color:black;
 }
 
-.list li {
-  display:table-row;
-}
 .list li span {
-  display:table-cell;
+  display:inline-block;
 }
 .list li span.year {
+  display:inline-block;
   padding-right:10px;
+}
+
+.list li span.icon {
+  margin-right:10px;
+  width:60px;
+  text-align:center;
+  border:1px solid #eeeeee;
+  background:white;
+}
+
+.list li span.icon img {
+  height:32px;
+  vertical-align:middle;
 }
 
 main.edition .list ol, main.work .list ol {
