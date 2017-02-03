@@ -122,7 +122,7 @@ class Work extends SmallHeaderComponent {
     super.componentDidMount();
     fetch('/werke/' + this.props.params.workId + '.json')
       .then((rsp) => rsp.json())
-      .then((json) => this.setState({content: json.content}));
+      .then((json) => this.setState({desc: json.desc}));
   }
 
   render() {
@@ -134,7 +134,7 @@ class Work extends SmallHeaderComponent {
         <h2>{work.title}</h2>
         {(work.subtitle) ? <h4>{work.subtitle}</h4> : null}
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
-        <div dangerouslySetInnerHTML={{__html: this.state.content}} />
+        <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
         <h3>Ver&ouml;ffentlicht in </h3>
         <EditionList editions={work.publishedIn}/>
         </article>
@@ -240,7 +240,7 @@ class Edition extends SmallHeaderComponent {
 
     fetch('/ausgaben/' + editionPath(this.props.params) + '.json')
       .then((rsp) => rsp.json())
-      .then((json) => this.setState({content: json.content}));
+      .then((json) => this.setState({notes: json.notes}));
   }
 
   render() {
@@ -276,8 +276,15 @@ class Edition extends SmallHeaderComponent {
         <img className="edition-preview" src={image + '.200px.png'}/>
         </a>}
         <div className="info">
-        {edition.year} <br/>
+        {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.year} <br/>
         {edition.publisher}
+        {(edition.publisher_city) ? ' (' + edition.publisher_city + ')': null}
+        <br/>
+        <br/>
+        {edition.pages} Seiten
+	{(edition.series) ? <br/> : null}
+	{(edition.series) ? <br/> : null}
+	{(edition.series) ? edition.series : null}
         <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
         </div>
         <h3>Enthaltene Werke</h3>

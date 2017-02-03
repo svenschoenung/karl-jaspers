@@ -53,7 +53,6 @@ gulp.task('md', function() {
     mkdirp.sync('./src/data/werke/');
     touch.sync('./src/data/werke/' + work + '.md');
   });
-
 });
 
 function readData() {
@@ -193,7 +192,7 @@ gulp.task('json-work-detail', function() {
     .pipe(through(function(file, enc, cb) {
       var id = file.path.replace(/.*\/(.*).html$/, '$1');
       var json = Object.assign({}, data.works[id], {
-        content:file.contents.toString()
+        desc:file.contents.toString()
       });
       file.contents = new Buffer(JSON.stringify(json));
       cb(null, file);
@@ -209,7 +208,7 @@ gulp.task('json-edition-detail', function() {
     .pipe(through(function(file, enc, cb) {
       var id = file.path.replace(/.*\/(.*\/.*).html$/, '$1');
       var json = Object.assign({}, data.editions[id], {
-        content:file.contents.toString()
+        notes:file.contents.toString()
       });
       file.contents = new Buffer(JSON.stringify(json));
       cb(null, file);
