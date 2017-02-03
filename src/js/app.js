@@ -154,7 +154,7 @@ class EditionList extends React.Component {
             .map((edition) => 
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-              <img alt="Cover" src={'/imgs/ausgaben/' + edition.id + '/' + edition.images[0] + '.100px.png'}/>
+              { (edition.images[0]) ? <img alt="Cover" src={'/imgs/ausgaben/' + edition.id + '/' + edition.images[0] + '.100px.png'}/> : <div className="missing-cover">?</div>}
               <div><span className="title">{edition.title} ({edition.year})</span><br/>{(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.pages} Seiten, {edition.publisher}</div>
               </Link>
               </li>
@@ -251,7 +251,7 @@ class Edition extends SmallHeaderComponent {
     var editionYear = this.props.params.editionYear;
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
-    var image = '/imgs/ausgaben/' + editionId + '/' + edition.images[0]; 
+    var image = (edition.images[0]) ? '/imgs/ausgaben/' + editionId + '/' + edition.images[0] : null; 
     var links = Object.keys(edition.links || {})
       .map(key => (
         (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :
@@ -271,9 +271,10 @@ class Edition extends SmallHeaderComponent {
         <article>
         <h2>{edition.title}</h2>
         {(edition.subtitle) ? <h4>{edition.subtitle}</h4> : null}
+        {(!image) ? <div className="edition-preview">?</div> :
         <a href={image + '.png'}>
         <img className="edition-preview" src={image + '.200px.png'}/>
-        </a>
+        </a>}
         <div className="info">
         {edition.year} <br/>
         {edition.publisher}

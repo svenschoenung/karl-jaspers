@@ -257,6 +257,23 @@ ul.edition-list li a img {
   display:inline-block; 
 }
 
+ul.edition-list li a .missing-cover {
+  width:40px;
+  height:60px;
+  margin-right:10px;
+  vertical-align:top;
+  display:inline-block; 
+  line-height:60px;
+  font-size:50px;
+  background:white;
+  border:1px solid #ccc;
+  color:#ccc;
+  font-family:sans-serif;
+  text-align:center;
+}
+
+
+
 ul.edition-list li a > * {
   display:inline-block; 
 }
@@ -270,7 +287,7 @@ ul.edition-list li {
   font-family:'Arsenal',sans-serif,Arial,Helvetica;
 }
 
-.edition-preview {
+img.edition-preview {
   float:left;
   padding:10px; 
   max-width:200px;
@@ -278,7 +295,21 @@ ul.edition-list li {
   margin-bottom:20px;
 }
 
-.edition-preview:hover {
+div.edition-preview {
+  float:left;
+  padding:10px; 
+  width:150px;
+  height:200px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  line-height:200px;
+  font-family:sans-serif;
+  font-size:150px;
+  color:#eee;
+  text-align:center;
+}
+
+img.edition-preview:hover {
   opacity:0.6;
   background:#eee;
 }
