@@ -46,6 +46,14 @@
         "die-geistige-situation-der-zeit/1933"
       ]
     },
+    "philosophie": {
+      "title": "Philosophie",
+      "publishedIn": [
+        "philosophie-1/1932",
+        "philosophie-2/1932",
+        "philosophie-3/1932"
+      ]
+    },
     "max-weber-wesen": {
       "title": "Max Weber",
       "publishedIn": [
@@ -183,7 +191,7 @@
       "google": "https://books.google.de/books?id=5ezPBgAAQBAJ",
       "openlib": "https://openlibrary.org/books/OL6756615M/",
       "links": {
-        "dnb": ["http://d-nb.info/580274489"],
+        "dnb": ["http://d-nb.info/580274489", "http://d-nb.info/1050169646"],
         "scribd": ["https://www.scribd.com/document/323103048/"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-642-99342-8"]
       }
@@ -220,6 +228,36 @@
       "series": "Sammlung Göschen, Band 1000",
       "links": {
         "dnb": ["http://d-nb.info/580274462"]
+      }
+    },
+    "philosophie-1/1932": {
+      "title": "Philosophie Bd. 1, Philosophische Weltorientierung",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 340,
+      "links": {
+        "dnb": ["http://d-nb.info/366261207"]
+      }
+    },
+    "philosophie-2/1932": {
+      "title": "Philosophie Bd. 2, Existenzerhellung",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 441,
+      "links": {
+        "dnb": ["http://d-nb.info/366261215"]
+      }
+    },
+    "philosophie-3/1932": {
+      "title": "Philosophie Bd. 3, Metaphysik",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 237,
+      "links": {
+        "dnb": ["http://d-nb.info/366261223"]
       }
     },
     "max-weber-wesen/1932": {
