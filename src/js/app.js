@@ -252,7 +252,7 @@ class Edition extends SmallHeaderComponent {
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
     var image = '/imgs/ausgaben/' + editionId + '/' + edition.images[0]; 
-    var links = Object.keys(edition.links)
+    var links = Object.keys(edition.links || {})
       .map(key => (
         (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :
         (key == 'google') ? l(edition, key, 'Google Books') :
@@ -294,8 +294,9 @@ class Edition extends SmallHeaderComponent {
         }
         </ol>
         </div>
-        <h3>Externe Links</h3>
+        { (links.length == 0) ? null : 
         <div className="list">
+        <h3>Externe Links</h3>
         <ol>
         {
           links.map((link) => (
@@ -309,6 +310,7 @@ class Edition extends SmallHeaderComponent {
         }
         </ol>
         </div>
+        }
         </article>
       </main> 
     );
