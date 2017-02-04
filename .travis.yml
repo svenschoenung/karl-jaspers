@@ -6,6 +6,7 @@ addons:
   apt:
     packages:
       - sshpass
+      - graphicsmagick
   ssh_known_hosts: schoenung.org
 env:
   global:
