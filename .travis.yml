@@ -1,0 +1,21 @@
+sudo: false
+language: node_js
+node_js:
+  - "4"
+addons:
+  apt:
+    packages:
+      - sshpass
+  ssh_known_hosts: schoenung.org
+env:
+  global:
+    - secure: "Z4VzWkT9sXxLGYjNELXCOoieH9JInZIA24hbs1KE4phobL5+veoWwKYzgx5bMiM77Bg99XUmz5RDvssg6dFHYsnywwIVKcXwwFuWriT8TlZVCVZrEPliad/XNp908mA36yF9IVa9uSz6wDfAngWzlgBy31Ig6mJcjnIwAvM2TZTxuBb5oLSbjRIAKSjchIBNxV+fdE3POSeXXFHPC4FX/+ZUIVuNu3UTlqVaw0nnTfcWmN2aOYFVg9TTydJ7rkjlwZpp88NR+4xU6cteEMNtBWwl/5xnVzFCqgVwOn9QGR7MqrdJNgN5b4F9bnviCgFlyQwcF8G8UfRX/K3cFNovqBAhhObxLt7HcJGbO8XVoKxm53FjjnZNuvS8vJzyqiwhkHOhgU3dmlsIhaZlMQnMgl2bXOFisdeWt9F7SGaV2q4iB+54CFeeaIkRLEvdzbJ2cyjTZGLgPCXysE0kYu9WpRrUJhofIIPF9vL4smjxnI5iIVAPtPFkA4J2zK/Qy/W4GUanJby2fdABXkoeKz4887h8X+UcuC5GHsLOgV19hZCT10D7yCe13CdMQL++L9P3WCUQQfjCrXKCR057lqFxsz5Yw3+sDC4Bc6yCX89V0ohi28ZAwSP4t18NiCN2DYFlkAHRIvKjq08XuftGvFmWbFFeUhnHgL+e+Oe68mqSVho="
+    - secure: "ULlKXzc6dm9T5ilcyh3Wq7oXgvXzbAU2Fokdm0K5+9xMcSCuD7dSEe4mNbKwQ6qrZ5xfV1u4ZvTpstSVXUs1X5WYbGjtJQGu2j0b4fKarlOb/nmkpKOY8EjNGTwEJbuCbFBRglmQB3LWXGfbjvNFqMhZ6kTLB7zz6dYuHDhHrT/cwHDP+c/l4Nl8ZKXmJtzQFrPqyOAskTwRleYXI7SgxOpyR2VJWvfsO+jtP3SgX12QR6vEJyfQrHwJsiuvzBkGot+54p4rrg9qMDhdWof/f7ZXSaOrdfYE+p5DjI1Lb3eGu9F1JDZ5/2yhZ6+MZJPKpJXhE2VFin431oq8OIx+ugtKYFeuju3H5D/ZbxHGGaa4bl0WOksS/hMVOwYOI2ZFe6jdUGOYnFIiKnl1nUizD3laI/x9ncZogq24VTq9TcpXgk5k1n386/dkgPefytv71cp0qrLq7SxLHVMQHGL1SLdQrqzg7bz7n5nlovIFaEGtMmDqbii+T19wKQHMpyBIxBMFY7ubZxLX0qHoM6Y0VO0ntH3C4KQ+CepkLmn6AzsCrUs6v21S/iF4atf1R2iYkPO7rFdb0O5L6fnNbsflzagPTm5FP3hLeYU80bPExGRv9M3pIsTEqhSJivQN0wKkAM39Gh1i/5yjNewgl9Z3JZNo8EsKN1Ql3lWUNQ2irj0="
+script:
+  - npm run gulp
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
