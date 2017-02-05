@@ -84,6 +84,13 @@
       "editions": [
         "existenzphilosophie/1938"
       ]
+    },
+    "vom-lebendigen-geist-der-universitaet-und-vom-studieren": {
+      "title": "Vom lebendigen Geist der Universität und vom Studieren",
+      "subtitle": "Zwei Vorträge von Karl Jaspers und Fritz Ernst",
+      "editions": [
+        "vom-lebendigen-geist-der-universitaet-und-vom-studieren/1946"
+      ]
     }
   },
   "editions": {
@@ -367,6 +374,19 @@
       "links": {
         "dnb": ["http://d-nb.info/574091610"],
         "openlib": ["https://openlibrary.org/books/OL19402744M"]
+      }
+    },
+    "vom-lebendigen-geist-der-universitaet-und-vom-studieren/1946": {
+      "title": "Vom lebendigen Geist der Universität und vom Studieren",
+      "subtitle": "Zwei Vorträge von Karl Jaspers und Fritz Ernst",
+      "publisher": "L. Schneider",
+      "publisher_city": "Heidelberg",
+      "edition": 1,
+      "pages": 62,
+      "series": "Schriften der Wandlung 1",
+      "links": {
+        "dnb": ["http://d-nb.info/452184339"],
+        "google": ["https://books.google.de/books?id=hP0-AAAAIAAJ"]
       }
     }
   }
