@@ -25,7 +25,8 @@ function init(data) {
   data.editionsByYearAndTitle = sortEditionsByYearAndTitle(data);
   data.editionsByName = sortEditionsByName(data);
 
-  data.images = revisionImages(data);
+  data.images = revisionImages(data, 'www/*.{jpg,png,svg}');
+  data.linkImages = revisionImages(data, 'www/links/*.{jpg,png,svg}');
 
   return data;
 }
@@ -120,12 +121,13 @@ function sortEditionsByName(data) {
   return editionsByName;
 }
 
-function revisionImages(data) {
+function revisionImages(data, files) {
   var images = {};
-  glob.sync('www/*.{jgp,png,svg}').forEach(image => {
+  glob.sync(files).forEach(image => {
     var hash = revHash(fs.readFileSync(image));
+    var key = path.parse(image).name;
     var file = path.basename(image);
-    images[file] = ext(file, '_v-' + hash + path.extname(file));
+    images[key] = ext(file, '_v-' + hash + path.extname(file));
   });
   return images;
 }
