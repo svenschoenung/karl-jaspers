@@ -98,6 +98,12 @@
       "editions": [
         "nietzsche-und-das-christentum/1946"
       ]
+    },
+    "die-schuldfrage": {
+      "title": "Die Schuldfrage",
+      "editions": [
+        "die-schuldfrage/1946/2"
+      ]
     }
   },
   "editions": {
@@ -408,7 +414,7 @@
         "google": ["https://books.google.de/books?id=rTxCAQAAIAAJ"]
       }
     },
-   "max-weber/1946": {
+    "max-weber/1946": {
       "title": "Max Weber",
       "subtitle": "Politiker, Forscher, Philosoph",
       "publisher": "Storm",
@@ -418,6 +424,19 @@
       "links": {
         "dnb": ["http://d-nb.info/452185149"],
         "openlib": ["https://openlibrary.org/books/OL15332211M"]
+      }
+    },
+    "die-schuldfrage/1946/2": {
+      "title": "Die Schuldfrage",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 0,
+      "edition_desc": "Lizensausgabe",
+      "pages": 96,
+      "series": "Schriften zur Zeit, Heft 11",
+      "links": {
+        "dnb": ["http://d-nb.info/363875166"],
+        "openlib": ["https://openlibrary.org/books/OL6518321M"]
       }
     }
   }
