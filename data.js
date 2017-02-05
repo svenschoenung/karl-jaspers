@@ -25,6 +25,8 @@ function init(data) {
   data.editionsByYearAndTitle = sortEditionsByYearAndTitle(data);
   data.editionsByName = sortEditionsByName(data);
 
+  data.images = revisionImages(data);
+
   return data;
 }
 
@@ -116,6 +118,16 @@ function sortEditionsByName(data) {
     editionsByName[editionName].push(editionId);
   });
   return editionsByName;
+}
+
+function revisionImages(data) {
+  var images = {};
+  glob.sync('www/*.{jgp,png,svg}').forEach(image => {
+    var hash = revHash(fs.readFileSync(image));
+    var file = path.basename(image);
+    images[file] = ext(file, '_v-' + hash + path.extname(file));
+  });
+  return images;
 }
 
 module.exports.load = load;

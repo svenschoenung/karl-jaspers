@@ -17,7 +17,7 @@ class Header extends React.Component {
       <header className={this.props.size}>
         <h1>
         <Link to="/" aria-label="Zur Startseite">
-        <img alt="Karl Jaspers" src="/karl-jaspers.svg"/>
+        <img alt="Karl Jaspers" src={'/' + data.images['karl-jaspers.svg']}/>
         </Link>
         </h1>
       </header>
@@ -30,7 +30,7 @@ class HomeButton extends React.Component {
     return (
       <Link to={this.props.to} aria-label={this.props.label}>
       <div className="home-button" aria-hidden="true">
-        <img src={'/' + this.props.to + '.png'} role="button"/>
+        <img src={'/' + data.images[this.props.to + '.png']} role="button"/>
         <h2>{this.props.name}</h2>
       </div>
       </Link>
