@@ -113,6 +113,7 @@ gulp.task('json-work-detail', ['imgs'], function() {
     .pipe(markdown())
     .pipe(through(function(file, enc, cb) {
       var id = file.path.replace(/.*\/(.*).html$/, '$1');
+console.log(id);
       d.works[id].desc = file.contents.toString();
       file.contents = new Buffer(JSON.stringify(d.works[id]));
       cb(null, file);

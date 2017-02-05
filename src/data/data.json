@@ -55,10 +55,11 @@
         "philosophie-3/1932"
       ]
     },
-    "max-weber-wesen": {
+    "max-weber": {
       "title": "Max Weber",
       "editions": [
-        "max-weber-wesen/1932"
+        "max-weber/1932",
+        "max-weber/1946"
       ]
     },
     "vernunft-und-existenz": {
@@ -292,7 +293,7 @@
         "google": ["https://books.google.de/books?id=RZ8hAQAAIAAJ"]
       }
     },
-    "max-weber-wesen/1932": {
+    "max-weber/1932": {
       "title": "Max Weber",
       "subtitle": "Deutsches Wesen im politischen Denken, im Forschen und Philosophieren",
       "publisher": "Gerhard Stalling",
@@ -406,7 +407,18 @@
         "openlib": ["https://openlibrary.org/books/OL232092M"],
         "google": ["https://books.google.de/books?id=rTxCAQAAIAAJ"]
       }
+    },
+   "max-weber/1946": {
+      "title": "Max Weber",
+      "subtitle": "Politiker, Forscher, Philosoph",
+      "publisher": "Storm",
+      "publisher_city": "Bremen",
+      "edition": 2,
+      "pages": 58,
+      "links": {
+        "dnb": ["http://d-nb.info/452185149"],
+        "openlib": ["https://openlibrary.org/books/OL15332211M"]
+      }
     }
-    
   }
 }
