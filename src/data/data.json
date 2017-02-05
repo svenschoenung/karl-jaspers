@@ -2,14 +2,14 @@
   "works": { 
     "allgemeine-psychopathologie": {
       "title": "Allgemeine Psychopathologie",
-      "publishedIn": [
+      "editions": [
         "allgemeine-psychopathologie/1913",
         "allgemeine-psychopathologie/1920"
       ]
     },
     "psychologie-der-weltanschauungen": {
       "title": "Psychologie der Weltanschauungen",
-      "publishedIn": [
+      "editions": [
         "psychologie-der-weltanschauungen/1919",
         "psychologie-der-weltanschauungen/1922"
       ]
@@ -17,7 +17,7 @@
     "max-weber-trauerfeier": {
       "title": "Max Weber",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
-      "publishedIn": [
+      "editions": [
         "max-weber-trauerfeier/1921",
         "max-weber-trauerfeier/1926"
       ]
@@ -25,20 +25,20 @@
     "strindberg-und-van-gogh": {
       "title": "Strindberg und van Gogh",
       "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
-      "publishedIn": [
+      "editions": [
         "strindberg-und-van-gogh/1922",
         "strindberg-und-van-gogh/1926"
       ]
     },
     "die-idee-der-universitaet": {
       "title": "Die Idee der Universität",
-      "publishedIn": [
+      "editions": [
         "die-idee-der-universitaet/1923"
       ]
     },
     "die-geistige-situation-der-zeit": {
       "title": "Die geistige Situation der Zeit",
-      "publishedIn": [
+      "editions": [
         "die-geistige-situation-der-zeit/1931/1",
         "die-geistige-situation-der-zeit/1931/2",
         "die-geistige-situation-der-zeit/1932/3",
@@ -48,7 +48,7 @@
     },
     "philosophie": {
       "title": "Philosophie",
-      "publishedIn": [
+      "editions": [
         "philosophie-1/1932",
         "philosophie-2/1932",
         "philosophie-3/1932"
@@ -56,31 +56,31 @@
     },
     "max-weber-wesen": {
       "title": "Max Weber",
-      "publishedIn": [
+      "editions": [
         "max-weber-wesen/1932"
       ]
     },
     "vernunft-und-existenz": {
       "title": "Vernunft und Existenz",
-      "publishedIn": [
+      "editions": [
         "vernunft-und-existenz/1935"
       ]
     },
     "nietzsche": {
       "title": "Nietzsche",
-      "publishedIn": [
+      "editions": [
         "nietzsche/1936"
       ]
     },
     "descartes-und-die-philosophie": {
       "title": "Descartes und die Philosophie",
-      "publishedIn": [
+      "editions": [
         "descartes-und-die-philosophie/1937"
       ]
     },
     "existenzphilosophie": {
       "title": "Existenzphilosophie",
-      "publishedIn": [
+      "editions": [
         "existenzphilosophie/1938"
       ]
     }

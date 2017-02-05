@@ -17,7 +17,7 @@ class Header extends React.Component {
       <header className={this.props.size}>
         <h1>
         <Link to="/" aria-label="Zur Startseite">
-        <img alt="Karl Jaspers" src="/imgs/karl-jaspers.svg"/>
+        <img alt="Karl Jaspers" src="/karl-jaspers.svg"/>
         </Link>
         </h1>
       </header>
@@ -30,7 +30,7 @@ class HomeButton extends React.Component {
     return (
       <Link to={this.props.to} aria-label={this.props.label}>
       <div className="home-button" aria-hidden="true">
-        <img src={'/imgs/' + this.props.to + '.png'} role="button"/>
+        <img src={'/' + this.props.to + '.png'} role="button"/>
         <h2>{this.props.name}</h2>
       </div>
       </Link>
@@ -94,7 +94,7 @@ class Works extends SmallHeaderComponent {
         <div className="list">
         <ol>
         {
-          data.worksByYear
+          data.worksByYearAndTitle
             .map((workId) => data.works[workId])
             .filter(isSearchMatch(this.state.search, ['year', 'title']))
             .map((work) => (
@@ -136,7 +136,7 @@ class Work extends SmallHeaderComponent {
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
         <h3>Ver&ouml;ffentlicht in </h3>
-        <EditionList editions={work.publishedIn}/>
+        <EditionList editions={work.editions}/>
         </article>
       </main> 
     );
@@ -154,7 +154,7 @@ class EditionList extends React.Component {
             .map((edition) => 
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-              { (edition.images[0]) ? <img alt="Cover" src={'/imgs/ausgaben/' + edition.id + '/' + edition.images[0] + '.100px.png'}/> : <div className="missing-cover">?</div>}
+              { (edition.images[100][0]) ? <img alt="Cover" src={'/ausgaben/' + edition.id + '/' + edition.images[100] }/> : <div className="missing-cover">?</div>}
               <div><span className="title">{edition.title} ({edition.year})</span><br/>{(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.pages} Seiten, {edition.publisher}</div>
               </Link>
               </li>
@@ -180,7 +180,7 @@ class Editions extends SmallHeaderComponent {
         <div className="list">
         <ol>
         {
-          data.editionsByYear
+          data.editionsByYearAndTitle
             .map((editionId) => data.editions[editionId])
             .filter(isSearchMatch(this.state.search, ['year', 'title']))
             .map((edition) => (
@@ -251,7 +251,8 @@ class Edition extends SmallHeaderComponent {
     var editionYear = this.props.params.editionYear;
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
-    var image = (edition.images[0]) ? '/imgs/ausgaben/' + editionId + '/' + edition.images[0] : null; 
+    var image = (edition.images[0][0]) ? '/ausgaben/' + editionId + '/' + edition.images[0][0] : null; 
+    var image200 = (edition.images[200][0]) ? '/ausgaben/' + editionId + '/' + edition.images[200][0] : null; 
     var links = Object.keys(edition.links || {})
       .map(key => (
         (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :
@@ -272,8 +273,8 @@ class Edition extends SmallHeaderComponent {
         <h2>{edition.title}</h2>
         {(edition.subtitle) ? <h4>{edition.subtitle}</h4> : null}
         {(!image) ? <div className="edition-preview">?</div> :
-        <a href={image + '.png'}>
-        <img className="edition-preview" src={image + '.200px.png'}/>
+        <a href={image}>
+        <img className="edition-preview" src={image200}/>
         </a>}
         <div className="info">
         {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.year} <br/>
@@ -291,7 +292,7 @@ class Edition extends SmallHeaderComponent {
         <div className="list">
         <ol>
         {
-          edition.contains.map((workId) => (
+          edition.works.map((workId) => (
 	    <li> 
             <Link to={'/werke/' + workId}>
             <span className="letter">{data.works[workId].title.charAt(0)}</span>
@@ -310,7 +311,7 @@ class Edition extends SmallHeaderComponent {
           links.map((link) => (
 	    <li> 
             <a href={link.url}>
-            <span className="icon"><img src={'/imgs/links/' + link.type + '.png'}/></span>
+            <span className="icon"><img src={'/links/' + link.type + '.png'}/></span>
             <span className="title">{link.desc}</span>
             </a>
             </li>

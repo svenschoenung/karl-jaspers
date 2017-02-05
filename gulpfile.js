@@ -26,21 +26,22 @@ var mkdirp = require('mkdirp');
 var fs = require('fs');
 var path = require('path');
 
-var serve = false;
+var config = require('./config.json');
+var data = require('./data.js');
 
 gulp.task('html', function() {
   return gulp.src('src/index.html')
-    .pipe(_if(!serve, minifyHtml({collapseWhitespace: true})))
+    .pipe(_if(!config.serve, minifyHtml({collapseWhitespace: true})))
     .pipe(gulp.dest('www/'))
-    .pipe(_if(serve, browserSync.stream()));
+    .pipe(_if(config.serve, browserSync.stream()));
 });
 
 gulp.task('css', function() {
   return gulp.src('src/css/**/*.css')
     .pipe(concat('style.css'))
-    .pipe(_if(!serve, minifyCss()))
+    .pipe(_if(!config.serve, minifyCss()))
     .pipe(gulp.dest('www/css'))
-    .pipe(_if(serve, browserSync.stream()));
+    .pipe(_if(config.serve, browserSync.stream()));
 });
 
 gulp.task('md', function() {
@@ -55,162 +56,77 @@ gulp.task('md', function() {
   });
 });
 
-function readData() {
-  return JSON.parse(fs.readFileSync('src/data/data.json'));
-}
-
-function jsData() {
-  var data = readData();
-  data = addYearAndIdToWorks(data);
-  data = addIdAndNameToEditions(data);
-
-  var worksByYear = sortWorksByYear(data);
-  var editionsByYear = sortEditionsByYear(data);
-
-  var editionsByName = editionsByYear.reduce((byName, edition) => {
-    byName[edition.name] = byName[edition.name] || [];
-    byName[edition.name].push(edition.id);
-    return byName;
-  }, {});
-
-  return JSON.stringify({
-    works: data.works,
-    editions: data.editions,
-    worksByYear: worksByYear.map((work) => work.id),
-    editionsByYear: editionsByYear.map((edition) => edition.id),
-    editionsByName: editionsByName
-  });
-}
-
-gulp.task('js', function(cb) {
+gulp.task('js', ['imgs'], function(cb) {
   return gulp.src('src/js/app.js')
-    .pipe(_if(serve, plumber(function(err) {
+    .pipe(_if(config.serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
     })))
-    .pipe(replace('{/*DATA*/}', jsData()))
+    .pipe(replace('{/*DATA*/}', JSON.stringify(data.load())))
     .pipe(concat('app.js'))
     .pipe(babel({ presets: ['es2015', 'react'] }))
-    .pipe(_if(!serve, uglify()))
+    .pipe(_if(!config.serve, uglify()))
     .pipe(gulp.dest('www/js/'))
-    .pipe(_if(serve, browserSync.stream()));
+    .pipe(_if(config.serve, browserSync.stream()));
 });
 
 gulp.task('imgs', function() {
   var base = {base:'src/imgs/'};
 
   var imgs = gulp.src('src/imgs/{links/,}*.{jpg,png,svg}')
-    .pipe(changed('www/imgs/'));
+    .pipe(changed('www/'));
 
-  var imgsEditions = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
-    .pipe(rename({extname:'.png'}))
-    .pipe(changed('www/imgs/'))
-    .pipe(gm((file) => file.setFormat('png')));
-
-  var imgsEditions100 = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
-    .pipe(rename({suffix:'.100px', extname:'.png'}))
-    .pipe(changed('www/imgs/'))
-    .pipe(gm((file) => file.resize(100, 100).setFormat('png')))
-
-  var imgsEditions200 = gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
-    .pipe(rename({suffix:'.200px', extname:'.png'}))
-    .pipe(changed('www/imgs/'))
-    .pipe(gm((file) => file.resize(200, 200).setFormat('png')))
-  
-  return merge(imgs, imgsEditions, imgsEditions100, imgsEditions200) 
+  var imgsEditions = config.imageSizes.map(size => {
+    return gulp.src('src/imgs/ausgaben/**/*.{jpg,png}', base)
+      .pipe(_if(size > 0, rename({suffix:'_' + size + 'px'})))
+      .pipe(changed('www/'))
+      .pipe(_if(size > 0, gm((file) => file.resize(size, size))));
+  });
+ 
+  return merge(imgs, merge(imgsEditions)) 
     .pipe(imagemin())
-    .pipe(gulp.dest('www/imgs/'))
-    .pipe(_if(serve, browserSync.stream()));
+    .pipe(gulp.dest('www/'))
+    .pipe(_if(config.serve, browserSync.stream()));
 });
 
-function getYearFromEdition(edition) {
-  return edition.replace(/.*\/(\d{4})\/?.*/, '$1');
-}
-
-function addYearAndIdToWorks(data) {
-  Object.keys(data.works).forEach((workId) => {
-    var work = data.works[workId];
-    var years = work.publishedIn
-      .map((edition) => getYearFromEdition(edition))
-      .map((year) => parseInt(year));
-    var year =  Math.min.apply(Math, years);
-    work.year = year;
-    work.id = workId;
-  });
-  return data;
-}
-
-function sortWorksByYear(data) {
-  return Object.keys(data.works)
-   .map((workId) => data.works[workId])
-   .sort((work1, work2) => work1.year - work2.year);
-}
-
-gulp.task('json-works', function() {
+gulp.task('json-works', ['imgs'], function() {
   return gulp.src('src/data/data.json')
-    .pipe(jeditor(addYearAndIdToWorks))
-    .pipe(jeditor(sortWorksByYear))
+    .pipe(jeditor(data.init))
+    .pipe(jeditor(data => data.worksByYearAndTitle.map(w => data.works[w])))
     .pipe(rename('werke.json'))
     .pipe(gulp.dest('www'));
 });
 
-function addIdAndNameToEditions(data) {
-  var images = ['umschlag', 'cover', 'einband', 'titelseite'];
-  Object.keys(data.editions).forEach((editionId) => {
-    var edition = data.editions[editionId]; 
-    edition.id = editionId;
-    edition.name = editionId.replace(/\/.*/, '');
-    edition.images = glob.sync('src/imgs/ausgaben/' + editionId + '/*')
-      .map((f) => path.parse(f).name)
-      .sort((f1, f2) => images.indexOf(f1) - images.indexOf(f2));
-    edition.contains = Object.keys(data.works).filter((workId) =>
-      data.works[workId].publishedIn.indexOf(editionId) >= 0
-    );
-    edition.year = getYearFromEdition(editionId);
-  });
-  return data;
-}
-
-function sortEditionsByYear(data) {
- return Object.keys(data.editions)
-   .map((editionId) => data.editions[editionId])
-   .sort((edition1, edition2) => edition1.year - edition2.year);
-}
-
-gulp.task('json-editions', function() {
+gulp.task('json-editions', ['imgs'], function() {
   return gulp.src('src/data/data.json')
-    .pipe(jeditor(addIdAndNameToEditions))
-    .pipe(jeditor(sortEditionsByYear))
+    .pipe(jeditor(data.init))
+    .pipe(jeditor(data => data.editionsByYearAndTitle.map(e => data.editions[e])))
     .pipe(rename('ausgaben.json'))
     .pipe(gulp.dest('www'));
 });
 
-gulp.task('json-work-detail', function() {
-  var data = addYearAndIdToWorks(readData());
+gulp.task('json-work-detail', ['imgs'], function() {
+  var d = data.load();
   return gulp.src('src/data/werke/*.md')
     .pipe(markdown())
     .pipe(through(function(file, enc, cb) {
       var id = file.path.replace(/.*\/(.*).html$/, '$1');
-      var json = Object.assign({}, data.works[id], {
-        desc:file.contents.toString()
-      });
-      file.contents = new Buffer(JSON.stringify(json));
+      d.works[id].desc = file.contents.toString();
+      file.contents = new Buffer(JSON.stringify(d.works[id]));
       cb(null, file);
     }))
     .pipe(rename({extname:'.json'}))
     .pipe(gulp.dest('www/werke'))
 });
 
-gulp.task('json-edition-detail', function() {
-  var data = addIdAndNameToEditions(readData());
+gulp.task('json-edition-detail', ['imgs'], function() {
+  var d = data.load();
   return gulp.src('src/data/ausgaben/*/*.md')
     .pipe(markdown())
     .pipe(through(function(file, enc, cb) {
       var id = file.path.replace(/.*\/(.*\/.*).html$/, '$1');
-      var json = Object.assign({}, data.editions[id], {
-        notes:file.contents.toString()
-      });
-      file.contents = new Buffer(JSON.stringify(json));
+      d.editions[id].notes = file.contents.toString();
+      file.contents = new Buffer(JSON.stringify(d.editions[id]));
       cb(null, file);
     }))
     .pipe(rename({extname:'.json'}))
@@ -223,15 +139,17 @@ gulp.task('json', ['json-works', 'json-editions',
 gulp.task('build',  ['html', 'css', 'js', 'imgs', 'json']);
 
 gulp.task('serve', function(cb) {
-  serve = true;
+  config.serve = true;
 
   runSequence('build', function() {
     browserSync.init({
       server: {
         baseDir: 'www/',
         middleware: function(req, res, next) {
-          if (!/\/(css|js|imgs)/.test(req.url) && !/.*\.json/.test(req.url)) {
+          if (!/\.(json|css|js|png|jpg|svg)$/.test(req.url)) {
             req.url = '/';
+          } else if (/_v-/.test(req.url)) {
+            req.url = req.url.replace(/_v-.*\./, '.');
           }
           next();
         }

@@ -1,0 +1,4 @@
+{
+  "imageSizes": [0, 200, 100],
+  "imageTypes": ["umschlag", "cover", "einband", "titelseite"]
+}
