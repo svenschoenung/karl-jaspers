@@ -14,6 +14,8 @@ var jeditor = require('gulp-json-editor');
 var imagemin = require('gulp-imagemin');
 var gm = require('gulp-gm');
 var changed = require('gulp-changed');
+var rev = require('gulp-rev-all');
+var gutil = require('gulp-util');
 
 var merge = require('merge-stream');
 var through = require('through2').obj;
@@ -166,4 +168,25 @@ gulp.task('serve', function(cb) {
   });
 });
 
-gulp.task('default', ['build']);
+gulp.task('dist', ['build'], function() {
+  var revFiles = gulp.src('www/**/*.{js,css,html}')
+    .pipe(rev.revision({
+       dontRenameFile: [/html$/],
+       dontSearchFile: [/js$/],
+       transformFilename: function(file, fullHash) {
+         var ext = path.extname(file.path);
+         var hash = fullHash.substring(0, 10);
+         var hashed = gutil.replaceExtension(file.path, '_v-' + hash + ext);
+         return path.basename(hashed);
+       }
+    }))
+    .pipe(through(function(file, enc, cb) {
+      file.path = file.revPathOriginal;
+      cb(null, file);
+    }));
+  var copyFiles = gulp.src(['www/**', '!www/**/*.{js,css,html}']);
+
+  return merge(revFiles, copyFiles).pipe(gulp.dest('dist'));
+});
+
+gulp.task('default', ['dist']);
