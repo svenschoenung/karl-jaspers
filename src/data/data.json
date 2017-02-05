@@ -102,6 +102,7 @@
     "die-schuldfrage": {
       "title": "Die Schuldfrage",
       "editions": [
+        "die-schuldfrage/1946/1",
         "die-schuldfrage/1946/2"
       ]
     }
@@ -426,6 +427,18 @@
         "openlib": ["https://openlibrary.org/books/OL15332211M"]
       }
     },
+    "die-schuldfrage/1946/1": {
+      "title": "Die Schuldfrage",
+      "subtitle": "Ein Beitrag zur deutschen Frage",
+      "publisher": "Lambert Schneider",
+      "publisher_city": "Heidelberg",
+      "edition": 1,
+      "pages": 106,
+      "links": {
+        "dnb": ["http://d-nb.info/452184827"],
+        "openlib": ["https://openlibrary.org/books/OL18614284M"]
+      }
+    },
     "die-schuldfrage/1946/2": {
       "title": "Die Schuldfrage",
       "publisher": "Artemis",
@@ -435,7 +448,7 @@
       "pages": 96,
       "series": "Schriften zur Zeit, Heft 11",
       "links": {
-        "dnb": ["http://d-nb.info/363875166"],
+        "dnb": ["http://d-nb.info/363875166", "http://d-nb.info/1018906061"],
         "openlib": ["https://openlibrary.org/books/OL6518321M"]
       }
     }
