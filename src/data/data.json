@@ -435,7 +435,7 @@
       "edition": 1,
       "pages": 106,
       "links": {
-        "dnb": ["http://d-nb.info/452184827"],
+        "dnb": ["http://d-nb.info/452184827", "http://d-nb.info/1018906061"],
         "openlib": ["https://openlibrary.org/books/OL18614284M"]
       }
     },
@@ -448,7 +448,7 @@
       "pages": 96,
       "series": "Schriften zur Zeit, Heft 11",
       "links": {
-        "dnb": ["http://d-nb.info/363875166", "http://d-nb.info/1018906061"],
+        "dnb": ["http://d-nb.info/363875166"],
         "openlib": ["https://openlibrary.org/books/OL6518321M"]
       }
     }
