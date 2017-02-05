@@ -4,7 +4,8 @@
       "title": "Allgemeine Psychopathologie",
       "editions": [
         "allgemeine-psychopathologie/1913",
-        "allgemeine-psychopathologie/1920"
+        "allgemeine-psychopathologie/1920",
+        "allgemeine-psychopathologie/1923"
       ]
     },
     "psychologie-der-weltanschauungen": {
@@ -166,6 +167,19 @@
         "dnb": ["http://d-nb.info/580991032"],
         "google": ["https://books.google.de/books?id=KE0AAAAAMAAJa"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-662-36361-4"]
+      }
+    },
+    "allgemeine-psychopathologie/1923": {
+      "title": "Allgemeine Psychopathologie",
+      "subtitle": "Für Studierende, Ärzte und Psychologen",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 3,
+      "edition_desc": "3. vermehrte und verbesserte Auflage",
+      "pages": 460,
+      "links": {
+        "dnb": ["http://d-nb.info/104404960X"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-36704-9"]
       }
     },
     "die-idee-der-universitaet/1923": {
