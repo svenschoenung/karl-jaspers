@@ -15,12 +15,12 @@
         "psychologie-der-weltanschauungen/1922"
       ]
     },
-    "max-weber-trauerfeier": {
-      "title": "Max Weber",
+    "max-weber-rede": {
+      "title": "Max Weber. Rede",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "editions": [
-        "max-weber-trauerfeier/1921",
-        "max-weber-trauerfeier/1926"
+        "max-weber-rede/1921",
+        "max-weber-rede/1926"
       ]
     },
     "strindberg-und-van-gogh": {
@@ -145,8 +145,8 @@
         "springer": ["http://link.springer.com/book/10.1007/978-3-662-26726-4"]
       }
     },
-    "max-weber-trauerfeier/1921": {
-      "title": "Max Weber",
+    "max-weber-rede/1921": {
+      "title": "Max Weber. Rede",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publisher": "J.C.B. Mohr",
       "publisher_city": "Tübingen",
@@ -224,8 +224,8 @@
         "springer": ["http://link.springer.com/book/10.1007/978-3-642-99342-8"]
       }
     },
-    "max-weber-trauerfeier/1926": {
-      "title": "Max Weber",
+    "max-weber-rede/1926": {
+      "title": "Max Weber. Rede",
       "subtitle": "Rede bei der von der Heidelberger Studentenschaft am 17. Juli 1920 veranstalteten Trauerfeier",
       "publisher": "J.C.B. Mohr",
       "publisher_city": "Tübingen",
