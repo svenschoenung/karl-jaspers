@@ -91,6 +91,12 @@
       "editions": [
         "vom-lebendigen-geist-der-universitaet-und-vom-studieren/1946"
       ]
+    },
+    "nietzsche-und-das-christentum": {
+      "title": "Nietzsche und das Christentum",
+      "editions": [
+        "nietzsche-und-das-christentum/1946"
+      ]
     }
   },
   "editions": {
@@ -388,6 +394,19 @@
         "dnb": ["http://d-nb.info/452184339"],
         "google": ["https://books.google.de/books?id=hP0-AAAAIAAJ"]
       }
+    },
+    "nietzsche-und-das-christentum/1946": {
+      "title": "Nietzsche und das Christentum",
+      "publisher": "Fritz Seifert",
+      "publisher_city": "Hameln",
+      "edition": 1,
+      "pages": 87,
+      "links": {
+        "dnb": ["http://d-nb.info/452184533"],
+        "openlib": ["https://openlibrary.org/books/OL232092M"],
+        "google": ["https://books.google.de/books?id=rTxCAQAAIAAJ"]
+      }
     }
+    
   }
 }
