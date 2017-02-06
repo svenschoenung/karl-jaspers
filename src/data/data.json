@@ -74,7 +74,8 @@
     "nietzsche": {
       "title": "Nietzsche",
       "editions": [
-        "nietzsche/1936"
+        "nietzsche/1936",
+        "nietzsche/1947"
       ]
     },
     "descartes-und-die-philosophie": {
@@ -539,6 +540,19 @@
       "pages": 123,
       "links": {
         "dnb": ["http://d-nb.info/452185009"]
+      }
+    },
+    "nietzsche/1947": {
+      "title": "Nietzsche",
+      "subtitle": "Einführung in das Verständnis seines Philosophierens",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin",
+      "edition": 2,
+      "edition_desc": "2. unveränderte Auflage",
+      "pages": 487,
+      "links": {
+        "dnb": ["http://d-nb.info/452184517"],
+        "google": ["https://books.google.de/books?id=nrQYAAAAIAAJ"]
       }
     }
   }
