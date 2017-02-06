@@ -67,7 +67,8 @@
     "vernunft-und-existenz": {
       "title": "Vernunft und Existenz",
       "editions": [
-        "vernunft-und-existenz/1935"
+        "vernunft-und-existenz/1935",
+        "vernunft-und-existenz/1947"
       ]
     },
     "nietzsche": {
@@ -527,6 +528,17 @@
       "pages": 17,
       "links": {
         "dnb": ["http://d-nb.info/992504198"]
+      }
+    },
+    "vernunft-und-existenz/1947": {
+      "title": "Vernunft und Existenz",
+      "subtitle": "5 Vorlesungen",
+      "publisher": "Storm",
+      "publisher_city": "Bremen",
+      "edition": 2,
+      "pages": 123,
+      "links": {
+        "dnb": ["http://d-nb.info/452185009"]
       }
     }
   }
