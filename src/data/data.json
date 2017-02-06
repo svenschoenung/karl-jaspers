@@ -122,6 +122,12 @@
         "vom-europaeischen-geist/1947/1",
         "vom-europaeischen-geist/1947/2"
       ]
+    },
+    "europa-der-gegenwart": {
+      "title": "Europa der Gegenwart",
+      "editions": [
+        "europa-der-gegenwart/1947"
+      ]
     }
   },
   "editions": {
@@ -553,6 +559,19 @@
       "links": {
         "dnb": ["http://d-nb.info/452184517"],
         "google": ["https://books.google.de/books?id=nrQYAAAAIAAJ"]
+      }
+    },
+    "europa-der-gegenwart/1947": {
+      "title": "Europa der Gegenwart",
+      "subtitle": "Einführung in das Verständnis seines Philosophierens",
+      "publisher": "Amadeus-Reihe",
+      "publisher_city": "Wien",
+      "edition": 1,
+      "pages": 56,
+      "series": "Schriftenreihe Symposion 13",
+      "links": {
+        "dnb": ["http://d-nb.info/452184258"],
+        "google": ["https://books.google.de/books?id=iITUAAAAMAAJ"]
       }
     }
   }
