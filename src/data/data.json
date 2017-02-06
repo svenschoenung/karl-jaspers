@@ -117,7 +117,8 @@
     "vom-europaeischen-geist": {
       "title": "Vom europäischen Geist",
       "editions": [
-        "vom-europaeischen-geist/1947"
+        "vom-europaeischen-geist/1947/1",
+        "vom-europaeischen-geist/1947/2"
       ]
     }
   },
@@ -504,7 +505,7 @@
         "google": ["https://books.google.de/books?id=a19VAAAAMAAJ"]
       }
     },
-    "vom-europaeischen-geist/1947": {
+    "vom-europaeischen-geist/1947/1": {
       "title": "Vom europäischen Geist",
       "subtitle": "Vortrag gehalten bei den Rencontres internationales de Genève, September 1946",
       "publisher": "Piper",
@@ -515,6 +516,17 @@
         "dnb": ["http://d-nb.info/1053927835"],
         "openlib": ["https://openlibrary.org/books/OL192207M"],
         "google": ["https://books.google.de/books?id=RgThjwEACAAJ"]
+      }
+    },
+    "vom-europaeischen-geist/1947/2": {
+      "title": "Vom europäischen Geist",
+      "subtitle": "Vortrag gehalten bei den Rencontres internationales de Genève, September 1946",
+      "publisher": "Verlag der Tribüne",
+      "publisher_city": "Fanara, Ägypten",
+      "edition": 1,
+      "pages": 17,
+      "links": {
+        "dnb": ["http://d-nb.info/992504198"]
       }
     }
   }
