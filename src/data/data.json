@@ -46,7 +46,8 @@
         "die-geistige-situation-der-zeit/1931/2",
         "die-geistige-situation-der-zeit/1932/3",
         "die-geistige-situation-der-zeit/1932/4",
-        "die-geistige-situation-der-zeit/1933"
+        "die-geistige-situation-der-zeit/1933",
+        "die-geistige-situation-der-zeit/1947"
       ]
     },
     "philosophie": {
@@ -583,6 +584,19 @@
       "series": "Schriften zur Zeit, Heft 11",
       "links": {
         "dnb": ["http://d-nb.info/452184835"]
+      }
+    },
+    "die-geistige-situation-der-zeit/1947": {
+      "title": "Die geistige Situation der Zeit",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin",
+      "edition": 6,
+      "edition_desc": "Unveränderter Abdruck der im Sommer 1932 bearbeiteten 5. Auflage",
+      "pages": 191,
+      "series": "Sammlung Göschen, Band 1000",
+      "links": {
+        "dnb": ["http://d-nb.info/363875174"],
+        "google": ["https://books.google.de/books?id=X_9ZPAAACAAJ"]
       }
     }
   }
