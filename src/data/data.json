@@ -107,7 +107,8 @@
       "title": "Die Schuldfrage",
       "editions": [
         "die-schuldfrage/1946/1",
-        "die-schuldfrage/1946/2"
+        "die-schuldfrage/1946/2",
+        "die-schuldfrage/1947"
       ]
     },
     "von-der-wahrheit": {
@@ -466,8 +467,7 @@
       "title": "Die Schuldfrage",
       "publisher": "Artemis",
       "publisher_city": "Zürich",
-      "edition": 0,
-      "edition_desc": "Lizensausgabe",
+      "edition": 1,
       "pages": 96,
       "series": "Schriften zur Zeit, Heft 11",
       "links": {
@@ -572,6 +572,17 @@
       "links": {
         "dnb": ["http://d-nb.info/452184258"],
         "google": ["https://books.google.de/books?id=iITUAAAAMAAJ"]
+      }
+    },
+    "die-schuldfrage/1947": {
+      "title": "Die Schuldfrage",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 4,
+      "pages": 95,
+      "series": "Schriften zur Zeit, Heft 11",
+      "links": {
+        "dnb": ["http://d-nb.info/452184835"]
       }
     }
   }
