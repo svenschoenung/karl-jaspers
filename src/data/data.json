@@ -34,7 +34,8 @@
     "die-idee-der-universitaet": {
       "title": "Die Idee der Universität",
       "editions": [
-        "die-idee-der-universitaet/1923"
+        "die-idee-der-universitaet/1923",
+        "die-idee-der-universitaet/1946"
       ]
     },
     "die-geistige-situation-der-zeit": {
@@ -451,6 +452,20 @@
         "dnb": ["http://d-nb.info/363875166"],
         "openlib": ["https://openlibrary.org/books/OL6518321M"]
       }
+    },
+    "die-idee-der-universitaet/1946": {
+      "title": "Die Idee der Universität",
+      "publisher": "Springer",
+      "publisher_city": "Berlin",
+      "edition": 1,
+      "pages": 132,
+      "series": "Schriften der Universität Heidelberg, Heft 1",
+      "links": {
+        "dnb": ["http://d-nb.info/452184452"],
+        "google": ["https://books.google.de/books?id=ZJbyBgAAQBAJ"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-43161-0"]
+      }
     }
+
   }
 }
