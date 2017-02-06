@@ -5,7 +5,8 @@
       "editions": [
         "allgemeine-psychopathologie/1913",
         "allgemeine-psychopathologie/1920",
-        "allgemeine-psychopathologie/1923"
+        "allgemeine-psychopathologie/1923",
+        "allgemeine-psychopathologie/1946"
       ]
     },
     "psychologie-der-weltanschauungen": {
@@ -465,7 +466,19 @@
         "google": ["https://books.google.de/books?id=ZJbyBgAAQBAJ"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-662-43161-0"]
       }
+    },
+    "allgemeine-psychopathologie/1946": {
+      "title": "Allgemeine Psychopathologie",
+      "publisher": "Springer",
+      "publisher_city": "Berlin, Heidelberg",
+      "edition": 4,
+      "edition_desc": "4. völlig neu bearbeitete Auflage",
+      "pages": 748,
+      "links": {
+        "dnb": ["http://d-nb.info/452184746"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-662-11113-0"],
+        "openlib": ["https://openlibrary.org/books/OL263445M"]
+      }
     }
-
   }
 }
