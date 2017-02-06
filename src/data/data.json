@@ -107,6 +107,12 @@
         "die-schuldfrage/1946/1",
         "die-schuldfrage/1946/2"
       ]
+    },
+    "von-der-wahrheit": {
+      "title": "Von der Wahrheit",
+      "editions": [
+        "von-der-wahrheit/1947"
+      ]
     }
   },
   "editions": {
@@ -478,6 +484,18 @@
         "dnb": ["http://d-nb.info/452184746"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-662-11113-0"],
         "openlib": ["https://openlibrary.org/books/OL263445M"]
+      }
+    },
+    "von-der-wahrheit/1947": {
+      "title": "Von der Wahrheit",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 1102,
+      "links": {
+        "dnb": ["http://d-nb.info/452185041"],
+        "openlib": ["https://openlibrary.org/books/OL16398121M"],
+        "google": ["https://books.google.de/books?id=a19VAAAAMAAJ"]
       }
     }
   }
