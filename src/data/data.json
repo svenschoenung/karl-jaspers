@@ -113,6 +113,12 @@
       "editions": [
         "von-der-wahrheit/1947"
       ]
+    },
+    "vom-europaeischen-geist": {
+      "title": "Vom europäischen Geist",
+      "editions": [
+        "vom-europaeischen-geist/1947"
+      ]
     }
   },
   "editions": {
@@ -496,6 +502,19 @@
         "dnb": ["http://d-nb.info/452185041"],
         "openlib": ["https://openlibrary.org/books/OL16398121M"],
         "google": ["https://books.google.de/books?id=a19VAAAAMAAJ"]
+      }
+    },
+    "vom-europaeischen-geist/1947": {
+      "title": "Vom europäischen Geist",
+      "subtitle": "Vortrag gehalten bei den Rencontres internationales de Genève, September 1946",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 30,
+      "links": {
+        "dnb": ["http://d-nb.info/1053927835"],
+        "openlib": ["https://openlibrary.org/books/OL192207M"],
+        "google": ["https://books.google.de/books?id=RgThjwEACAAJ"]
       }
     }
   }
