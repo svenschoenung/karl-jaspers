@@ -182,12 +182,14 @@ class Editions extends SmallHeaderComponent {
         {
           data.editionsByYearAndTitle
             .map((editionId) => data.editions[editionId])
-            .filter(isSearchMatch(this.state.search, ['year', 'title']))
+            .filter(isSearchMatch(this.state.search, ['year', 'title', 'publisher']))
             .map((edition) => (
               <li>
               <Link to={'/ausgaben/' + edition.id}>
               <span className="year">{edition.year}</span>
               <span className="title">{edition.title}</span>
+              <span className="publisher">. {edition.publisher}</span>
+              <span className="editionno">, {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}</span>
               </Link>
               </li>
             ))

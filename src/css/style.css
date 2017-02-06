@@ -160,6 +160,12 @@ a .home-button {
   padding-right:10px;
 }
 
+.list li span.publisher, .list li span.editionno {
+  color:#ccc;
+}
+
+
+
 .list li span.icon, .list li span.letter {
   margin-right:10px;
   width:60px;
