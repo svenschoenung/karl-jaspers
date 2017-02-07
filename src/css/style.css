@@ -297,7 +297,7 @@ ul.edition-list li a img {
   margin-right:10px;
 }
 
-ul.edition-list li a > div.missing-cover {
+ul.edition-list li a div.missing-cover {
   width:40px;
   height:60px;
   vertical-align:top;
@@ -308,6 +308,7 @@ ul.edition-list li a > div.missing-cover {
   color:#ccc;
   font-family:sans-serif;
   text-align:center;
+  margin-right:10px;
 }
 
 ul.edition-list li .title {
