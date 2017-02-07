@@ -13,10 +13,10 @@ function isSearchMatch(term, props) {
 
 function editionDesc(edition, after) {
   if (edition.edition_desc) {
-     return edition.edition_desc + after;
+     return edition.edition_desc + (after || '');
   }
   if (edition.edition) {
-     return edition.edition + '. Auflage' + after;
+     return edition.edition + '. Auflage' + (after || '');
   }
   return null;
 }
@@ -209,7 +209,7 @@ class Editions extends SmallHeaderComponent {
               <span className="title">{edition.title}.</span>
               <span className="variant">
               <span className="publisher">{edition.publisher}</span>
-              <span className="editionno">, {editionDesc(edition, '')}</span>
+              <span className="editionno">, {editionDesc(edition, '') || ''}</span>
               </span>
               </span>
               </Link>
@@ -283,6 +283,7 @@ class Edition extends SmallHeaderComponent {
         (key == 'google') ? l(edition, key, 'Google Books') :
         (key == 'scribd') ? l(edition, key, 'Scribd') :
         (key == 'openlib') ? l(edition, key, 'Open Library') : 
+        (key == 'jstor') ? l(edition, key, 'JSTOR') : 
         (key == 'springer') ? l(edition, key, 'Springer Link') : []
       ));
     links = [].concat.apply([], links)
@@ -301,7 +302,7 @@ class Edition extends SmallHeaderComponent {
         <img className="edition-preview" src={image200}/>
         </a>}
         <div className="info">
-        {editionDesc(edition, ',')} {edition.year} <br/>
+        {editionDesc(edition, ',') || ''} {edition.year} <br/>
         {edition.publisher}
         {(edition.publisher_city) ? ' (' + edition.publisher_city + ')': null}
         <br/>
