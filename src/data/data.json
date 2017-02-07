@@ -130,6 +130,13 @@
       "editions": [
         "europa-der-gegenwart/1947"
       ]
+    },
+    "die-antwort-an-sigrid-undset": {
+      "title": "Die Antwort an Sigrid Undset",
+      "editions": [
+        "die-antwort-an-sigrid-undset/1946",
+        "die-antwort-an-sigrid-undset/1947"
+      ]
     }
   },
   "editions": {
@@ -597,6 +604,28 @@
       "links": {
         "dnb": ["http://d-nb.info/363875174"],
         "google": ["https://books.google.de/books?id=X_9ZPAAACAAJ"]
+      }
+    },
+    "die-antwort-an-sigrid-undset/1946": {
+      "title": "Antwort an Sigrid Undset",
+      "publisher": "University of Wisconsin Press",
+      "pages": 5,
+      "series": "Monatshefte Vol. 38, No 2 (Feb. 1946), pp. 115-119",
+      "links": {
+        "jstor": ["https://www.jstor.org/stable/30164505"]
+      }
+    },
+    "die-antwort-an-sigrid-undset/1947": {
+      "title": "Die Antwort an Sigrid Undset",
+      "subtitle": "Vermehrt um Beiträge über die Wissenschaft und die Universität von Karl Jaspers",
+      "publisher": "Südverlag",
+      "publisher_city": "Konstanz",
+      "edition": 1,
+      "pages": 30,
+      "series": "Schriften des Südverlags 2",
+      "links": {
+        "dnb": ["http://d-nb.info/452184053"],
+        "google": ["https://books.google.de/books?id=gJavYgEACAAJ"]
       }
     }
   }

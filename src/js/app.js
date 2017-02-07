@@ -11,6 +11,16 @@ function isSearchMatch(term, props) {
   }
 }
 
+function editionDesc(edition, after) {
+  if (edition.edition_desc) {
+     return edition.edition_desc + after;
+  }
+  if (edition.edition) {
+     return edition.edition + '. Auflage' + after;
+  }
+  return null;
+}
+
 class Header extends React.Component {
   render() {
     return (
@@ -162,7 +172,7 @@ class EditionList extends React.Component {
               </div>
               <div>
               <div className="title">{edition.title} ({edition.year})</div>
-              <div>{(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.pages} Seiten, {edition.publisher}</div>
+              <div>{editionDesc(edition) || edition.series || ''}, {edition.pages} Seiten, {edition.publisher}</div>
               </div>
               </Link>
               </li>
@@ -199,7 +209,7 @@ class Editions extends SmallHeaderComponent {
               <span className="title">{edition.title}.</span>
               <span className="variant">
               <span className="publisher">{edition.publisher}</span>
-              <span className="editionno">, {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}</span>
+              <span className="editionno">, {editionDesc(edition, '')}</span>
               </span>
               </span>
               </Link>
@@ -291,7 +301,7 @@ class Edition extends SmallHeaderComponent {
         <img className="edition-preview" src={image200}/>
         </a>}
         <div className="info">
-        {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.year} <br/>
+        {editionDesc(edition, ',')} {edition.year} <br/>
         {edition.publisher}
         {(edition.publisher_city) ? ' (' + edition.publisher_city + ')': null}
         <br/>
