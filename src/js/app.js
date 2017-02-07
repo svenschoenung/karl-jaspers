@@ -154,8 +154,16 @@ class EditionList extends React.Component {
             .map((edition) => 
               <li>
               <Link to={'/ausgaben/' + edition.id}>
-              { (edition.images[100][0]) ? <img alt="Cover" src={'/ausgaben/' + edition.id + '/' + edition.images[100][0] }/> : <div className="missing-cover">?</div>}
-              <div><span className="title">{edition.title} ({edition.year})</span><br/>{(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.pages} Seiten, {edition.publisher}</div>
+              <div>
+              { (edition.images[100][0]) ?
+                <img alt="Cover" src={'/ausgaben/' + edition.id + '/' + edition.images[100][0] }/> :
+                <div className="missing-cover">?</div>
+              }
+              </div>
+              <div>
+              <div className="title">{edition.title} ({edition.year})</div>
+              <div>{(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}, {edition.pages} Seiten, {edition.publisher}</div>
+              </div>
               </Link>
               </li>
             )
