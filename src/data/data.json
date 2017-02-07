@@ -137,6 +137,12 @@
         "die-antwort-an-sigrid-undset/1946",
         "die-antwort-an-sigrid-undset/1947"
       ]
+    },
+    "unsere-zukunft-und-goethe": {
+      "title": "Unsere Zukunft und Goethe",
+      "editions": [
+        "unsere-zukunft-und-goethe/1948"
+      ]
     }
   },
   "editions": {
@@ -626,6 +632,18 @@
       "links": {
         "dnb": ["http://d-nb.info/452184053"],
         "google": ["https://books.google.de/books?id=gJavYgEACAAJ"]
+      }
+    },
+    "unsere-zukunft-und-goethe/1948": {
+      "title": "Unsere Zukunft und Goethe",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 1,
+      "pages": 43,
+      "series": "Goetheschriften im Artemis-Verlag Zürich, Heft 3",
+      "links": {
+        "dnb": ["http://d-nb.info/452185181"],
+        "openlib": ["https://openlibrary.org/books/OL194564M/"]
       }
     }
   }
