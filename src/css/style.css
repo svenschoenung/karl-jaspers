@@ -131,9 +131,45 @@ a .home-button {
   outline:none;
 }
 
-.list ol {
+.overview ul {
   margin:0 auto;
   font-size:120%;
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+  border-collapse:collapse;
+  width:100%;
+  display:table;
+  list-style-type:none;
+}
+
+.overview li:hover {
+  background:#eee;
+}
+
+.overview li a {
+  display:block;
+  padding:10px 10px;
+  text-decoration:none;
+  color:black;
+}
+
+.overview li a > span {
+  display:table-cell;
+  vertical-align:top;
+}
+.overview li a > span.year {
+  padding-right:10px;
+}
+.overview li a > span > span {
+  display:inline-block;
+  padding-right:5px;
+}
+
+.overview li span.publisher, .overview span.editionno {
+  color:#ccc;
+}
+
+.list ul {
+  font-size:100%;
   font-family:'Arsenal',sans-serif,Arial,Helvetica;
   border-collapse:collapse;
   width:100%;
@@ -152,33 +188,24 @@ a .home-button {
   color:black;
 }
 
-.list li span {
-  display:inline-block;
-}
-.list li span.year {
-  display:inline-block;
-  padding-right:10px;
-}
-
-.list li span.publisher, .list li span.editionno {
-  color:#ccc;
-}
-
-
-
 .list li span.icon, .list li span.letter {
-  margin-right:10px;
   width:60px;
   height:32px;
   text-align:center;
   border:1px solid #eeeeee;
   background:white;
+  padding-left:0px;
 }
 .list li span.letter {
   font-size:32px;
   line-height:36px;
   vertical-align:middle;
   font-family:'Amiri',serif;
+}
+.list li span {
+  display:table-cell;
+  vertical-align:middle;
+  padding-left:10px;
 }
 
 .list li span.icon img {

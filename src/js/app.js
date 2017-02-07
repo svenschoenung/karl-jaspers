@@ -91,8 +91,8 @@ class Works extends SmallHeaderComponent {
           <input type="text" placeholder="Werke durchsuchen"
                  value={this.state.value} onChange={this.handleChange} />
         </div>
-        <div className="list">
-        <ol>
+        <div className="overview">
+        <ul>
         {
           data.worksByYearAndTitle
             .map((workId) => data.works[workId])
@@ -106,7 +106,7 @@ class Works extends SmallHeaderComponent {
               </li>
             ))
         }
-        </ol>
+        </ul>
         </div>
       </main>
     );
@@ -172,13 +172,13 @@ class Editions extends SmallHeaderComponent {
 
   render() {
     return (
-      <main className="editions list">
+      <main className="editions">
         <div className="search">
           <input type="text" placeholder="Ausgaben durchsuchen"
                  value={this.state.value} onChange={this.handleChange} />
         </div>
-        <div className="list">
-        <ol>
+        <div className="overview">
+        <ul>
         {
           data.editionsByYearAndTitle
             .map((editionId) => data.editions[editionId])
@@ -187,14 +187,18 @@ class Editions extends SmallHeaderComponent {
               <li>
               <Link to={'/ausgaben/' + edition.id}>
               <span className="year">{edition.year}</span>
-              <span className="title">{edition.title}</span>
-              <span className="publisher">. {edition.publisher}</span>
+              <span>
+              <span className="title">{edition.title}.</span>
+              <span className="variant">
+              <span className="publisher">{edition.publisher}</span>
               <span className="editionno">, {(edition.edition_desc) ? edition.edition_desc : edition.edition + '. Auflage'}</span>
+              </span>
+              </span>
               </Link>
               </li>
             ))
         }
-        </ol>
+        </ul>
         </div>
       </main>
     );
@@ -292,7 +296,7 @@ class Edition extends SmallHeaderComponent {
         </div>
         <h3>Enthaltene Werke</h3>
         <div className="list">
-        <ol>
+        <ul>
         {
           edition.works.map((workId) => (
 	    <li> 
@@ -303,12 +307,12 @@ class Edition extends SmallHeaderComponent {
             </li>
           ))
         }
-        </ol>
+        </ul>
         </div>
         { (links.length == 0) ? null : 
         <div className="list">
         <h3>Externe Links</h3>
-        <ol>
+        <ul>
         {
           links.map((link) => (
 	    <li> 
@@ -319,7 +323,7 @@ class Edition extends SmallHeaderComponent {
             </li>
           ))
         }
-        </ol>
+        </ul>
         </div>
         }
         </article>
