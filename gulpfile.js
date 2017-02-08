@@ -65,13 +65,14 @@ gulp.task('data', ['imgs'], function(cb) {
 });
 
 gulp.task('js', ['data'], function(cb) {
-  return gulp.src('src/js/app.js')
+  return gulp.src('src/js/app.jsx')
     .pipe(_if(config.serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
     })))
     .pipe(webpack(require('./webpack.config.js'), webpack2))
     .pipe(_if(!config.serve, uglify()))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(config.serve, browserSync.stream()));
 });

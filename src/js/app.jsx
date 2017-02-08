@@ -1,4 +1,13 @@
-var data = require('./data.json');
+import data from './data.json';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+import {
+  Router, Route, IndexRoute, IndexLink, Link, hashHistory, browserHistory
+} from 'react-router';
+
+import 'whatwg-fetch';
 
 function isSearchMatch(term, props) {
   var lowerCaseTerm = term.toLowerCase();
@@ -352,13 +361,6 @@ class Edition extends SmallHeaderComponent {
 }
 
 
-
-var {
-  Router, Route, IndexRoute, IndexLink, Link,
-  hashHistory, browserHistory
-} = ReactRouter;
-
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 class App extends React.Component {
   constructor(props) {
