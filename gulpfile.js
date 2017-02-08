@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 
-var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var _if = require('gulp-if');
 var plumber = require('gulp-plumber'); 
@@ -16,6 +15,8 @@ var gm = require('gulp-gm');
 var changed = require('gulp-changed');
 var rev = require('gulp-rev-all');
 var gutil = require('gulp-util');
+var webpack = require('webpack-stream');
+var webpack2 = require('webpack');
 
 var merge = require('merge-stream');
 var through = require('through2').obj;
@@ -66,7 +67,7 @@ gulp.task('js', ['imgs'], function(cb) {
     })))
     .pipe(replace('{/*DATA*/}', JSON.stringify(data.load())))
     .pipe(concat('app.js'))
-    .pipe(babel({ presets: ['es2015', 'react'] }))
+    .pipe(webpack(require('./webpack.config.js'), webpack2))
     .pipe(_if(!config.serve, uglify()))
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(config.serve, browserSync.stream()));
