@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
+var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var _if = require('gulp-if');
 var plumber = require('gulp-plumber'); 
@@ -71,7 +72,8 @@ gulp.task('js', ['data'], function(cb) {
       console.log(err.message);
     })))
     .pipe(webpack(require('./webpack.config.js'), webpack2))
-    .pipe(_if(!config.serve, uglify()))
+    .pipe(babel({ presets: ['es2015', 'react'] }))
+    .pipe(_if(!config.serve, uglify().on('error', (err) => console.log(err))))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(config.serve, browserSync.stream()));
