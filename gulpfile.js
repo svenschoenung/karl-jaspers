@@ -3,7 +3,6 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var _if = require('gulp-if');
 var plumber = require('gulp-plumber'); 
-var replace = require('gulp-replace');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css')
 var minifyHtml = require('gulp-htmlmin')
@@ -59,14 +58,18 @@ gulp.task('md', function() {
   });
 });
 
-gulp.task('js', ['imgs'], function(cb) {
+gulp.task('data', ['imgs'], function(cb) {
+  return gulp.src('src/data/data.json')
+    .pipe(jeditor(json => data.init(json)))
+    .pipe(gulp.dest('src/js'))
+});
+
+gulp.task('js', ['data'], function(cb) {
   return gulp.src('src/js/app.js')
     .pipe(_if(config.serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
     })))
-    .pipe(replace('{/*DATA*/}', JSON.stringify(data.load())))
-    .pipe(concat('app.js'))
     .pipe(webpack(require('./webpack.config.js'), webpack2))
     .pipe(_if(!config.serve, uglify()))
     .pipe(gulp.dest('www/js/'))

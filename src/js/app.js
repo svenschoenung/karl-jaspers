@@ -1,4 +1,4 @@
-var data = {/*DATA*/};
+var data = require('./data.json');
 
 function isSearchMatch(term, props) {
   var lowerCaseTerm = term.toLowerCase();
