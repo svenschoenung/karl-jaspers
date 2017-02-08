@@ -55,7 +55,8 @@
       "editions": [
         "philosophie-1/1932",
         "philosophie-2/1932",
-        "philosophie-3/1932"
+        "philosophie-3/1932",
+        "philosophie/1948"
       ]
     },
     "max-weber": {
@@ -644,6 +645,20 @@
       "links": {
         "dnb": ["http://d-nb.info/452185181"],
         "openlib": ["https://openlibrary.org/books/OL194564M/"]
+      }
+    },
+    "philosophie/1948": {
+      "title": "Philosophie",
+      "publisher": "Springer",
+      "publisher_city": "Berlin, Göttingen, Heidelberg",
+      "edition": 2,
+      "edition_desc": "2. unveränderte Auflage",
+      "pages": 912,
+      "links": {
+        "dnb": ["http://d-nb.info/452184630"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-49688-2"],
+        "openlib": ["https://openlibrary.org/books/OL6077586M/"],
+        "google": ["https://books.google.de/books?id=0QwKMQAACAAJ"]
       }
     }
   }
