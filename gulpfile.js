@@ -146,7 +146,12 @@ gulp.task('json-edition-detail', ['imgs'], function() {
 gulp.task('json', ['json-works', 'json-editions', 
                    'json-work-detail', 'json-edition-detail']);
 
-gulp.task('build',  ['html', 'css', 'js', 'imgs', 'json']);
+gulp.task('txt', function() {
+  return gulp.src('src/*.txt')
+    .pipe(gulp.dest('www'));
+});
+
+gulp.task('build',  ['html', 'css', 'js', 'imgs', 'json', 'txt']);
 
 gulp.task('serve', function(cb) {
   config.serve = true;
