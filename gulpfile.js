@@ -29,6 +29,7 @@ var mkdirp = require('mkdirp');
 var fs = require('fs');
 var path = require('path');
 
+var webpackConfig = require('./webpack.config.js');
 var config = require('./config.json');
 var data = require('./data.js');
 
@@ -71,7 +72,7 @@ gulp.task('js', ['data'], function(cb) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
     })))
-    .pipe(webpack(require('./webpack.config.js'), webpack2))
+    .pipe(webpack(webpackConfig(!config.serve), webpack2))
     .pipe(babel({ presets: ['es2015', 'react'], compact: true }))
     .pipe(_if(!config.serve, uglify().on('error', (err) => console.log(err))))
     .pipe(concat('app.js'))
