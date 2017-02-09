@@ -72,7 +72,7 @@ gulp.task('js', ['data'], function(cb) {
       console.log(err.message);
     })))
     .pipe(webpack(require('./webpack.config.js'), webpack2))
-    .pipe(babel({ presets: ['es2015', 'react'] }))
+    .pipe(babel({ presets: ['es2015', 'react'], compact: true }))
     .pipe(_if(!config.serve, uglify().on('error', (err) => console.log(err))))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('www/js/'))
