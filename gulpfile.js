@@ -66,7 +66,7 @@ gulp.task('data', ['imgs'], function(cb) {
 });
 
 gulp.task('js', ['data'], function(cb) {
-  return gulp.src('src/js/app.jsx')
+  return gulp.src('src/js/client.jsx')
     .pipe(_if(config.serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
       console.log(err.message);
