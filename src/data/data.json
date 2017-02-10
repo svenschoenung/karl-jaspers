@@ -153,6 +153,12 @@
       "editions": [
         "der-philosophische-glaube/1948"
       ]
+    },
+    "vom-ursprung-und-ziel-der-geschichte": {
+      "title": "Vom Ursprung und Ziel der Geschichte",
+      "editions": [
+        "vom-ursprung-und-ziel-der-geschichte/1949"
+      ]
     }
   },
   "editions": {
@@ -715,6 +721,18 @@
       "links": {
         "dnb": ["http://d-nb.info/452184754", "http://d-nb.info/1042840105"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-642-49689-9"]
+      }
+    },
+    "vom-ursprung-und-ziel-der-geschichte/1949": {
+      "title": "Vom Ursprung und Ziel der Geschichte",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 1,
+      "pages": 360,
+      "links": {
+        "dnb": ["http://d-nb.info/452184924"],
+        "openlib": ["https://openlibrary.org/books/OL21168858M"],
+        "google": ["https://books.google.de/books?id=YayfAAAAMAAJ"]
       }
     }
   }
