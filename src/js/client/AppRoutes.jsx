@@ -12,6 +12,7 @@ import Work from './Work.jsx';
 import Editions from './Editions.jsx';
 import EditionVariants from './EditionVariants.jsx';
 import Edition from './Edition.jsx';
+import TextPage from './TextPage.jsx';
 
 import App from './App.jsx';
 
@@ -27,6 +28,9 @@ class AppRoutes extends React.Component {
           <Route path="/ausgaben/:editionName" component={EditionVariants}/>
           <Route path="/ausgaben/:editionName/:editionYear" component={Edition}/>
           <Route path="/ausgaben/:editionName/:editionYear/:editionNum" component={Edition}/>
+          <Route path="/ueber" component={TextPage}/>
+          <Route path="/kontakt" component={TextPage}/>
+          <Route path="/rechtliches" component={TextPage}/>
         </Route>
       </Router>
     );

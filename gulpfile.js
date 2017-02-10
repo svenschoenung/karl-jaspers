@@ -17,6 +17,7 @@ var rev = require('gulp-rev-all');
 var gutil = require('gulp-util');
 var webpack = require('webpack-stream');
 var webpack2 = require('webpack');
+var markdownToJson = require('gulp-markdown-to-json');
 
 var merge = require('merge-stream');
 var through = require('through2').obj;
@@ -66,7 +67,7 @@ gulp.task('data', ['imgs'], function(cb) {
     .pipe(gulp.dest('src/js'))
 });
 
-gulp.task('js', ['data'], function(cb) {
+gulp.task('js-client', ['data'], function() {
   return gulp.src('src/js/client.jsx')
     .pipe(_if(config.serve, plumber(function(err) {
       console.log((err.codeFrame) ? err.codeFrame : err);
@@ -79,6 +80,11 @@ gulp.task('js', ['data'], function(cb) {
     .pipe(gulp.dest('www/js/'))
     .pipe(_if(config.serve, browserSync.stream()));
 });
+
+gulp.task('js-server', ['js-client'], function() {
+});
+
+gulp.task('js', ['js-client', 'js-server']);
 
 gulp.task('imgs', function() {
   var base = {base:'src/imgs/'};
@@ -143,8 +149,15 @@ gulp.task('json-edition-detail', ['imgs'], function() {
     .pipe(gulp.dest('www/ausgaben'))
 });
 
+gulp.task('json-text', function() {
+  return gulp.src('src/text/**/*.md')
+    .pipe(markdownToJson(require('marked')))
+    .pipe(gulp.dest('www/'));
+});
+
 gulp.task('json', ['json-works', 'json-editions', 
-                   'json-work-detail', 'json-edition-detail']);
+                   'json-work-detail', 'json-edition-detail', 
+                   'json-text']);
 
 gulp.task('txt', function() {
   return gulp.src('src/*.txt')
@@ -173,9 +186,10 @@ gulp.task('serve', function(cb) {
 
     gulp.watch('src/index.html', ['html']);
     gulp.watch('src/css/**/*.css', ['css']);
-    gulp.watch('src/js/**/*.js', ['js']);
+    gulp.watch('src/js/**/*.js{,x}', ['js']);
     gulp.watch('src/imgs/**/*', ['imgs']);
     gulp.watch('src/data/**/*', ['json', 'js']);
+    gulp.watch('src/text/**/*', ['json-text']);
 
     cb();
   });

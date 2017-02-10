@@ -72,13 +72,272 @@ main > * {
   margin:0px auto;
 }
 
+main.text {
+  padding:10px;
+}
+
+main.text a {
+  color:black;
+  font-weight:bold;
+ padding:3px;
+}
+main.text a:hover {
+  background:#eee;
+}
+
+main.text li {
+  list-style-type:square;
+}
+
 /* HOME */
 
-.home-buttons {
+nav.home-buttons {
   text-align:center;
   font-family: 'Amiri', serif;
 }
 
+nav.home-links {
+  margin-top:50px;
+  text-align:center; 
+}
+
+nav.home-links a, nav.home-links span {
+  display:inline-block;
+  padding:1px 10px;
+}
+
+nav.home-links a {
+  color:black;
+  text-decoration:none;
+  font-size:120%;
+  font-family: 'Amiri', serif;
+}
+
+nav.home-links a:hover {
+  background:#eee;
+}
+
+.search input:focus {
+  outline:none;
+}
+
+.overview ul {
+  margin:0 auto;
+  font-size:120%;
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+  border-collapse:collapse;
+  width:100%;
+  display:table;
+  list-style-type:none;
+}
+
+.overview li:hover {
+  background:#eee;
+}
+
+.overview li a {
+  display:block;
+  padding:10px 10px;
+  text-decoration:none;
+  color:black;
+}
+
+.overview li a > span {
+  display:table-cell;
+  vertical-align:top;
+}
+.overview li a > span.year {
+  padding-right:10px;
+}
+.overview li a > span > span {
+  display:inline-block;
+  padding-right:5px;
+}
+
+.overview li span.publisher, .overview span.editionno {
+  color:#ccc;
+}
+
+.list ul {
+  font-size:100%;
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+  border-collapse:collapse;
+  width:100%;
+  display:table;
+  list-style-type:none;
+}
+
+.list li:hover {
+  background:#eee;
+}
+
+.list li a {
+  display:block;
+  padding:10px 10px;
+  text-decoration:none;
+  color:black;
+}
+
+.list li span.icon, .list li span.letter {
+  width:60px;
+  height:32px;
+  text-align:center;
+  border:1px solid #eeeeee;
+  background:white;
+  padding-left:0px;
+}
+.list li span.letter {
+  font-size:32px;
+  line-height:36px;
+  vertical-align:middle;
+  font-family:'Amiri',serif;
+}
+.list li span {
+  display:table-cell;
+  vertical-align:middle;
+  padding-left:10px;
+}
+
+.list li span.icon img {
+  height:32px;
+  vertical-align:middle;
+}
+
+main.edition .list ol, main.work .list ol {
+  font-size:100%;
+}
+main.edition .list li a, main.work .list li a {
+  padding:7px 7px;
+}
+
+
+nav.breadcrumb {
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+  margin-bottom:10px;
+}
+
+nav.breadcrumb a {
+  text-decoration:none;
+  color:black;
+}
+nav.breadcrumb a:hover {
+  background:#eee;
+}
+
+article {
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+}
+
+article h2 {
+  font-size:200%;
+  font-weight:normal;
+  font-family:'Amiri',serif;
+  margin:20px 0px;
+  margin-bottom:10px;
+  line-height:1em;
+}
+
+article h3 {
+  clear:both;
+}
+
+article h4 {
+  margin-top:0px;
+}
+
+article .info {
+  display:inline-block;
+  margin:10px;  
+}
+
+ul.edition-list {
+  margin:0px;
+  padding:0px;
+}
+
+ul.edition-list li {
+  list-style-type:none;
+  margin:0px;
+  padding:0px;
+}
+
+ul.edition-list li a:hover {
+  background:#eee;
+}
+
+ul.edition-list li a {
+  display:block;
+  text-decoration:none;
+  color:black;
+  padding:10px;
+} 
+
+ul.edition-list li a {
+  width:100%;
+}
+
+ul.edition-list li a > * {
+  display:table-cell; 
+  vertical-align:middle;
+}
+
+ul.edition-list li a img {
+  width:40px;
+  height:60px;
+  margin-right:10px;
+}
+
+ul.edition-list li a div.missing-cover {
+  width:40px;
+  height:60px;
+  vertical-align:top;
+  line-height:60px;
+  font-size:50px;
+  background:white;
+  border:1px solid #ccc;
+  color:#ccc;
+  font-family:sans-serif;
+  text-align:center;
+  margin-right:10px;
+}
+
+ul.edition-list li .title {
+  font-family: 'Amiri',serif;
+  font-size:120%;
+  line-height:1em;
+  margin-bottom:5px;
+}
+
+ul.edition-list li {
+  font-family:'Arsenal',sans-serif,Arial,Helvetica;
+}
+
+img.edition-preview {
+  float:left;
+  padding:10px; 
+  max-width:200px;
+  max-height:200px;
+  margin-bottom:20px;
+}
+
+div.edition-preview {
+  float:left;
+  padding:10px; 
+  width:150px;
+  height:200px;
+  margin-bottom:20px;
+  border:1px solid #ccc;
+  line-height:200px;
+  font-family:sans-serif;
+  font-size:150px;
+  color:#eee;
+  text-align:center;
+}
+
+img.edition-preview:hover {
+  opacity:0.6;
+  background:#eee;
+}
 
 @media only screen and (min-width: 576px) {
 .home-button { margin:20px; }
