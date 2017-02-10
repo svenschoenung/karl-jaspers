@@ -145,7 +145,8 @@
     "unsere-zukunft-und-goethe": {
       "title": "Unsere Zukunft und Goethe",
       "editions": [
-        "unsere-zukunft-und-goethe/1948"
+        "unsere-zukunft-und-goethe/1948",
+        "unsere-zukunft-und-goethe/1949"
       ]
     },
     "der-philosophische-glaube": {
@@ -660,7 +661,8 @@
       "series": "Goetheschriften im Artemis-Verlag Zürich, Heft 3",
       "links": {
         "dnb": ["http://d-nb.info/452185181"],
-        "openlib": ["https://openlibrary.org/books/OL194564M/"]
+        "openlib": ["https://openlibrary.org/books/OL194564M/"],
+        "google": ["https://books.google.de/books?id=0f4vAQAAIAAJ"]
       }
     },
     "philosophie/1948": {
@@ -746,7 +748,18 @@
         "dnb": ["http://d-nb.info/452184932"],
         "openlib": ["https://openlibrary.org/books/OL19955163M"]
       }
+    },
+    "unsere-zukunft-und-goethe/1949": {
+      "title": "Unsere Zukunft und Goethe",
+      "publisher": "Storm",
+      "publisher_city": "Bremen",
+      "edition": 1,
+      "pages": 37,
+      "links": {
+        "dnb": ["http://d-nb.info/452185203"],
+        "openlib": ["https://openlibrary.org/books/OL22051132M"],
+        "google": ["https://books.google.de/books?id=ZUvMmwEACAAJ"]
+      }
     }
-
   }
 }
