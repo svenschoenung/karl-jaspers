@@ -35,8 +35,8 @@ class Edition extends SmallHeaderComponent {
     var editionYear = this.props.params.editionYear;
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
-    var image = (edition.images[0][0]) ? '/ausgaben/' + editionId + '/' + edition.images[0][0] : null; 
-    var image200 = (edition.images[200][0]) ? '/ausgaben/' + editionId + '/' + edition.images[200][0] : null; 
+    var image = (edition.images[0]) ? '/ausgaben/' + editionId + '/' + edition.images[0][0] : null; 
+    var image200 = (edition.images[0]) ? '/ausgaben/' + editionId + '/' + edition.images[0][200] : null; 
     var links = Object.keys(edition.links || {})
       .map(key => (
         (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :

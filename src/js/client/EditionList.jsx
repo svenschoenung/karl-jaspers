@@ -16,8 +16,8 @@ class EditionList extends React.Component {
               <li>
               <Link to={'/ausgaben/' + edition.id}>
               <div>
-              { (edition.images[100][0]) ?
-                <img alt="Cover" src={'/ausgaben/' + edition.id + '/' + edition.images[100][0] }/> :
+              { (edition.images[0]) ?
+                <img alt="Cover" src={'/ausgaben/' + edition.id + '/' + edition.images[0][100] }/> :
                 <div className="missing-cover">?</div>
               }
               </div>

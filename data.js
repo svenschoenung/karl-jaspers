@@ -1,6 +1,6 @@
 var revHash = require('rev-hash');
 var glob = require('glob');
-var ext = require('gulp-util').replaceExtension;
+var replaceExtension = require('gulp-util').replaceExtension;
 
 var path = require('path');
 var fs = require('fs');
@@ -81,18 +81,22 @@ function addWorksToEditions(data) {
 
 function addImagesToEditions(data) {
   Object.keys(data.editions).forEach((editionId) => {
-    data.editions[editionId].images = {};
+    data.editions[editionId].images = [];
 
-    config.imageSizes.forEach(size => {
-      var imageGlobs = config.imageTypes.map(type => 
-        'www/ausgaben/' + editionId + '/' + type +  
-        ((size > 0) ? '_' + size + 'px' : '') + '.{jpg,png}'
-      );
-      var imagePaths = imageGlobs.map(i => glob.sync(i));
-      var images = [].concat.apply([], imagePaths);
-      data.editions[editionId].images[size] = images
-        .map(i => ext(i, '_v-' + revHash(fs.readFileSync(i)) + path.extname(i)))
-        .map(i => path.basename(i))
+    config.imageTypes.forEach(type => {
+      var imageGlob = 'www/ausgaben/' + editionId + '/' + type + '*.{jpg,png}';
+      var imagePaths = glob.sync(imageGlob);
+   
+      var imageSizes = {}; 
+      imagePaths.forEach(imagePath => {
+        var size = (imagePath.match(/_(\d+)px/) || {})[1] || '0';
+        imageSizes[size] = revisionImage(imagePath);
+      });
+
+      if (Object.keys(imageSizes).length > 0) {
+        data.editions[editionId].images.push(imageSizes);
+      }
+      
     });
   });
 }
@@ -124,12 +128,16 @@ function sortEditionsByName(data) {
 function revisionImages(data, files) {
   var images = {};
   glob.sync(files).forEach(image => {
-    var hash = revHash(fs.readFileSync(image));
     var key = path.parse(image).name;
-    var file = path.basename(image);
-    images[key] = ext(file, '_v-' + hash + path.extname(file));
+    images[key] = revisionImage(image);
   });
   return images;
+}
+
+function revisionImage(image) {
+  var hash = revHash(fs.readFileSync(image));
+  var basename = path.basename(image);
+  return replaceExtension(basename, '_v-' + hash + path.extname(basename));
 }
 
 module.exports.load = load;
