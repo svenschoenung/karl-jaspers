@@ -63,7 +63,8 @@
       "title": "Max Weber",
       "editions": [
         "max-weber/1932",
-        "max-weber/1946"
+        "max-weber/1946",
+        "max-weber/1948"
       ]
     },
     "vernunft-und-existenz": {
@@ -83,7 +84,8 @@
     "descartes-und-die-philosophie": {
       "title": "Descartes und die Philosophie",
       "editions": [
-        "descartes-und-die-philosophie/1937"
+        "descartes-und-die-philosophie/1937",
+        "descartes-und-die-philosophie/1948"
       ]
     },
     "existenzphilosophie": {
@@ -659,6 +661,30 @@
         "springer": ["http://link.springer.com/book/10.1007/978-3-642-49688-2"],
         "openlib": ["https://openlibrary.org/books/OL6077586M/"],
         "google": ["https://books.google.de/books?id=0QwKMQAACAAJ"]
+      }
+    },
+    "max-weber/1948": {
+      "title": "Max Weber",
+      "subtitle": "Politiker, Forscher, Philosoph",
+      "publisher": "Storm",
+      "publisher_city": "Bremen",
+      "edition": 3,
+      "pages": 58,
+      "links": {
+        "dnb": ["http://d-nb.info/994618255"],
+        "openlib": ["https://openlibrary.org/works/OL569925W/"]
+      }
+    },
+    "descartes-und-die-philosophie/1948": {
+      "title": "Descartes und die Philosophie",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin",
+      "edition": 2,
+      "edition_desc": "2. unveränderte Auflage",
+      "pages": 104,
+      "links": {
+        "dnb": ["http://d-nb.info/452184150"],
+        "openlib": ["https://openlibrary.org/books/OL13655530M"]
       }
     }
   }
