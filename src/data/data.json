@@ -148,7 +148,7 @@
         "unsere-zukunft-und-goethe/1948"
       ]
     },
-    "der-philsophische Glaube": {
+    "der-philosophische-glaube": {
       "title": "Der philosophische Glaube",
       "editions": [
         "der-philosophische-glaube/1948"
@@ -713,7 +713,7 @@
       "edition_desc": "5. unveränderte Auflage",
       "pages": 748,
       "links": {
-        "dnb": ["http://d-nb.info/452184754"],
+        "dnb": ["http://d-nb.info/452184754", "http://d-nb.info/1042840105"],
         "springer": ["http://link.springer.com/book/10.1007/978-3-642-49689-9"]
       }
     }
