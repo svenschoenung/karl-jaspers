@@ -146,6 +146,12 @@
       "editions": [
         "unsere-zukunft-und-goethe/1948"
       ]
+    },
+    "der-philsophische Glaube": {
+      "title": "Der philosophische Glaube",
+      "editions": [
+        "der-philosophische-glaube/1948"
+      ]
     }
   },
   "editions": {
@@ -685,6 +691,17 @@
       "links": {
         "dnb": ["http://d-nb.info/452184150"],
         "openlib": ["https://openlibrary.org/books/OL13655530M"]
+      }
+    },
+    "der-philosophische-glaube/1948": {
+      "title": "Der philosophische Glaube",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 136,
+      "links": {
+        "dnb": ["http://d-nb.info/452184347", "http://d-nb.info/452184355"],
+        "openlib": ["https://openlibrary.org/works/OL569889W"]
       }
     }
   }
