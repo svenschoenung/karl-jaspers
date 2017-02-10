@@ -6,7 +6,8 @@
         "allgemeine-psychopathologie/1913",
         "allgemeine-psychopathologie/1920",
         "allgemeine-psychopathologie/1923",
-        "allgemeine-psychopathologie/1946"
+        "allgemeine-psychopathologie/1946",
+        "allgemeine-psychopathologie/1948"
       ]
     },
     "psychologie-der-weltanschauungen": {
@@ -702,6 +703,18 @@
       "links": {
         "dnb": ["http://d-nb.info/452184347", "http://d-nb.info/452184355"],
         "openlib": ["https://openlibrary.org/works/OL569889W"]
+      }
+    },
+    "allgemeine-psychopathologie/1948": {
+      "title": "Allgemeine Psychopathologie",
+      "publisher": "Springer",
+      "publisher_city": "Berlin, Heidelberg",
+      "edition": 5,
+      "edition_desc": "5. unveränderte Auflage",
+      "pages": 748,
+      "links": {
+        "dnb": ["http://d-nb.info/452184754"],
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-49689-9"]
       }
     }
   }
