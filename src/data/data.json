@@ -30,7 +30,8 @@
       "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
       "editions": [
         "strindberg-und-van-gogh/1922",
-        "strindberg-und-van-gogh/1926"
+        "strindberg-und-van-gogh/1926",
+        "strindberg-und-van-gogh/1949"
       ]
     },
     "die-idee-der-universitaet": {
@@ -759,6 +760,17 @@
         "dnb": ["http://d-nb.info/452185203"],
         "openlib": ["https://openlibrary.org/books/OL22051132M"],
         "google": ["https://books.google.de/books?id=ZUvMmwEACAAJ"]
+      }
+    },
+    "strindberg-und-van-gogh/1949": {
+      "title": "Strindberg und van Gogh",
+      "subtitle": "Versuch einer pathographischen Analyse unter vergleichender Heranziehung von Swedenborg und Hölderlin",
+      "publisher": "Storm",
+      "publisher_city": "Bremen",
+      "edition": 1,
+      "pages": 182,
+      "links": {
+        "dnb": ["http://d-nb.info/452184908"]
       }
     }
   }
