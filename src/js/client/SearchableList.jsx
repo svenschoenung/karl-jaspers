@@ -21,6 +21,10 @@ export default class SearchableList extends React.Component {
   changeSearchTerm(evt) {
     this.setState({ searchTerm: evt.target.value });
   }
+  
+  componentDidMount() {
+    this.searchInput.focus();
+  }
 
   render() {
     return (
@@ -29,7 +33,8 @@ export default class SearchableList extends React.Component {
            <input type="text"
                   placeholder={this.props.searchPlaceholder}
                   value={this.state.searchTerm}
-                  onChange={this.changeSearchTerm.bind(this)} />
+                  onChange={this.changeSearchTerm.bind(this)}
+                  ref={(input) => { this.searchInput = input; }}/>
         </div>
         <div className="overview">
         <ul>
