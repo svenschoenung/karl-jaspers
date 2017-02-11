@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SmallHeaderComponent from './SmallHeaderComponent.jsx';
+import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
 import data from '../data.json';
 
-class EditionVariants extends SmallHeaderComponent {
+class EditionVariants extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }

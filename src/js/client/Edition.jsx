@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SmallHeaderComponent from './SmallHeaderComponent.jsx';
+import SmallHeaderPage from './SmallHeaderPage.jsx';
 import { editionDesc } from './util.js';
 import data from '../data.json';
 
@@ -16,7 +16,7 @@ function editionPath(params) {
   return path;
 }
 
-class Edition extends SmallHeaderComponent {
+class Edition extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }

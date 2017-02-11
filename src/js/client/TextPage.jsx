@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SmallHeaderComponent from './SmallHeaderComponent.jsx';
+import SmallHeaderPage from './SmallHeaderPage.jsx';
 
-class TextPage extends SmallHeaderComponent {
+class TextPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }

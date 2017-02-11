@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SmallHeaderComponent from './SmallHeaderComponent.jsx';
+import SmallHeaderPage from './SmallHeaderPage.jsx';
 import SearchableList from './SearchableList.jsx';
 
 import { editionDesc } from './util.js';
 import data from '../data.json';
 
-class Editions extends SmallHeaderComponent {
+class Editions extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }

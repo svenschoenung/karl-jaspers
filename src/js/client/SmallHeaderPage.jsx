@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SmallHeaderComponent extends React.Component {
+export default class SmallHeaderPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: '' };
@@ -11,5 +11,3 @@ class SmallHeaderComponent extends React.Component {
     this.setHeaderSize('small');
   }
 }
-
-export default SmallHeaderComponent;

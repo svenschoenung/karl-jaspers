@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import SmallHeaderComponent from './SmallHeaderComponent.jsx';
+import SmallHeaderPage from './SmallHeaderPage.jsx';
 import SearchableList from './SearchableList.jsx';
 
 import data from '../data.json';
 
-export default class Works extends SmallHeaderComponent {
+export default class Works extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
