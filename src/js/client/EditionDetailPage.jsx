@@ -79,7 +79,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <ul>
         {
           edition.works.map((workId) => (
-	    <li> 
+	    <li key={workId}> 
             <Link to={'/werke/' + workId}>
             <span className="letter">{data.works[workId].title.charAt(0)}</span>
             <span className="title">{data.works[workId].title} ({data.works[workId].year})</span>
@@ -95,7 +95,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <ul>
         {
           links.map((link) => (
-	    <li> 
+	    <li key={link.url}> 
             <a href={link.url}>
             <span className="icon"><img src={'/links/' + data.linkImages[link.type]}/></span>
             <span className="title">{link.desc}</span>
