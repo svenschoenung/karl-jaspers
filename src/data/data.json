@@ -279,12 +279,12 @@
       "edition_desc": "2. ergänzte Auflage",
       "pages": 151,
       "series": "Philosophische Forschungen, Band 3",
-      "google": "https://books.google.de/books?id=5ezPBgAAQBAJ",
-      "openlib": "https://openlibrary.org/books/OL6756615M/",
       "links": {
         "dnb": ["http://d-nb.info/580274489", "http://d-nb.info/1050169646"],
         "scribd": ["https://www.scribd.com/document/323103048/"],
-        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99342-8"]
+        "springer": ["http://link.springer.com/book/10.1007/978-3-642-99342-8"],
+        "google": ["https://books.google.de/books?id=5ezPBgAAQBAJ"],
+        "openlib": ["https://openlibrary.org/books/OL6756615M/"]
       }
     },
     "max-weber-rede/1926": {
