@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import SmallHeaderComponent from './SmallHeaderComponent.jsx';
-import { isSearchMatch } from './util.js';
+import SearchableList from './SearchableList.jsx';
+
 import data from '../data.json';
 
-class Works extends SmallHeaderComponent {
+export default class Works extends SmallHeaderComponent {
   constructor(props) {
     super(props);
   }
@@ -13,30 +14,19 @@ class Works extends SmallHeaderComponent {
   render() {
     return (
       <main className="works">
-        <div className="search">
-          <input type="text" placeholder="Werke durchsuchen"
-                 value={this.state.value} onChange={this.handleChange} />
-        </div>
-        <div className="overview">
-        <ul>
-        {
-          data.worksByYearAndTitle
-            .map((workId) => data.works[workId])
-            .filter(isSearchMatch(this.state.search, ['year', 'title']))
-            .map((work) => (
-              <li> 
-              <Link to={'/werke/' + work.id}>
-              <span className="year">{work.year}</span> 
-              <span className="title">{work.title}</span>
-              </Link>
-              </li>
-            ))
-        }
-        </ul>
-        </div>
+        <SearchableList
+          listItems={data.worksByYearAndTitle.map(id => data.works[id])}
+          searchPlaceholder="Werke durchsuchen"
+          searchFields={['year', 'title']}
+          renderItem={(work) =>
+            <li key={work.id}> 
+            <Link to={'/werke/' + work.id}>
+            <span className="year">{work.year}</span> 
+            <span className="title">{work.title}</span>
+            </Link>
+            </li>
+          } />
       </main>
     );
   }
 }
-
-export default Works;
