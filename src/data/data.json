@@ -160,7 +160,8 @@
       "title": "Vom Ursprung und Ziel der Geschichte",
       "editions": [
         "vom-ursprung-und-ziel-der-geschichte/1949/1",
-        "vom-ursprung-und-ziel-der-geschichte/1949/2"
+        "vom-ursprung-und-ziel-der-geschichte/1949/2",
+        "vom-ursprung-und-ziel-der-geschichte/1950"
       ]
     },
     "philosophie-und-wissenschaft": {
@@ -794,6 +795,17 @@
           "https://books.google.de/books?id=CT76wiuShEkC"
         ],
         "openlib": ["https://openlibrary.org/works/OL569932W"]
+      }
+    },
+    "vom-ursprung-und-ziel-der-geschichte/1950": {
+      "title": "Vom Ursprung und Ziel der Geschichte",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 2,
+      "edition_desc": "8. - 11. Tsd.",
+      "pages": 349,
+      "links": {
+        "dnb": ["http://d-nb.info/452184940"]
       }
     }
   }
