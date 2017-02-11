@@ -169,6 +169,13 @@
       "editions": [
         "philosophie-und-wissenschaft/1949"
       ]
+    },
+    "vernunft-und-widervernunft-in-unserer-zeit": {
+      "title": "Vernunft und Widervernunft in unserer Zeit",
+      "subtitle": "Drei Gastvorlesungen, gehalten auf Einladung des Asta an der Universität Heidelberg 1950",
+      "editions": [
+        "vernunft-und-widervernunft-in-unserer-zeit/1950"
+      ]
     }
   },
   "editions": {
@@ -806,6 +813,19 @@
       "pages": 349,
       "links": {
         "dnb": ["http://d-nb.info/452184940"]
+      }
+    },
+    "vernunft-und-widervernunft-in-unserer-zeit/1950": {
+      "title": "Vernunft und Widervernunft in unserer Zeit",
+      "subtitle": "Drei Gastvorlesungen, gehalten auf Einladung des Asta an der Universität Heidelberg 1950",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 71,
+      "links": {
+        "dnb": ["http://d-nb.info/452185025"],
+        "openlib": ["https://openlibrary.org/books/OL6097698M"],
+        "google": ["https://books.google.de/books?id=tVI_AAAAIAAJ"]
       }
     }
   }
