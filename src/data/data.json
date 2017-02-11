@@ -80,7 +80,8 @@
       "title": "Nietzsche",
       "editions": [
         "nietzsche/1936",
-        "nietzsche/1947"
+        "nietzsche/1947",
+        "nietzsche/1950"
       ]
     },
     "descartes-und-die-philosophie": {
@@ -826,6 +827,19 @@
         "dnb": ["http://d-nb.info/452185025"],
         "openlib": ["https://openlibrary.org/books/OL6097698M"],
         "google": ["https://books.google.de/books?id=tVI_AAAAIAAJ"]
+      }
+    },
+    "nietzsche/1950": {
+      "title": "Nietzsche",
+      "subtitle": "Einführung in das Verständnis seines Philosophierens",
+      "publisher": "De Gruyter",
+      "publisher_city": "Berlin",
+      "edition": 3,
+      "edition_desc": "3. unveränderte Auflage",
+      "pages": 487,
+      "links": {
+        "dnb": ["http://d-nb.info/452184525"],
+        "google": ["https://books.google.de/books?id=qro_vgAACAAJ"]
       }
     }
   }
