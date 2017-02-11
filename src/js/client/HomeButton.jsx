@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+
 import data from '../data.json';
 
-class HomeButton extends React.Component {
+export default class HomeButton extends React.Component {
   render() {
     return (
       <Link to={this.props.to} aria-label={this.props.label}>
@@ -14,5 +15,3 @@ class HomeButton extends React.Component {
     )
   }
 }
-
-export default HomeButton;

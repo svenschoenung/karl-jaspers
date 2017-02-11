@@ -4,8 +4,7 @@ import { Link } from 'react-router';
 import data from '../data.json';
 import { editionDesc } from './util.js';
 
-class EditionList extends React.Component {
-
+export default class EditionList extends React.Component {
   render() {
     return (
       <ul className="edition-list">
@@ -33,5 +32,3 @@ class EditionList extends React.Component {
     );
   }
 }
-
-export default EditionList;

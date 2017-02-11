@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import data from '../data.json';
 import HomeButton from './HomeButton.jsx';
 
-class Home extends React.Component {
+import data from '../data.json';
+
+export default class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: '' };
@@ -33,5 +34,3 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;

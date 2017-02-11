@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+
 import data from '../data.json';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
       <header className={this.props.size}>
@@ -15,5 +16,3 @@ class Header extends React.Component {
     );
   }
 }
-
-export default Header;

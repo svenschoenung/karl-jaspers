@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 
-class TextPage extends SmallHeaderPage {
+export default class TextPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
@@ -30,5 +30,3 @@ class TextPage extends SmallHeaderPage {
     );
   }
 }
-
-export default TextPage;

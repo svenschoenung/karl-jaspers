@@ -3,9 +3,10 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
+
 import data from '../data.json';
 
-class EditionVariants extends SmallHeaderPage {
+export default class EditionVariantPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
@@ -26,5 +27,3 @@ class EditionVariants extends SmallHeaderPage {
     );
   }
 }
-
-export default EditionVariants;

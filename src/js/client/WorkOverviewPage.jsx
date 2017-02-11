@@ -6,7 +6,7 @@ import SearchableList from './SearchableList.jsx';
 
 import data from '../data.json';
 
-export default class Works extends SmallHeaderPage {
+export default class WorkOverviewPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }

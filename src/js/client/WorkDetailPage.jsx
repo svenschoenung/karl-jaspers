@@ -3,9 +3,10 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
+
 import data from '../data.json';
 
-class Work extends SmallHeaderPage {
+export default class WorkDetailPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
@@ -34,5 +35,3 @@ class Work extends SmallHeaderPage {
     );
   }
 }
-
-export default Work;

@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
+import EditionPreview from './EditionPreview.jsx';
+
 import { editionDesc } from './util.js';
 import data from '../data.json';
-
-import EditionPreview from './EditionPreview.jsx';
 
 function editionPath(params) {
   var path = params.editionName
@@ -16,7 +16,7 @@ function editionPath(params) {
   return path;
 }
 
-class Edition extends SmallHeaderPage {
+export default class EditionDetailPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
@@ -111,5 +111,3 @@ class Edition extends SmallHeaderPage {
     );
   }
 }
-
-export default Edition;

@@ -7,7 +7,7 @@ import SearchableList from './SearchableList.jsx';
 import { editionDesc } from './util.js';
 import data from '../data.json';
 
-class Editions extends SmallHeaderPage {
+export default class EditionOverviewPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
   }
@@ -37,5 +37,3 @@ class Editions extends SmallHeaderPage {
     );
   }
 }
-
-export default Editions;

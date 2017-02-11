@@ -3,11 +3,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Header from './Header.jsx';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { headerSize: '' };
-    this.setHeaderSize = this.setHeaderSize.bind(this);
   }
 
   setHeaderSize(headerSize) {
@@ -27,7 +26,7 @@ class App extends React.Component {
         {
           React.cloneElement(this.props.children, {
             key: location.pathname,
-            setHeaderSize: this.setHeaderSize
+            setHeaderSize: this.setHeaderSize.bind(this)
           })
         }
         </ReactCSSTransitionGroup>
@@ -35,5 +34,3 @@ class App extends React.Component {
     );
   }
 } 
-
-export default App;
