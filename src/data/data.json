@@ -162,6 +162,12 @@
         "vom-ursprung-und-ziel-der-geschichte/1949/1",
         "vom-ursprung-und-ziel-der-geschichte/1949/2"
       ]
+    },
+    "philosophie-und-wissenschaft": {
+      "title": "Philosphie und Wissenschaft",
+      "editions": [
+        "philosophie-und-wissenschaft/1949"
+      ]
     }
   },
   "editions": {
@@ -771,6 +777,23 @@
       "pages": 182,
       "links": {
         "dnb": ["http://d-nb.info/452184908"]
+      }
+    },
+    "philosophie-und-wissenschaft/1949": {
+      "title": "Philsophie und Wissenschaft",
+      "subtitle": "Antrittsvorlesg an der Universität Basel",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 1,
+      "pages": 16,
+      "links": {
+        "dnb": ["http://d-nb.info/57409167X"],
+        "google": [
+          "https://books.google.de/books?id=wD5CAQAAIAAJ",
+          "https://books.google.de/books?id=zkUZAAAAMAAJ",
+          "https://books.google.de/books?id=CT76wiuShEkC"
+        ],
+        "openlib": ["https://openlibrary.org/works/OL569932W"]
       }
     }
   }
