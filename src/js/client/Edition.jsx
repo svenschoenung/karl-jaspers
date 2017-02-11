@@ -44,6 +44,15 @@ class EditionPreview extends React.Component {
     });
   }
 
+  gotoAuto() {
+    if (this.state.currentImage == this.props.edition.images.length - 1) {
+      this.setState({currentImage: 0});
+      return;
+    }
+
+    this.gotoNext();
+  }
+
   render() {
     var edition = this.props.edition;
 
@@ -82,10 +91,10 @@ class EditionPreview extends React.Component {
             onClose={this.closeLightbox.bind(this)}
             onClickNext={this.gotoNext.bind(this)}
             onClickPrev={this.gotoPrevious.bind(this)}
+            onClickImage={this.gotoAuto.bind(this)}
             onClickThumbnail={this.gotoImage.bind(this)}
             showThumbnails={true}
             showImageCount={false}
-            backdropClosesModal={true}
             leftArrowTitle="Vorheriges Bild"
             rightArrowTitle="Nächstes Bild"
             closeButtonTitle="Schließen"
