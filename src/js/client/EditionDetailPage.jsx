@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
+import Title from './Title.jsx';
 
 import { editionDesc } from './util.js';
 import data from '../data.json';
@@ -59,8 +60,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
           {edition.year} 
         </nav>
         <article>
-        <h2>{edition.title}</h2>
-        {(edition.subtitle) ? <h4>{edition.subtitle}</h4> : null}
+        <Title for={edition}/>
         <EditionPreview edition={edition}/>
         <div className="info">
         {editionDesc(edition, ',') || ''} {edition.year} <br/>
