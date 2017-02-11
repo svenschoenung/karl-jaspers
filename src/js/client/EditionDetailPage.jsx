@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
+import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
 
 import { editionDesc } from './util.js';
@@ -52,13 +53,9 @@ export default class EditionDetailPage extends SmallHeaderPage {
 
     return (
       <main className="edition">
-        <nav className="breadcrumb">
-          <Link to={'/ausgaben'}>Ausgaben</Link> 
-          {' > '}
-          <Link to={'/ausgaben/' + edition.name}>{edition.title}</Link>
-          {' > '}
-          {edition.year} 
-        </nav>
+        <Breadcrumb
+           links={['/ausgaben', '/ausgaben/' + edition.name]}
+           labels={['Ausgaben', edition.title, edition.year]} />
         <article>
         <Title for={edition}/>
         <EditionPreview edition={edition}/>

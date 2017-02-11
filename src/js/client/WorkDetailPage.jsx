@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
+import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
 
 import data from '../data.json';
@@ -23,11 +24,7 @@ export default class WorkDetailPage extends SmallHeaderPage {
     var work = data.works[this.props.params.workId];
     return (
       <main className="work">
-        <nav className="breadcrumb">
-          <Link to="/werke">Werke</Link> 
-          {' > '}
-          {work.title}
-        </nav>
+        <Breadcrumb links={['/werke']} labels={['Werke', work.title]}/>
         <article>
         <Title for={work}/>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>

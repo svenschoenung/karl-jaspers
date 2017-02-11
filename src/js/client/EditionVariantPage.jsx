@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
+import Breadcrumb from './Breadcrumb.jsx';
 
 import data from '../data.json';
 
@@ -16,9 +17,9 @@ export default class EditionVariantPage extends SmallHeaderPage {
     var editions = editionIds.map((editionId) => data.editions[editionId]);
     return (
      <main className="editions-variants">
-       <nav className="breadcrumb">
-         <Link to="/ausgaben">Ausgaben</Link> &gt; {editions[0].title} 
-       </nav>
+       <Breadcrumb
+         links={['/ausgaben']} 
+         labels={['Ausgaben', editions[0].title]} />
        <article>
        <h3>Auflagen</h3>
        <EditionList editions={editionIds}/>
