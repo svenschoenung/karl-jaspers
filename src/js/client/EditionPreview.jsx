@@ -63,7 +63,7 @@ class EditionPreview extends React.Component {
 
           <div>
           {smallPreviewImages.map((smallPreviewImage, i) =>
-            <img className="small-preview"
+            <img key={i} className="small-preview"
                  src={smallPreviewImage}
                  onClick={this.openLightbox.bind(this, i+1)}/>
           )}
