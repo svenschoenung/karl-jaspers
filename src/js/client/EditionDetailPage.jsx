@@ -59,7 +59,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
         </div>
         <EditionWorks title="Enthaltene Werke" workIds={edition.works}/>
-        <EditionLinks links={edition.links}/>
+        <EditionLinks title="Externe Links" links={edition.links}/>
         </article>
       </main> 
     );

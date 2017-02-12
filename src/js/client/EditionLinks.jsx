@@ -29,7 +29,7 @@ export default class EditionLinks extends React.Component {
     }
     return (
       <div className="list">
-        <h3>Externe Links</h3>
+        <h3>{this.props.title}</h3>
         <ul>
         {
           links.map(link => (
