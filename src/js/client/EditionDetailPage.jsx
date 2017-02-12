@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
+import EditionInfo from './EditionInfo.jsx';
 import EditionWorks from './EditionWorks.jsx';
 import EditionLinks from './EditionLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
@@ -23,6 +24,7 @@ function editionPath(params) {
 export default class EditionDetailPage extends SmallHeaderPage {
   constructor(props) {
     super(props);
+    this.state = {edition: {}};
   }
 
   componentDidMount() {
@@ -30,7 +32,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
 
     fetch('/ausgaben/' + editionPath(this.props.params) + '.json')
       .then((rsp) => rsp.json())
-      .then((json) => this.setState({notes: json.notes}));
+      .then((json) => this.setState({edition: json}));
   }
 
   render() {
@@ -46,18 +48,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <article>
         <Title for={edition}/>
         <EditionPreview edition={edition}/>
-        <div className="info">
-        {editionDesc(edition, ',') || ''} {edition.year} <br/>
-        {edition.publisher}
-        {(edition.publisher_city) ? ' (' + edition.publisher_city + ')': null}
-        <br/>
-        <br/>
-        {edition.pages} Seiten
-	{(edition.series) ? <br/> : null}
-	{(edition.series) ? <br/> : null}
-	{(edition.series) ? edition.series : null}
-        <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
-        </div>
+        <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
         <EditionWorks title="Enthaltene Werke" workIds={edition.works}/>
         <EditionLinks title="Externe Links" links={edition.links}/>
         </article>
