@@ -21,8 +21,7 @@ export default class EditionVariantPage extends SmallHeaderPage {
          links={['/ausgaben']} 
          labels={['Ausgaben', editions[0].title]} />
        <article>
-       <h3>Auflagen</h3>
-       <EditionList editions={editionIds}/>
+       <EditionList title="Auflagen" editions={editionIds}/>
        </article>
      </main>
     );

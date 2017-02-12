@@ -29,8 +29,7 @@ export default class WorkDetailPage extends SmallHeaderPage {
         <Title for={work}/>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
-        <h3>Ver&ouml;ffentlicht in</h3>
-        <EditionList editions={work.editions}/>
+        <EditionList title="Veröffentlicht in" editions={work.editions}/>
         </article>
       </main> 
     );

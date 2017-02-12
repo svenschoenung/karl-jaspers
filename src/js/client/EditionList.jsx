@@ -8,6 +8,8 @@ export default class EditionList extends React.Component {
   render() {
     var cover = (ed) => '/ausgaben/' + ed.id + '/' + ed.images[0][100];
     return (
+      <div>
+      <h3>{this.props.title}</h3>
       <ul className="edition-list">
         {
           this.props.editions.map((editionId) => data.editions[editionId])
@@ -35,6 +37,7 @@ export default class EditionList extends React.Component {
             )
         }
       </ul>
+      </div>
     );
   }
 }
