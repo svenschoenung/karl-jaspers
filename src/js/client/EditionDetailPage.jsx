@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
+import EditionWorks from './EditionWorks.jsx';
 import EditionLinks from './EditionLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
@@ -57,21 +58,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
 	{(edition.series) ? edition.series : null}
         <div dangerouslySetInnerHTML={{__html: this.state.notes}} />
         </div>
-        <h3>Enthaltene Werke</h3>
-        <div className="list">
-        <ul>
-        {
-          edition.works.map((workId) => (
-	    <li key={workId}> 
-            <Link to={'/werke/' + workId}>
-            <span className="letter">{data.works[workId].title.charAt(0)}</span>
-            <span className="title">{data.works[workId].title} ({data.works[workId].year})</span>
-            </Link>
-            </li>
-          ))
-        }
-        </ul>
-        </div>
+        <EditionWorks title="Enthaltene Werke" workIds={edition.works}/>
         <EditionLinks links={edition.links}/>
         </article>
       </main> 
