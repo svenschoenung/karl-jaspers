@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
+import EditionLinks from './EditionLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
 
@@ -32,25 +33,10 @@ export default class EditionDetailPage extends SmallHeaderPage {
   }
 
   render() {
-    var l = (edition, key, desc) =>
-      edition.links[key].map(url => ({ url: url, desc: desc, type: key }));
-
     var editionName = this.props.params.editionName;
     var editionYear = this.props.params.editionYear;
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
-    var links = Object.keys(edition.links || {})
-      .map(key => (
-        (key == 'dnb') ? l(edition, key, 'Deutsche Nationalbibliothek') :
-        (key == 'google') ? l(edition, key, 'Google Books') :
-        (key == 'scribd') ? l(edition, key, 'Scribd') :
-        (key == 'openlib') ? l(edition, key, 'Open Library') : 
-        (key == 'jstor') ? l(edition, key, 'JSTOR') : 
-        (key == 'springer') ? l(edition, key, 'Springer Link') : []
-      ));
-    links = [].concat.apply([], links)
-      .sort((a,b) => a.desc.localeCompare(b.desc));
-
     return (
       <main className="edition">
         <Breadcrumb
@@ -86,23 +72,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         }
         </ul>
         </div>
-        { (links.length == 0) ? null : 
-        <div className="list">
-        <h3>Externe Links</h3>
-        <ul>
-        {
-          links.map((link) => (
-	    <li key={link.url}> 
-            <a href={link.url}>
-            <span className="icon"><img src={'/links/' + data.linkImages[link.type]}/></span>
-            <span className="title">{link.desc}</span>
-            </a>
-            </li>
-          ))
-        }
-        </ul>
-        </div>
-        }
+        <EditionLinks links={edition.links}/>
         </article>
       </main> 
     );
