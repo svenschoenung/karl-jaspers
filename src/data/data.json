@@ -131,7 +131,8 @@
       "title": "Vom europäischen Geist",
       "editions": [
         "vom-europaeischen-geist/1947/1",
-        "vom-europaeischen-geist/1947/2"
+        "vom-europaeischen-geist/1947/2",
+        "rechenschaft-und-ausblick/1951"
       ]
     },
     "europa-der-gegenwart": {
@@ -151,7 +152,8 @@
       "title": "Unsere Zukunft und Goethe",
       "editions": [
         "unsere-zukunft-und-goethe/1948",
-        "unsere-zukunft-und-goethe/1949"
+        "unsere-zukunft-und-goethe/1949",
+        "rechenschaft-und-ausblick/1951"
       ]
     },
     "der-philosophische-glaube": {
@@ -190,8 +192,49 @@
         "einfuehrung-in-die-philosophie/1950/1",
         "einfuehrung-in-die-philosophie/1950/2"
       ]
+    },
+    "das-radikal-boese-bei-kant": {
+      "title": "Das radikal Böse bei Kant",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "kierkegaard": {
+      "title": "Kierkegaard",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "volk-und-universitaet": {
+      "title": "Volk und Universität",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "zur-kritik-der-psychoanalyse": {
+      "title": "Zur Kritik der Psychoanalyse",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "gefahren-und-chancen-der-freiheit": {
+      "title": "Gefahren und Chancen der Freiheit",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "das-gewissen-vor-der-bedrohung-durch-die-atombombe": {
+      "title": "Das Gewissen vor der Bedrohung durch die Atombombe",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
+    },
+    "mein-weg-zur-philosophie": {
+      "title": "Mein Weg zur Philosophie",
+      "editions": [
+        "rechenschaft-und-ausblick/1951"
+      ]
     }
-
   },
   "editions": {
     "allgemeine-psychopathologie/1913": {
@@ -877,6 +920,19 @@
       "copies_desc": "6.-10. Tausend",
       "pages": 159,
       "links": {
+      }
+    },
+    "rechenschaft-und-ausblick/1951": {
+      "title": "Rechenschaft und Ausblick",
+      "subtitle": "Reden und Aufsätze",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 368,
+      "links": {
+        "dnb": ["http://d-nb.info/452184797"],
+        "google": ["https://books.google.de/books?id=fzxIAAAAMAAJ"],
+        "openlib": ["https://openlibrary.org/books/OL15332133://openlibrary.org/books/OL201752M"]
       }
     }
   }
