@@ -15,7 +15,10 @@
       "editions": [
         "psychologie-der-weltanschauungen/1919",
         "psychologie-der-weltanschauungen/1922"
-      ]
+      ],
+      "links": {
+        "wiki": ["https://de.wikipedia.org/wiki/Psychologie_der_Weltanschauungen"]
+      }
     },
     "max-weber-rede": {
       "title": "Max Weber. Rede",
@@ -163,7 +166,10 @@
         "vom-ursprung-und-ziel-der-geschichte/1949/1",
         "vom-ursprung-und-ziel-der-geschichte/1949/2",
         "vom-ursprung-und-ziel-der-geschichte/1950"
-      ]
+      ],
+      "links": {
+        "wiki": ["https://de.wikipedia.org/wiki/Achsenzeit"]
+      }
     },
     "philosophie-und-wissenschaft": {
       "title": "Philosphie und Wissenschaft",
