@@ -5,7 +5,7 @@ import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
 import EditionInfo from './EditionInfo.jsx';
 import EditionWorks from './EditionWorks.jsx';
-import EditionLinks from './EditionLinks.jsx';
+import ExternalLinks from './ExternalLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
 
@@ -50,7 +50,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <EditionPreview edition={edition}/>
         <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
         <EditionWorks title="Enthaltene Werke" workIds={edition.works}/>
-        <EditionLinks title="Externe Links" links={edition.links}/>
+        <ExternalLinks title="Externe Links" links={edition.links}/>
         </article>
       </main> 
     );

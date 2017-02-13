@@ -12,7 +12,7 @@ var linkDescs = {
   springer: 'Springer Link'
 };
 
-export default class EditionLinks extends React.Component {
+export default class ExternalLinks extends React.Component {
   render() {
     var links = [];
     Object.keys(this.props.links || {}).forEach(type => 
