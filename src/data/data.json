@@ -183,7 +183,15 @@
       "editions": [
         "vernunft-und-widervernunft-in-unserer-zeit/1950"
       ]
+    },
+    "einfuehrung-in-die-philosophie": {
+      "title": "Einführung in die Philosophie",
+      "editions": [
+        "einfuehrung-in-die-philosophie/1950/1",
+        "einfuehrung-in-die-philosophie/1950/2"
+      ]
     }
+
   },
   "editions": {
     "allgemeine-psychopathologie/1913": {
@@ -846,6 +854,29 @@
       "links": {
         "dnb": ["http://d-nb.info/452184525"],
         "google": ["https://books.google.de/books?id=qro_vgAACAAJ"]
+      }
+    },
+    "einfuehrung-in-die-philosophie/1950/1": {
+      "title": "Einführung in die Philosophie",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 1,
+      "pages": 159,
+      "links": {
+        "dnb": ["http://d-nb.info/452184177"],
+        "google": ["https://books.google.de/books?id=8z1IAAAAMAAJ"],
+        "openlib": ["https://openlibrary.org/books/OL15332133M"]
+      }
+    },
+    "einfuehrung-in-die-philosophie/1950/2": {
+      "title": "Einführung in die Philosophie",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 2,
+      "copies": "6000-10000",
+      "copies_desc": "6.-10. Tausend",
+      "pages": 159,
+      "links": {
       }
     }
   }
