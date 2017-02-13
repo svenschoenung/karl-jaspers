@@ -159,7 +159,8 @@
     "der-philosophische-glaube": {
       "title": "Der philosophische Glaube",
       "editions": [
-        "der-philosophische-glaube/1948"
+        "der-philosophische-glaube/1948",
+        "der-philosophische-glaube/1951"
       ]
     },
     "vom-ursprung-und-ziel-der-geschichte": {
@@ -934,6 +935,19 @@
         "google": ["https://books.google.de/books?id=fzxIAAAAMAAJ"],
         "openlib": ["https://openlibrary.org/books/OL15332133://openlibrary.org/books/OL201752M"]
       }
+    },
+    "der-philosophische-glaube/1951": {
+      "title": "Der philosophische Glaube",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 2,
+      "copies": "11000-13000",
+      "copies_desc": "11.-13. Tausend",
+      "pages": 136,
+      "links": {
+        "dnb": ["http://d-nb.info/452184363"]
+      }
     }
+
   }
 }
