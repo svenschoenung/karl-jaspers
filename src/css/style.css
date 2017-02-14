@@ -158,7 +158,9 @@ nav.home-links a:hover {
   padding-right:5px;
 }
 
-.overview li span.publisher, .overview span.editionno {
+.overview li span.publisher, 
+.overview li span.editionno, 
+.overview li span.excerpt {
   color:#ccc;
 }
 

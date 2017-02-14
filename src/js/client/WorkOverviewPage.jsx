@@ -22,7 +22,14 @@ export default class WorkOverviewPage extends SmallHeaderPage {
             <li key={work.id}> 
             <Link to={'/werke/' + work.id}>
             <span className="year">{work.year}</span> 
-            <span className="title">{work.title}</span>
+            <span>
+              <span className="title">{work.title}</span>
+              { (!work.source) ? null :
+                <span className="excerpt">
+                (Exzerpt aus: &laquo;{data.works[work.source[0]].title}&raquo;)
+                </span>
+              } 
+            </span>
             </Link>
             </li>
           } />

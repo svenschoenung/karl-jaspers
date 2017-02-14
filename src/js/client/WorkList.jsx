@@ -3,8 +3,11 @@ import { Link } from 'react-router';
 
 import data from '../data.json';
 
-export default class EditionWorks extends React.Component {
+export default class WorkList extends React.Component {
   render() {
+    if (!this.props.workIds || this.props.workIds.length == 0) {
+      return null;
+    }
     return (
       <div>
         <h3>{this.props.title}</h3>

@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
+import WorkList from './WorkList.jsx';
 import ExternalLinks from './ExternalLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
@@ -30,6 +31,7 @@ export default class WorkDetailPage extends SmallHeaderPage {
         <Title for={work}/>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
+        <WorkList title="Exzerpt aus" workIds={work.source}/>
         <EditionList title="Veröffentlicht in" editions={work.editions}/>
         <ExternalLinks title="Externe Links" links={work.links}/>
         </article>

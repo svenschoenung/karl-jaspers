@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionPreview from './EditionPreview.jsx';
 import EditionInfo from './EditionInfo.jsx';
-import EditionWorks from './EditionWorks.jsx';
+import WorkList from './WorkList.jsx';
 import ExternalLinks from './ExternalLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
@@ -49,7 +49,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <Title for={edition}/>
         <EditionPreview edition={edition}/>
         <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
-        <EditionWorks title="Enthaltene Werke" workIds={edition.works}/>
+        <WorkList title="Enthaltene Werke" workIds={edition.works}/>
         <ExternalLinks title="Externe Links" links={edition.links}/>
         </article>
       </main> 
