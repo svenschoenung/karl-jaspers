@@ -110,7 +110,8 @@
     "nietzsche-und-das-christentum": {
       "title": "Nietzsche und das Christentum",
       "editions": [
-        "nietzsche-und-das-christentum/1946"
+        "nietzsche-und-das-christentum/1946",
+        "nietzsche-und-das-christentum/1952"
       ]
     },
     "die-schuldfrage": {
@@ -995,6 +996,18 @@
         "google": ["https://books.google.de/books?id=mGIaAAAAIAAJ"],
         "openlib": ["https://openlibrary.org/works/OL569879W"]
       }
-    }
+    },
+    "nietzsche-und-das-christentum/1952": {
+      "title": "Nietzsche und das Christentum",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 70,
+      "links": {
+        "dnb": ["http://d-nb.info/452184541"],
+        "openlib": ["https://openlibrary.org/books/OL16404654M"],
+        "google": ["https://books.google.de/books?id=CU10vgAACAAJ"]
+      }
+    } 
   }
 }
