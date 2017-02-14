@@ -237,6 +237,13 @@
       "editions": [
         "rechenschaft-und-ausblick/1951"
       ]
+    },
+    "ueber-das-tragische": {
+      "title": "Über das Tragische",
+      "source": ["von-der-wahrheit"],
+      "editions": [
+        "ueber-das-tragische/1952"
+      ]
     }
   },
   "editions": {
@@ -975,6 +982,18 @@
       "links": {
         "dnb": ["http://d-nb.info/452185033"],
         "google": ["https://books.google.de/books?id=Z1ZNDQEACAAJ"]
+      }
+    },
+    "ueber-das-tragische/1952": {
+      "title": "Über das Tragische",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 1,
+      "pages": 63,
+      "links": {
+        "dnb": ["http://d-nb.info/452185068"],
+        "google": ["https://books.google.de/books?id=mGIaAAAAIAAJ"],
+        "openlib": ["https://openlibrary.org/works/OL569879W"]
       }
     }
   }
