@@ -168,7 +168,8 @@
       "editions": [
         "vom-ursprung-und-ziel-der-geschichte/1949/1",
         "vom-ursprung-und-ziel-der-geschichte/1949/2",
-        "vom-ursprung-und-ziel-der-geschichte/1950"
+        "vom-ursprung-und-ziel-der-geschichte/1950",
+        "vom-ursprung-und-ziel-der-geschichte/1952"
       ],
       "links": {
         "wiki": ["https://de.wikipedia.org/wiki/Achsenzeit"]
@@ -868,7 +869,8 @@
       "publisher": "Piper",
       "publisher_city": "München",
       "edition": 2,
-      "edition_desc": "8. - 11. Tsd.",
+      "copies": "8000-11000",
+      "copies_desc": "8.-11. Tsd.",
       "pages": 349,
       "links": {
         "dnb": ["http://d-nb.info/452184940"]
@@ -947,7 +949,18 @@
       "links": {
         "dnb": ["http://d-nb.info/452184363"]
       }
+    },
+    "vom-ursprung-und-ziel-der-geschichte/1952": {
+      "title": "Vom Ursprung und Ziel der Geschichte",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 3,
+      "copies": "12000-14000",
+      "copies_desc": "12.-14. Tsd.",
+      "pages": 349,
+      "links": {
+        "dnb": ["http://d-nb.info/452184959"]
+      }
     }
-
   }
 }
