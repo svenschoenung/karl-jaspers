@@ -12,6 +12,11 @@ function isMatch(term, props) {
   }
 }
 
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") ||
+         (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
 export default class SearchableList extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +28,9 @@ export default class SearchableList extends React.Component {
   }
   
   componentDidMount() {
-    this.searchInput.focus();
+    if (!isMobileDevice()) {
+      this.searchInput.focus();
+    }
   }
 
   render() {
