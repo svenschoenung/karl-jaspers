@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { editionDesc } from './util.js';
+import EditionDesc from './EditionDesc.jsx';
 
 export default class EditionInfo extends React.Component {
   render() {
     var edition = this.props.edition;
     return (
       <div className="info">
-        {editionDesc(edition, ',') || ''} {edition.year} <br/>
+        <EditionDesc edition={edition} delim=", " trailingDelim={true}/>
+        {edition.year}<br/>
         {edition.publisher}
         {(edition.publisher_city) ? ' (' + edition.publisher_city + ')': null}
         <br/>

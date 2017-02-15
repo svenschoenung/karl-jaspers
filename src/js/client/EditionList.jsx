@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import EditionDesc from './EditionDesc.jsx';
+
 import data from '../data.json';
-import { editionDesc } from './util.js';
 
 export default class EditionList extends React.Component {
   render() {
@@ -27,9 +28,8 @@ export default class EditionList extends React.Component {
               <div>
               <div className="title">{edition.title} ({edition.year})</div>
               <div>
-                {editionDesc(edition) || edition.series || ''}
-                , {edition.pages} Seiten
-                , {edition.publisher}
+                <EditionDesc edition={edition} delim=", " series={true}/>
+                , {edition.pages} Seiten, {edition.publisher}
               </div>
               </div>
               </Link>

@@ -9,7 +9,6 @@ import ExternalLinks from './ExternalLinks.jsx';
 import Breadcrumb from './Breadcrumb.jsx';
 import Title from './Title.jsx';
 
-import { editionDesc } from './util.js';
 import data from '../data.json';
 
 function editionPath(params) {
