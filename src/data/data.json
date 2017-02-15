@@ -194,7 +194,8 @@
       "title": "Einführung in die Philosophie",
       "editions": [
         "einfuehrung-in-die-philosophie/1950/1",
-        "einfuehrung-in-die-philosophie/1950/2"
+        "einfuehrung-in-die-philosophie/1950/2",
+        "einfuehrung-in-die-philosophie/1953"
       ]
     },
     "das-radikal-boese-bei-kant": {
@@ -1025,6 +1026,18 @@
       "links": {
         "dnb": ["http://d-nb.info/574091653"],
         "openlib": ["https://openlibrary.org/works/OL569920W/"]
+      }
+    },
+    "einfuehrung-in-die-philosophie/1953": {
+      "title": "Einführung in die Philosophie",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 3,
+      "copies": "11000-20000",
+      "copies_desc": "11.-20. Tausend",
+      "pages": 164,
+      "links": {
+        "dnb": ["http://d-nb.info/452184185"]
       }
     }
   }
