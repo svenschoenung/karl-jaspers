@@ -256,6 +256,19 @@ article .info {
   margin:10px;  
 }
 
+article .info-group {
+  margin-bottom:15px;
+}
+
+article .info-group h4 {
+  margin-bottom:5px;
+}
+
+article .info-group p {
+  margin:5px 0px;
+}
+
+
 ul.edition-list {
   margin:0px;
   padding:0px;
