@@ -245,6 +245,12 @@
       "editions": [
         "ueber-das-tragische/1952"
       ]
+    },
+    "lionardo-als-philosoph": {
+      "title": "Lionardo als Philosoph",
+      "editions": [
+        "lionardo-als-philosoph/1953"
+      ]
     }
   },
   "editions": {
@@ -1008,6 +1014,18 @@
         "openlib": ["https://openlibrary.org/books/OL16404654M"],
         "google": ["https://books.google.de/books?id=CU10vgAACAAJ"]
       }
-    } 
+    },
+    "lionardo-als-philosoph/1953": {
+      "title": "Lionardo als Philosoph",
+      "publisher": "Franke",
+      "publisher_city": "Bern",
+      "edition": 1,
+      "pages": 77,
+      "series": "Schriften der \"Concinnitas\" im kunsthistorischen Seminar der Universität Basel",
+      "links": {
+        "dnb": ["http://d-nb.info/574091653"],
+        "openlib": ["https://openlibrary.org/works/OL569920W/"]
+      }
+    }
   }
 }
