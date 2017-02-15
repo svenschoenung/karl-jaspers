@@ -160,7 +160,8 @@
     "der-philosophische-glaube": {
       "title": "Der philosophische Glaube",
       "editions": [
-        "der-philosophische-glaube/1948",
+        "der-philosophische-glaube/1948/1",
+        "der-philosophische-glaube/1948/2",
         "der-philosophische-glaube/1951"
       ]
     },
@@ -385,6 +386,8 @@
       "publisher": "J.C.B. Mohr",
       "publisher_city": "Tübingen",
       "edition": 2,
+      "copies": "2000-3000",
+      "copies_desc": "2. und 3. Tausend",
       "pages": 27,
       "links": {
         "dnb": ["http://d-nb.info/574091742"],
@@ -795,14 +798,27 @@
         "openlib": ["https://openlibrary.org/books/OL13655530M"]
       }
     },
-    "der-philosophische-glaube/1948": {
+    "der-philosophische-glaube/1948/1": {
       "title": "Der philosophische Glaube",
       "publisher": "Piper",
       "publisher_city": "München",
       "edition": 1,
       "pages": 136,
       "links": {
-        "dnb": ["http://d-nb.info/452184347", "http://d-nb.info/452184355"],
+        "dnb": ["http://d-nb.info/452184347"],
+        "openlib": ["https://openlibrary.org/works/OL569889W"]
+      }
+    },
+    "der-philosophische-glaube/1948/2": {
+      "title": "Der philosophische Glaube",
+      "publisher": "Piper",
+      "publisher_city": "München",
+      "edition": 2,
+      "copies": "6000-10000",
+      "copies_desc": "6.-10. Tausend",
+      "pages": 136,
+      "links": {
+        "dnb": ["http://d-nb.info/452184355"],
         "openlib": ["https://openlibrary.org/works/OL569889W"]
       }
     },
@@ -865,7 +881,7 @@
       }
     },
     "philosophie-und-wissenschaft/1949": {
-      "title": "Philsophie und Wissenschaft",
+      "title": "Philosophie und Wissenschaft",
       "subtitle": "Antrittsvorlesg an der Universität Basel",
       "publisher": "Artemis",
       "publisher_city": "Zürich",
@@ -959,7 +975,7 @@
       "title": "Der philosophische Glaube",
       "publisher": "Piper",
       "publisher_city": "München",
-      "edition": 2,
+      "edition": 3,
       "copies": "11000-13000",
       "copies_desc": "11.-13. Tausend",
       "pages": 136,
