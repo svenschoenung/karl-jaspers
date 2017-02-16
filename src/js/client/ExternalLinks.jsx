@@ -10,7 +10,8 @@ var linkDescs = {
   openlib: () => 'Open Library',
   jstor: () => 'JSTOR',
   springer: () => 'Springer Link',
-  wiki: (l) => 'Wikipedia: ' + l.url.replace(/.*\//, '').replace(/_/g, ' ')
+  wiki: (l) => 'Wikipedia: ' + l.url.replace(/.*\//, '').replace(/_/g, ' '),
+  worldcat: () => 'OCLC WorldCat'
 };
 
 export default class ExternalLinks extends React.Component {
