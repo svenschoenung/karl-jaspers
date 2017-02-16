@@ -5,7 +5,6 @@ export default class EditionDesc extends React.Component {
     var edition = this.props.edition;
     var desc = '';
 
-console.log(edition);
     if (edition.edition_desc) {
        desc = edition.edition_desc;
     } else if (edition.edition) {
