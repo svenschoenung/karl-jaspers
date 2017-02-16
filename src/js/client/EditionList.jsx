@@ -26,7 +26,12 @@ export default class EditionList extends React.Component {
               }
               </div>
               <div>
-              <div className="title">{edition.title} ({edition.year})</div>
+              <div className="title">
+                <span className="aquo">&laquo;</span>
+                {edition.title}
+                <span className="aquo">&raquo;</span>
+                {' (' + edition.year + ')'}
+              </div>
               <div>
                 <EditionDesc edition={edition} delim=", " series={true}/>
                 , {edition.pages} Seiten, {edition.publisher}
