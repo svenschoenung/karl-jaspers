@@ -8,17 +8,21 @@ function esc(text) {
 }
 
 var linkTypes = {
-  scribd: (ids, e) => ids.map(id => ({
+  scribd: (ids) => ids.map(id => ({
     desc: 'Scribd', 
     url: 'https://www.scribd.com/doc/' + id
   })),
-  jstor: (ids, e) => ids.map(id => ({
+  jstor: (ids) => ids.map(id => ({
     desc: 'JSTOR',
     url: 'https://www.jstor.org/stable/' + id
   })),
-  springer: (ids, e) => ids.map(id => ({
+  springer: (ids) => ids.map(id => ({
     desc: 'Springer Link',
     url: 'http://link.springer.com/book/' + id
+  })),
+  archive: (ids) => ids.map(id => ({
+    desc: 'Internet Archive',
+    url: 'https://archive.org/details/' + id
   })),
   dnb: (ids, e) => [{
     desc: 'Deutsche Nationalbibliothek',

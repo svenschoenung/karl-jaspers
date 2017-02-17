@@ -53,7 +53,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
         <WorkList title="Enthaltene Werke" works={edition.works}/>
         <ExternalLinks title="Onlineausgaben"
-           for={edition} types={['springer','scribd', 'jstor']}/>
+           for={edition} types={['springer','scribd', 'jstor', 'archive']}/>
         <ExternalLinks title="Kataloge, Datenbanken, Suchmaschinen"
            for={edition} types={['dnb','openlib','worldcat','google']}/>
         </article>
