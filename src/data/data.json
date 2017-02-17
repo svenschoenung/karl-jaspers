@@ -166,6 +166,7 @@
       "editions": [
         "der-philosophische-glaube/1948/1",
         "der-philosophische-glaube/1948/2",
+        "der-philosophische-glaube/1948/3",
         "der-philosophische-glaube/1951"
       ]
     },
@@ -308,7 +309,8 @@
         ],
         "google": ["RGCqBgAAQBAJ"],
         "scribd": ["316019211"],
-        "springer": ["10.1007/978-3-662-26726-4"]
+        "springer": ["10.1007/978-3-662-26726-4"],
+        "worldcat": ["924432661"]
       }
     },
     "max-weber-rede/1921": {
@@ -320,7 +322,8 @@
       "pages": 30,
       "links": {
         "dnb": ["574091734"],
-        "google": ["H38CAAAAMAAJ"]
+        "google": ["H38CAAAAMAAJ"],
+        "worldcat": ["257898546"]
       }
     },
     "strindberg-und-van-gogh/1922": {
@@ -333,7 +336,8 @@
       "series": "Arbeiten zur angewandten Psychiatrie, Band 5",
       "links": {
         "openlib": ["OL6648014M"],
-        "dnb": ["580274470"]
+        "dnb": ["580274470"],
+        "worldcat": ["610288882"]
       }
     },
     "psychologie-der-weltanschauungen/1922": {
@@ -346,7 +350,8 @@
       "links": {
         "dnb": ["580991032"],
         "google": ["KE0AAAAAMAAJa"],
-        "springer": ["10.1007/978-3-662-36361-4"]
+        "springer": ["10.1007/978-3-662-36361-4"],
+        "worldcat": ["919558595"]
       }
     },
     "allgemeine-psychopathologie/1923": {
@@ -359,7 +364,10 @@
       "pages": 460,
       "links": {
         "dnb": ["104404960X"],
-        "springer": ["10.1007/978-3-662-36704-9"]
+        "springer": ["10.1007/978-3-662-36704-9"],
+        "worldcat": ["807818960"],
+        "google": ["0BlWAAAAMAAJ"],
+        "openlib": ["OL15332085M"]
       }
     },
     "die-idee-der-universitaet/1923": {
@@ -387,7 +395,8 @@
         "scribd": ["323103048"],
         "springer": ["10.1007/978-3-642-99342-8"],
         "google": ["5ezPBgAAQBAJ"],
-        "openlib": ["OL6756615M"]
+        "openlib": ["OL6756615M"],
+        "worldcat": []
       }
     },
     "max-weber-rede/1926": {
@@ -401,7 +410,8 @@
       "pages": 27,
       "links": {
         "dnb": ["574091742"],
-        "google": ["Vs5HAAAAYAAJ"]
+        "google": ["Vs5HAAAAYAAJ"],
+        "worldcat": ["181821285"]
       }
     },
     "die-geistige-situation-der-zeit/1931/1": {
@@ -435,7 +445,8 @@
       "links": {
         "dnb": ["366261207"],
         "springer": ["10.1007/978-3-642-99341-1"],
-        "google": ["nXk6vgAACAAJ"]
+        "google": ["nXk6vgAACAAJ"],
+        "worldcat": ["750573827"]
       }
     },
     "philosophie-2/1932": {
@@ -446,7 +457,8 @@
       "pages": 441,
       "links": {
         "dnb": ["366261215"],
-        "springer": ["10.1007/978-3-642-99339-8"]
+        "springer": ["10.1007/978-3-642-99339-8"],
+        "worldcat": ["750573839"]
       }
     },
     "philosophie-3/1932": {
@@ -458,7 +470,8 @@
       "links": {
         "dnb": ["366261223"],
         "springer": ["10.1007/978-3-642-99340-4"],
-        "google": ["RZ8hAQAAIAAJ"]
+        "google": ["RZ8hAQAAIAAJ"],
+        "worldcat": ["751211267"]
       }
     },
     "max-weber/1932": {
@@ -472,7 +485,8 @@
       "links": {
         "dnb": ["366318519"],
         "openlib": ["OL6290875M"],
-        "google": ["yEIeAAAAIAAJ"]
+        "google": ["yEIeAAAAIAAJ"],
+        "worldcat": ["490196665"]
       }
     },
     "die-geistige-situation-der-zeit/1932/3": {
@@ -481,7 +495,10 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 3,
       "pages": 191,
-      "series": "Sammlung Göschen, Band 1000"
+      "series": "Sammlung Göschen, Band 1000",
+      "links": {
+        "google": ["tEUEpUop7FUC"]
+      }
     },
     "die-geistige-situation-der-zeit/1932/4": {
       "title": "Die geistige Situation der Zeit",
@@ -489,7 +506,10 @@
       "publisher_city": "Berlin, Leipzig",
       "edition": 4,
       "pages": 191,
-      "series": "Sammlung Göschen, Band 1000"
+      "series": "Sammlung Göschen, Band 1000",
+      "links": {
+        "google": ["tEUEpUop7FUC"]
+      }
     },
     "die-geistige-situation-der-zeit/1933": {
       "title": "Die geistige Situation der Zeit",
@@ -500,7 +520,8 @@
       "pages": 191,
       "series": "Sammlung Göschen, Band 1000",
       "links": {
-        "dnb": ["580274454"]
+        "dnb": ["580274454"],
+        "google": ["Bwd-XwAACAAJ"]
       }
     },
     "vernunft-und-existenz/1935": {
@@ -513,7 +534,8 @@
       "series": "Aula-voordrachten der Rijksuniversiteit te Groningen 1",
       "links": {
         "dnb": ["580274497"],
-        "openlib": ["OL15332601M"]
+        "openlib": ["OL15332601M"],
+        "worldcat": ["884553404"]
       }
     },
     "nietzsche/1936": {
@@ -525,7 +547,9 @@
       "pages": 437,
       "links": {
         "dnb": ["574091661"],
-        "openlib": ["OL6343164M"]
+        "openlib": ["OL6343164M"],
+        "google": ["NXQgAAAAQBAJ"],
+        "worldcat": ["923441003"]
       }
     },
     "descartes-und-die-philosophie/1937": {
@@ -536,7 +560,8 @@
       "pages": 104,
       "links": {
         "dnb": ["574091599"],
-        "openlib": ["OL6365843M"]
+        "openlib": ["OL6365843M"],
+        "worldcat": ["781375914"]
       }
     },
     "existenzphilosophie/1938": {
@@ -548,7 +573,8 @@
       "pages": 86,
       "links": {
         "dnb": ["574091610"],
-        "openlib": ["OL19402744M"]
+        "openlib": ["OL19402744M"],
+        "worldcat": ["868494862"]
       }
     },
     "vom-lebendigen-geist-der-universitaet-und-vom-studieren/1946": {
@@ -561,7 +587,8 @@
       "series": "Schriften der Wandlung 1",
       "links": {
         "dnb": ["452184339"],
-        "google": ["hP0-AAAAIAAJ"]
+        "google": ["hP0-AAAAIAAJ"],
+        "worldcat": ["884552779"]
       }
     },
     "nietzsche-und-das-christentum/1946": {
@@ -573,7 +600,8 @@
       "links": {
         "dnb": ["452184533"],
         "openlib": ["OL232092M"],
-        "google": ["rTxCAQAAIAAJ"]
+        "google": ["rTxCAQAAIAAJ"],
+        "worldcat": ["9303659"]
       }
     },
     "max-weber/1946": {
@@ -585,7 +613,8 @@
       "pages": 58,
       "links": {
         "dnb": ["452185149"],
-        "openlib": ["OL15332211M"]
+        "openlib": ["OL15332211M"],
+        "worldcat": ["898498997"]
       }
     },
     "die-schuldfrage/1946/1": {
@@ -622,7 +651,8 @@
       "links": {
         "dnb": ["452184452"],
         "google": ["ZJbyBgAAQBAJ"],
-        "springer": ["10.1007/978-3-662-43161-0"]
+        "springer": ["10.1007/978-3-662-43161-0"],
+        "worldcat": ["928743100"]
       }
     },
     "allgemeine-psychopathologie/1946": {
@@ -635,7 +665,8 @@
       "links": {
         "dnb": ["452184746"],
         "springer": ["10.1007/978-3-662-11113-0"],
-        "openlib": ["OL263445M"]
+        "openlib": ["OL263445M"],
+        "worldcat": ["230688932"]
       }
     },
     "von-der-wahrheit/1947": {
@@ -647,7 +678,8 @@
       "links": {
         "dnb": ["452185041"],
         "openlib": ["OL16398121M"],
-        "google": ["a19VAAAAMAAJ"]
+        "google": ["a19VAAAAMAAJ"],
+        "worldcat": ["901262605"]
       }
     },
     "vom-europaeischen-geist/1947/1": {
@@ -660,7 +692,8 @@
       "links": {
         "dnb": ["1053927835"],
         "openlib": ["OL192207M"],
-        "google": ["RgThjwEACAAJ"]
+        "google": ["RgThjwEACAAJ"],
+        "worldcat": ["459592267"]
       }
     },
     "vom-europaeischen-geist/1947/2": {
@@ -671,7 +704,8 @@
       "edition": 1,
       "pages": 17,
       "links": {
-        "dnb": ["992504198"]
+        "dnb": ["992504198"],
+        "worldcat": ["723953265"]
       }
     },
     "vernunft-und-existenz/1947": {
@@ -682,7 +716,8 @@
       "edition": 2,
       "pages": 123,
       "links": {
-        "dnb": ["452185009"]
+        "dnb": ["452185009"],
+        "worldcat": ["714081121"]
       }
     },
     "nietzsche/1947": {
@@ -695,7 +730,9 @@
       "pages": 487,
       "links": {
         "dnb": ["452184517"],
-        "google": ["nrQYAAAAIAAJ"]
+        "google": ["nrQYAAAAIAAJ"],
+        "worldcat": ["73475282"],
+        "openlib": ["OL14329120M"]
       }
     },
     "europa-der-gegenwart/1947": {
@@ -708,7 +745,8 @@
       "series": "Schriftenreihe Symposion 13",
       "links": {
         "dnb": ["452184258"],
-        "google": ["iITUAAAAMAAJ"]
+        "google": ["iITUAAAAMAAJ"],
+        "worldcat": ["884552909"]
       }
     },
     "die-schuldfrage/1947": {
@@ -719,7 +757,8 @@
       "pages": 95,
       "series": "Schriften zur Zeit, Heft 11",
       "links": {
-        "dnb": ["452184835"]
+        "dnb": ["452184835"],
+        "openlib": ["OL6518321M"]
       }
     },
     "die-geistige-situation-der-zeit/1947": {
@@ -741,7 +780,8 @@
       "pages": 5,
       "series": "Monatshefte Vol. 38, No 2 (Feb. 1946), pp. 115-119",
       "links": {
-        "jstor": ["30164505"]
+        "jstor": ["30164505"],
+        "worldcat": ["5544052428"]
       }
     },
     "die-antwort-an-sigrid-undset/1947": {
@@ -754,7 +794,8 @@
       "series": "Schriften des Südverlags 2",
       "links": {
         "dnb": ["452184053"],
-        "google": ["gJavYgEACAAJ"]
+        "google": ["gJavYgEACAAJ"],
+        "worldcat": ["602662249"]
       }
     },
     "unsere-zukunft-und-goethe/1948": {
@@ -767,7 +808,8 @@
       "links": {
         "dnb": ["452185181"],
         "openlib": ["OL194564M"],
-        "google": ["0f4vAQAAIAAJ"]
+        "google": ["0f4vAQAAIAAJ"],
+        "worldcat": ["887476800"]
       }
     },
     "philosophie/1948": {
@@ -781,7 +823,8 @@
         "dnb": ["452184630"],
         "springer": ["10.1007/978-3-642-49688-2"],
         "openlib": ["OL6077586M"],
-        "google": ["0QwKMQAACAAJ"]
+        "google": ["0QwKMQAACAAJ"],
+        "worldcat": ["948050600"]
       }
     },
     "max-weber/1948": {
@@ -793,7 +836,8 @@
       "pages": 58,
       "links": {
         "dnb": ["994618255"],
-        "openlib": ["OL6081042M"]
+        "openlib": ["OL6081042M"],
+        "worldcat": ["1306711"]
       }
     },
     "descartes-und-die-philosophie/1948": {
@@ -805,7 +849,8 @@
       "pages": 104,
       "links": {
         "dnb": ["452184150"],
-        "openlib": ["OL13655530M"]
+        "openlib": ["OL13655530M"],
+        "worldcat": ["250932105"]
       }
     },
     "der-philosophische-glaube/1948/1": {
@@ -816,7 +861,8 @@
       "pages": 136,
       "links": {
         "dnb": ["452184347"],
-        "openlib": ["OL20028351M"]
+        "openlib": ["OL20028351M"],
+        "worldcat": ["782102548"]
       }
     },
     "der-philosophische-glaube/1948/2": {
@@ -832,6 +878,16 @@
         "openlib": ["OL20028351M"]
       }
     },
+    "der-philosophische-glaube/1948/3": {
+      "title": "Der philosophische Glaube",
+      "publisher": "Artemis",
+      "publisher_city": "Zürich",
+      "edition": 1,
+      "pages": 158,
+      "links": {
+        "worldcat": ["723602400"]
+      }
+    },
     "allgemeine-psychopathologie/1948": {
       "title": "Allgemeine Psychopathologie",
       "publisher": "Springer",
@@ -841,7 +897,9 @@
       "pages": 748,
       "links": {
         "dnb": ["452184754", "1042840105"],
-        "springer": ["10.1007/978-3-642-49689-9"]
+        "springer": ["10.1007/978-3-642-49689-9"],
+        "worldcat": ["318239329"],
+        "openlib": ["OL6063373M"]
       }
     },
     "die-geistige-situation-der-zeit/1949": {
@@ -866,7 +924,8 @@
       "links": {
         "dnb": ["452184924"],
         "openlib": ["OL21168858M"],
-        "google": ["tArTAAAAMAAJ"]
+        "google": ["tArTAAAAMAAJ"],
+        "worldcat": ["874515726"]
       }
     },
     "vom-ursprung-und-ziel-der-geschichte/1949/2": {
@@ -877,7 +936,9 @@
       "pages": 349,
       "links": {
         "dnb": ["452184932"],
-        "openlib": ["OL19955163M"]
+        "openlib": ["OL19955163M"],
+        "google": ["O4-BnQEACAAJ"], 
+        "worldcat": ["845062643"]
       }
     },
     "unsere-zukunft-und-goethe/1949": {
@@ -889,7 +950,8 @@
       "links": {
         "dnb": ["452185203"],
         "openlib": ["OL22051132M"],
-        "google": ["ZUvMmwEACAAJ"]
+        "google": ["ZUvMmwEACAAJ"],
+        "worldcat": ["499959110"]
       }
     },
     "strindberg-und-van-gogh/1949": {
@@ -900,7 +962,9 @@
       "edition": 1,
       "pages": 182,
       "links": {
-        "dnb": ["452184908"]
+        "dnb": ["452184908"],
+        "google": ["HxES3GU2ml0C"],
+        "worldcat": ["760581598"]
       }
     },
     "philosophie-und-wissenschaft/1949": {
@@ -917,7 +981,8 @@
           "zkUZAAAAMAAJ",
           "CT76wiuShEkC"
         ],
-        "openlib": ["OL20829258M"]
+        "openlib": ["OL20829258M"],
+        "worldcat": ["602713876"]
       }
     },
     "vom-ursprung-und-ziel-der-geschichte/1950": {
@@ -929,7 +994,8 @@
       "copies_desc": "8.-11. Tsd.",
       "pages": 349,
       "links": {
-        "dnb": ["452184940"]
+        "dnb": ["452184940"],
+        "worldcat": ["42255642"]
       }
     },
     "vernunft-und-widervernunft-in-unserer-zeit/1950": {
@@ -942,7 +1008,8 @@
       "links": {
         "dnb": ["452185025"],
         "openlib": ["OL6097698M"],
-        "google": ["tVI_AAAAIAAJ"]
+        "google": ["tVI_AAAAIAAJ"],
+        "worldcat": ["247381690"]
       }
     },
     "nietzsche/1950": {
@@ -955,7 +1022,9 @@
       "pages": 487,
       "links": {
         "dnb": ["452184525"],
-        "google": ["qro_vgAACAAJ"]
+        "google": ["qro_vgAACAAJ"],
+        "worldcat": ["874806602"],
+        "openlib": ["OL14674071M"]
       }
     },
     "einfuehrung-in-die-philosophie/1950/1": {
@@ -967,7 +1036,8 @@
       "links": {
         "dnb": ["452184177"],
         "google": ["8z1IAAAAMAAJ"],
-        "openlib": ["OL15332133M"]
+        "openlib": ["OL15332133M"],
+        "worldcat": ["715636540"]
       }
     },
     "einfuehrung-in-die-philosophie/1950/2": {
@@ -979,6 +1049,8 @@
       "copies_desc": "6.-10. Tausend",
       "pages": 159,
       "links": {
+        "worldcat": ["645381484"],
+        "google": ["8z1IAAAAMAAJ"]
       }
     },
     "rechenschaft-und-ausblick/1951": {
@@ -991,7 +1063,8 @@
       "links": {
         "dnb": ["452184797"],
         "google": ["fzxIAAAAMAAJ"],
-        "openlib": ["OL201752M"]
+        "openlib": ["OL201752M"],
+        "worldcat": ["187195903"]
       }
     },
     "der-philosophische-glaube/1951": {
@@ -1003,7 +1076,8 @@
       "copies_desc": "11.-13. Tausend",
       "pages": 136,
       "links": {
-        "dnb": ["452184363"]
+        "dnb": ["452184363"],
+        "worldcat": ["813632152"]
       }
     },
     "vom-ursprung-und-ziel-der-geschichte/1952": {
@@ -1015,7 +1089,8 @@
       "copies_desc": "12.-14. Tsd.",
       "pages": 349,
       "links": {
-        "dnb": ["452184959"]
+        "dnb": ["452184959"],
+        "worldcat": ["717752241"]
       }
     },
     "vernunft-und-widervernunft-in-unserer-zeit/1952": {
@@ -1029,7 +1104,8 @@
       "pages": 71,
       "links": {
         "dnb": ["452185033"],
-        "google": ["Z1ZNDQEACAAJ"]
+        "google": ["Z1ZNDQEACAAJ"],
+        "worldcat": ["463109349"]
       }
     },
     "ueber-das-tragische/1952": {
@@ -1041,7 +1117,8 @@
       "links": {
         "dnb": ["452185068"],
         "google": ["mGIaAAAAIAAJ"],
-        "openlib": ["OL15332532M"]
+        "openlib": ["OL15332532M"],
+        "worldcat": ["222604538"]
       }
     },
     "nietzsche-und-das-christentum/1952": {
@@ -1053,7 +1130,8 @@
       "links": {
         "dnb": ["452184541"],
         "openlib": ["OL16404654M"],
-        "google": ["CU10vgAACAAJ"]
+        "google": ["CU10vgAACAAJ"],
+        "worldcat": ["638999011"]
       }
     },
     "lionardo-als-philosoph/1953": {
@@ -1065,7 +1143,8 @@
       "series": "Schriften der \"Concinnitas\" im kunsthistorischen Seminar der Universität Basel",
       "links": {
         "dnb": ["574091653"],
-        "openlib": ["OL13640129M"]
+        "openlib": ["OL13640129M"],
+        "worldcat": ["469511667"]
       }
     },
     "einfuehrung-in-die-philosophie/1953/1": {
@@ -1077,7 +1156,8 @@
       "copies_desc": "11.-20. Tausend",
       "pages": 164,
       "links": {
-        "dnb": ["452184185"]
+        "dnb": ["452184185"],
+        "worldcat": ["73475266"]
       }
     },
     "einfuehrung-in-die-philosophie/1953/2": {
@@ -1087,7 +1167,8 @@
       "edition": "Lizensausgabe",
       "pages": 163,
       "links": {
-        "dnb": ["574091602"]
+        "dnb": ["574091602"],
+        "worldcat": ["912067458"]
       }
     }
   }
