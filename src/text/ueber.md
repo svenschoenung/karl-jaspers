@@ -1,3 +1,7 @@
+---
+title: Über diese Seite
+---
+
 ### Über diese Seite
 
 Anders als zum Beispiel im Falle Martin Heideggers gab es für Karl Jaspers lange keine groß angelegte, vollständige Werksausgabe. Dies soll sich [in Zukunft ändern](http://www.haw.uni-heidelberg.de/forschung/forschungsstellen/jaspers.de.html).
