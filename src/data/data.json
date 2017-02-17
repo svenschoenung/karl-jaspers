@@ -8,7 +8,10 @@
         "allgemeine-psychopathologie/1923",
         "allgemeine-psychopathologie/1946",
         "allgemeine-psychopathologie/1948"
-      ]
+      ], 
+      "links": {
+        "wiki": ["Schichtenlehre (Jaspers)"]
+      }
     },
     "psychologie-der-weltanschauungen": {
       "title": "Psychologie der Weltanschauungen",
@@ -17,7 +20,7 @@
         "psychologie-der-weltanschauungen/1922"
       ],
       "links": {
-        "wiki": ["Psychologie der Weltanschauungen"]
+        "wiki": ["Psychologie der Weltanschauungen", "Grenzsituation"]
       }
     },
     "max-weber-rede": {
