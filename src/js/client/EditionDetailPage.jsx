@@ -40,7 +40,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
     var editionId = editionPath(this.props.params);
     var edition = data.editions[editionId];
     return (
-      <main className="edition">
+      <main>
         <Breadcrumb
            links={['/ausgaben', '/ausgaben/' + edition.name]}
            labels={['Ausgaben', edition.title, edition.year]} />
@@ -49,7 +49,10 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <EditionPreview edition={edition}/>
         <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
         <WorkList title="Enthaltene Werke" workIds={edition.works}/>
-        <ExternalLinks title="Externe Links" links={edition.links}/>
+        <ExternalLinks title="Onlineausgaben"
+           for={edition} types={['springer','scribd', 'jstor']}/>
+        <ExternalLinks title="Kataloge, Datenbanken, Suchmaschinen"
+           for={edition} types={['dnb','openlib','worldcat','google']}/>
         </article>
       </main> 
     );

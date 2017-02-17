@@ -33,7 +33,8 @@ export default class WorkDetailPage extends SmallHeaderPage {
         <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
         <WorkList title="Exzerpt aus" workIds={work.source}/>
         <EditionList title="Veröffentlicht in" editions={work.editions}/>
-        <ExternalLinks title="Externe Links" links={work.links}/>
+        <ExternalLinks title="Externe Links" 
+          for={work} types={['wiki']}/>
         </article>
       </main> 
     );

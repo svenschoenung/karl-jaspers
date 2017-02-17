@@ -481,6 +481,10 @@ a .home-button {
   list-style-type:none;
 }
 
+.list li {
+  position:relative;
+}
+
 .list li:hover {
   background:#eee;
 }
@@ -490,6 +494,28 @@ a .home-button {
   padding:10px 10px;
   text-decoration:none;
   color:black;
+}
+
+.list li a.search-link {
+  display: inline-block;
+  border: 1px solid #ccc;
+  z-index: 9999;
+  padding: 0px;
+  text-align: center;
+  margin: 10px;
+  padding: 0px 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 32px;
+  line-height:32px;
+}
+
+.list li a.search-link:hover {
+  border: 2px solid #000;
+  color:#000; 
+  margin: 9px;
 }
 
 .list li span.icon, .list li span.letter {
