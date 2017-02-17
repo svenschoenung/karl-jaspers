@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
@@ -17,6 +18,7 @@ export default class EditionVariantPage extends SmallHeaderPage {
     var editions = editionIds.map((editionId) => data.editions[editionId]);
     return (
      <main className="editions-variants">
+       <Helmet title={'Karl Jaspers: ' + editions[0].title}/>
        <Breadcrumb
          links={['/ausgaben']} 
          labels={['Ausgaben', editions[0].title]} />

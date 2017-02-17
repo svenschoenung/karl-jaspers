@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import EditionList from './EditionList.jsx';
@@ -26,6 +27,7 @@ export default class WorkDetailPage extends SmallHeaderPage {
     var work = data.works[this.props.params.workId];
     return (
       <main className="work">
+        <Helmet title={'Karl Jaspers: ' + work.title}/>
         <Breadcrumb links={['/werke']} labels={['Werke', work.title]}/>
         <article>
         <Title for={work}/>

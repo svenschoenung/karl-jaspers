@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 
@@ -22,6 +23,7 @@ export default class TextPage extends SmallHeaderPage {
   render() {
     return (
       <main className="text">
+        <Helmet title={'Karl Jaspers: ' + (this.state.text || {}).title}/>
         <article>
         <h2 dangerouslySetInnerHTML={{__html: (this.state.text || {}).title}}/>
         <div dangerouslySetInnerHTML={{__html: (this.state.text || {}).body}}/>

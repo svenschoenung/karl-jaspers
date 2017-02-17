@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 
 import HomeButton from './HomeButton.jsx';
 
@@ -19,6 +20,7 @@ export default class HomePage extends React.Component {
   render() {
     return (
         <main className="home">
+          <Helmet title={'Karl Jaspers'}/>
           <nav className="home-buttons">
           <HomeButton name="Werke" to="werke" label="Zeige Liste mit Karl Jaspers Werken"/>
           <HomeButton name="Ausgaben" to="ausgaben" label="Zeige Liste verschiedener Ausgaben von Karl Jaspers Werken"/>

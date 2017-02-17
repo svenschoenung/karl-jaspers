@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 
 import SmallHeaderPage from './SmallHeaderPage.jsx';
 import SearchableList from './SearchableList.jsx';
@@ -14,6 +15,7 @@ export default class WorkOverviewPage extends SmallHeaderPage {
   render() {
     return (
       <main className="works">
+        <Helmet title={'Karl Jaspers: Werke'}/>
         <SearchableList
           listItems={data.worksByYearAndTitle.map(id => data.works[id])}
           searchPlaceholder="Werke durchsuchen"
