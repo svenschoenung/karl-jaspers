@@ -31,7 +31,7 @@ export default class WorkDetailPage extends SmallHeaderPage {
         <Title for={work}/>
         <div className="meta">Erstver&ouml;ffentlichung: {work.year}</div>
         <div dangerouslySetInnerHTML={{__html: this.state.desc}} />
-        <WorkList title="Exzerpt aus" workIds={work.source}/>
+        <WorkList title="Exzerpt aus" works={work.source}/>
         <EditionList title="Veröffentlicht in" editions={work.editions}/>
         <ExternalLinks title="Externe Links" 
           for={work} types={['wiki']}/>

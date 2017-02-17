@@ -5,7 +5,7 @@ import data from '../data.json';
 
 export default class WorkList extends React.Component {
   render() {
-    if (!this.props.workIds || this.props.workIds.length == 0) {
+    if (!this.props.works || this.props.works.length == 0) {
       return null;
     }
     return (
@@ -14,8 +14,8 @@ export default class WorkList extends React.Component {
         <div className="list">
         <ul>
         {
-          this.props.workIds.map(workId => (
-	    <li key={workId}> 
+          this.props.works.map(workId => (
+	        <li key={workId}> 
             <Link to={'/werke/' + workId}>
             <span className="letter">
               {data.works[workId].title.charAt(0)} 

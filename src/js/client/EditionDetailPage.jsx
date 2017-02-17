@@ -48,7 +48,7 @@ export default class EditionDetailPage extends SmallHeaderPage {
         <Title for={edition}/>
         <EditionPreview edition={edition}/>
         <EditionInfo edition={Object.assign(edition, this.state.edition)}/>
-        <WorkList title="Enthaltene Werke" workIds={edition.works}/>
+        <WorkList title="Enthaltene Werke" works={edition.works}/>
         <ExternalLinks title="Onlineausgaben"
            for={edition} types={['springer','scribd', 'jstor']}/>
         <ExternalLinks title="Kataloge, Datenbanken, Suchmaschinen"
