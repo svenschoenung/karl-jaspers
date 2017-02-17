@@ -64,7 +64,7 @@ var linkTypes = {
     })
   }],
   wiki: (ids) => ids.map(id => ({
-    url: 'https://de.wikipedia.org/wiki/' + idurl.replace(/ /, '_'),
+    url: 'https://de.wikipedia.org/wiki/' + id.replace(/ /, '_'),
     desc: 'Wikipedia: ' + id
   }))
 };
